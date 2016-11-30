@@ -9,6 +9,7 @@ namespace JewelsExchange.iOS
 {
 	public class Application
 	{
+		//Kannan
 		// This is the main entry point of the application.
 		static void Main(string[] args)
 		{
