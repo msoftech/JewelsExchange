@@ -13,7 +13,7 @@ using Android;
 
 namespace JewelsExchange.Droid
 {
-	//Ars
+	//Arshadkr
 	[Activity(Label = "MainActivity")]
 	public class MainActivity : AppCompatActivity
 	{
