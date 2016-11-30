@@ -1,0 +1,14 @@
+/Users/arshad/Projects/JewelsExchange/iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/arshad/Projects/JewelsExchange/iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/arshad/Projects/JewelsExchange/iOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/arshad/Projects/JewelsExchange/iOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/arshad/Projects/JewelsExchange/iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/arshad/Projects/JewelsExchange/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe.mdb
+/Users/arshad/Projects/JewelsExchange/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe
+/Users/arshad/Projects/JewelsExchange/iOS/obj/iPhoneSimulator/Debug/JewelsExchange.iOS.exe
+/Users/arshad/Projects/JewelsExchange/iOS/obj/iPhoneSimulator/Debug/JewelsExchange.iOS.exe.mdb
+/Users/arshad/Projects/JewelsExchange/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.dll
+/Users/arshad/Projects/JewelsExchange/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.dll.mdb
+/Users/arshad/Projects/JewelsExchange/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.dll
+/Users/arshad/Projects/JewelsExchange/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/arshad/Projects/JewelsExchange/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.Primitives.dll

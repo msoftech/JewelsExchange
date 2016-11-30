@@ -1,0 +1,9 @@
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile259.AssemblyAttribute.cs
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/bin/Debug/JewelsExchange.dll.mdb
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/bin/Debug/JewelsExchange.dll
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/obj/Debug/JewelsExchange.dll
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/obj/Debug/JewelsExchange.dll.mdb
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/bin/Debug/System.Net.Http.dll
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/bin/Debug/System.Net.Http.Extensions.dll
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/bin/Debug/System.Net.Http.Primitives.dll
+/Users/arshad/Projects/JewelsExchange/JewelsExchange/bin/Debug/Newtonsoft.Json.dll
