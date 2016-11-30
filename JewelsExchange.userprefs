@@ -1,5 +1,5 @@
-﻿<Properties StartupConfiguration="{A552B3B9-182E-413F-8B4C-44397FF717CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Fragments/WebserviceTest.cs">
+﻿<Properties StartupConfiguration="{A552B3B9-182E-413F-8B4C-44397FF717CB}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="JewelsExchange Status">
     <Files>
       <File FileName="JewelsExchange/PropertyWebServices.cs" Line="5" Column="29" />
       <File FileName="Droid/Fragments/WebserviceTest.cs" Line="39" Column="3" />
@@ -7,15 +7,17 @@
       <File FileName="Droid/Fragments/DefaultActivity.cs" Line="110" Column="5" />
       <File FileName="Droid/Listner/XamarinRecyclerViewOnScrollListener.cs" Line="27" Column="5" />
       <File FileName="Droid/ViewHolder/ResultViewHolder.cs" Line="27" Column="33" />
-      <File FileName="Droid/MainActivity.cs" Line="17" Column="15" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
       <File FileName="JewelsExchange/ConstWebservice.cs" Line="4" Column="16" />
+      <File FileName="JewelsExchange Status" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="JewelsExchange" expanded="True" selected="True">
+          <Node name="JewelsExchange" expanded="True">
             <Node name="JewelsExchange.Droid" expanded="True">
               <Node name="Fragments" expanded="True" />
+              <Node name="MainActivity.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -36,5 +38,5 @@
     <Watch file="Droid/Fragments/WebserviceTest.cs" line="54" offsetX="660" offsetY="795" expression="wDatas" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.JewelsExchange.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B58C90BA-6AE9-426A-A53C-99E5092A6C9F" />
-  <MonoDevelop.Ide.ItemProperties.JewelsExchange.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.d865b276" AndroidDesignerPreferredTheme="MyMaterialTheme" />
+  <MonoDevelop.Ide.ItemProperties.JewelsExchange.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" AndroidDesignerPreferredTheme="MyMaterialTheme" />
 </Properties>
