@@ -58,6 +58,7 @@
 /Users/arshad/Projects/JewelsExchange/Droid/obj/Debug/res/layout/layout_recyclerview.xml
 /Users/arshad/Projects/JewelsExchange/Droid/obj/Debug/res/layout/row_result.xml
 /Users/arshad/Projects/JewelsExchange/Droid/obj/Debug/res/layout/layout_loading_item.xml
+/Users/arshad/Projects/JewelsExchange/Droid/obj/Debug/res/layout/fragment_stock_details.xml
 /Users/arshad/Projects/JewelsExchange/Droid/obj/Debug/R.cs.flag
 /Users/arshad/Projects/JewelsExchange/Droid/bin/Debug/com.mark.jewelsexchange-Signed.apk
 /Users/arshad/Projects/JewelsExchange/Droid/obj/Debug/uploadflags.txt

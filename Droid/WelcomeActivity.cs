@@ -30,7 +30,7 @@ namespace JewelsExchange.Droid
 			timer.AutoReset = false; // Do not reset the timer after it's elapsed
 			timer.Elapsed += (object sender, ElapsedEventArgs e) =>
 			{
-				StartActivity(typeof(WebserviceTest));//StartActivity(typeof(MainActivity)); //StartActivity(typeof(WebserviceTest));
+				StartActivity(typeof(MainActivity));//StartActivity(typeof(MainActivity)); //StartActivity(typeof(WebserviceTest));
 			};
 			timer.Start();
 		}

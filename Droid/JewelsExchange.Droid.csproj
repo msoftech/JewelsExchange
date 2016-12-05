@@ -89,10 +89,10 @@
     <Compile Include="Fragments\WebserviceTest.cs" />
     <Compile Include="Fragments\DefaultActivity.cs" />
     <Compile Include="Adapter\ResultJewelryAdapter.cs" />
-    <Compile Include="model\ResultJewelryModel.cs" />
     <Compile Include="Listner\XamarinRecyclerViewOnScrollListener.cs" />
     <Compile Include="ViewHolder\ResultViewHolder.cs" />
     <Compile Include="ViewHolder\LoadingViewHolder.cs" />
+    <Compile Include="Fragments\FragmentFinaResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -156,6 +156,7 @@
     <AndroidResource Include="Resources\layout\layout_recyclerview.axml" />
     <AndroidResource Include="Resources\layout\row_result.axml" />
     <AndroidResource Include="Resources\layout\layout_loading_item.axml" />
+    <AndroidResource Include="Resources\layout\fragment_stock_details.axml" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamandroidsupportdesign">

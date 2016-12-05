@@ -4,27 +4,29 @@ using Android.Views;
 using System.Collections.Generic;
 using Android.Content;
 using System.Collections;
+using JewelsExchange.Webservices;
 
 namespace JewelsExchange.Droid
 {
 	public class ResultJewelryAdapter : RecyclerView.Adapter{
 
 		private readonly LayoutInflater mInflater;
-		private readonly List<ResultJewelryModel> mModels;
+		private readonly List<ResultJewelry> mModels;
 		private readonly int VIEW_TYPE_ITEM = 0;
 		private readonly int VIEW_TYPE_LOADING = 1;
-		private OnLoadMoreListener mOnLoadMoreListener;
+		//private OnLoadMoreListener mOnLoadMoreListener;
 
-		private Boolean isLoading;
-		private int visibleThreshold = 5;
-		private int lastVisibleItem, totalItemCount;
+		//private Boolean isLoading;
+		//private int visibleThreshold = 5;
+		//private int lastVisibleItem, totalItemCount;
 
-		public ResultJewelryAdapter(Context context, List<ResultJewelryModel> models, RecyclerView mRecyclerView)
+		public ResultJewelryAdapter(Context context, List<ResultJewelry> models, RecyclerView mRecyclerView)
 		{
 			mInflater = LayoutInflater.From(context);
-			mModels = new  List<ResultJewelryModel>(models);
+			mModels = new  List<ResultJewelry>(models);
 			//LinearLayoutManager linearLayoutManager = (LinearLayoutManager)mRecyclerView.GetLayoutManager();
 			//mrecyclerView.AddOnScrollListener(onScrollListener);
+			//using Android.Support.V7.Widget;
 		}
 
 		public override int GetItemViewType(int position)
@@ -43,9 +45,9 @@ namespace JewelsExchange.Droid
 		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
 		{
 			if (holder is ResultViewHolder) {
-				ResultJewelryModel model = mModels[position];
+				ResultJewelry model = mModels[position];
 				ResultViewHolder exholder = (ResultViewHolder)holder;
-				exholder.bind(model, holder.ItemView.Context);
+				exholder.bind( model, holder.ItemView.Context);
 			}else if (holder is LoadingViewHolder) {
 				LoadingViewHolder loadingViewHolder = (LoadingViewHolder)holder;
 				loadingViewHolder.progressBar.Indeterminate = true;
@@ -66,6 +68,16 @@ namespace JewelsExchange.Droid
 				return new LoadingViewHolder(itemView);
 			}
 			return null;
+		}
+		public void addMany(List<ResultJewelry> model)
+		{
+			mModels.AddRange(model);
+		}
+
+		public void removeLoadingView()
+		{
+			mModels.RemoveAt(mModels.Count - 1); //mModels.size() - 1
+			NotifyItemRemoved(mModels.Count);
 		}
 
 	}

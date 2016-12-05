@@ -1,8 +1,10 @@
 ﻿using System;
 using Android.Content;
 using Android.Support.V7.Widget;
+using Android.Support.V4;
 using Android.Views;
 using Android.Widget;
+using JewelsExchange.Webservices;
 
 namespace JewelsExchange.Droid
 {
@@ -10,6 +12,7 @@ namespace JewelsExchange.Droid
 	{
 		private TextView tvCategory,tvSubCategory,tvPlace,tvPrice,tv_carrat,tv_gm;
 		private	ImageView jwelImg;
+
 
 		public ResultViewHolder(View itemView) : base(itemView)
 			
@@ -24,14 +27,30 @@ namespace JewelsExchange.Droid
 		}
 
 
-		public void bind(ResultJewelryModel model, Context ctx)
+		public void bind(ResultJewelry model, Context ctx)
 		{
-			tvCategory.Text = model.getJewelCategoryName();
-			//tvSubCategory.Text = model.getJewelBaseDescName();
-			////tvPlace.setText(model.get());
-			//tvPrice.Text = "$" + model.getPrice();
-			//tv_carrat.Text = model.getKarat();
-			//tv_gm.Text = model.getWeightGms();
+			tvCategory.Text = model.JewelCategoryName;//model.getJewelCategoryName();
+			tvSubCategory.Text = model.JewelBaseDescName;
+			tv_carrat.Text = model.JewelMetalKaratName;
+			tv_gm.Text = model.WeightGms;
+			tvPrice.Text = model.CloseOutPrice;
+			tvPlace.Text = model.JewelRegionName;
+			//Glide.With(ctx).Load("Url")
+			//	 .Placeholder(Resource.Drawable.ic_launcher)
+			//	 .Into(jwelImg);
+			((RelativeLayout)ItemView.FindViewById<RelativeLayout>(Resource.Id.clk_details)).Click += delegate
+			{
+
+				//Call Your Method When User Clicks The Button
+				//Toast.MakeText(ctx, "click", ToastLength.Long).Show();
+				MainActivity myActivity = (MainActivity)ItemView.Context;
+
+				Android.Support.V4.App.FragmentTransaction fragmentTransaction =myActivity.SupportFragmentManager.BeginTransaction();
+				FragmentFinaResult childFragment = new FragmentFinaResult();
+				fragmentTransaction.Replace(Resource.Id.container_body, childFragment);
+				fragmentTransaction.AddToBackStack(null);
+				fragmentTransaction.Commit();
+			};
 		}
 	}
 }

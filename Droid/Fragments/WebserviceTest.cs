@@ -31,19 +31,19 @@ namespace JewelsExchange.Droid
 				{
 					btnGetData.Enabled = false;
 
-					await viewModel.GetWebDataTask(resultCompletion,"http://montemagno.com/monkeys.json");
+					//await viewModel.GetWebDataTask(resultCompletion,"http://montemagno.com/monkeys.json");
 
-					//ObservableCollection<ResultJewelry> wDatas = viewModel.wDatas;
-					ObservableCollection<GetDataFromWebservice> wDatas = viewModel.wDatas;
+				
+					//ObservableCollection<GetDataFromWebservice> wDatas = viewModel.wDatas;
 
 					//var items = JsonConvert.DeserializeObject<List<object>>(json);
 
 					//var dictionary = JsonConvert.DeserializeObject<List<KeyValuePair<int, string>>>("")
 					//			 .ToDictionary(x => x.Key, y => y.Value);
 
-					listview.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1,
-																Android.Resource.Id.Text1,
-					                                            viewModel.wDatas.Select(m => $"{m.Name} - from {m.Location}").ToArray());
+					//listview.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1,
+					//											Android.Resource.Id.Text1,
+					//                                            viewModel.wDatas.Select(m => $"{m.Name} - from {m.Location}").ToArray());
 					
 					btnGetData.Enabled = true;
 				}
@@ -52,7 +52,10 @@ namespace JewelsExchange.Droid
 		}
 
 		void resultCompletion(ObservableCollection<GetDataFromWebservice> wDatas) {
-			Console.WriteLine("asfadsf");
+			
+			//listview.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1,
+			//													Android.Resource.Id.Text1,
+			//													wDatas.Select(m => $"{m.Name} - from {m.Location}").ToArray());
 		}
 	}
 }

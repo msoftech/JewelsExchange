@@ -1,42 +1,29 @@
 ﻿<Properties StartupConfiguration="{A552B3B9-182E-413F-8B4C-44397FF717CB}|Default" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workbench ActiveDocument="JewelsExchange Status">
     <Files>
-      <File FileName="JewelsExchange/PropertyWebServices.cs" Line="5" Column="29" />
-      <File FileName="Droid/Fragments/WebserviceTest.cs" Line="39" Column="3" />
-      <File FileName="JewelsExchange/GetDataFromWebservice.cs" Line="65" Column="1" />
-      <File FileName="Droid/Fragments/DefaultActivity.cs" Line="110" Column="5" />
-      <File FileName="Droid/Listner/XamarinRecyclerViewOnScrollListener.cs" Line="27" Column="5" />
-      <File FileName="Droid/ViewHolder/ResultViewHolder.cs" Line="27" Column="33" />
-      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="JewelsExchange/ConstWebservice.cs" Line="4" Column="16" />
+      <File FileName="Droid/Fragments/WebserviceTest.cs" Line="31" Column="6" />
+      <File FileName="Droid/Fragments/DefaultActivity.cs" Line="119" Column="5" />
+      <File FileName="JewelsExchange/GetDataFromWebservice.cs" Line="90" Column="1" />
+      <File FileName="Droid/ViewHolder/ResultViewHolder.cs" Line="21" Column="68" />
+      <File FileName="Droid/MainActivity.cs" Line="90" Column="3" />
+      <File FileName="Droid/WelcomeActivity.cs" Line="33" Column="38" />
+      <File FileName="Droid/Adapter/ResultJewelryAdapter.cs" Line="47" Column="32" />
+      <File FileName="Droid/Fragments/FragmentFinaResult.cs" Line="62" Column="2" />
       <File FileName="JewelsExchange Status" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="JewelsExchange" expanded="True">
-            <Node name="JewelsExchange.Droid" expanded="True">
-              <Node name="Fragments" expanded="True" />
-              <Node name="MainActivity.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/arshad/Projects/JewelsExchange/Droid/Fragments/DefaultActivity.cs" line="115" column="33" />
-      <Breakpoint file="/Users/arshad/Projects/JewelsExchange/Droid/Fragments/WebserviceTest.cs" line="34" column="19" />
-      <Breakpoint file="/Users/arshad/Projects/JewelsExchange/JewelsExchange/GetDataFromWebservice.cs" line="65" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Droid/Fragments/WebserviceTest.cs" line="35" offsetX="603" offsetY="510" expression="wDatas" liveUpdate="True" />
     <Watch file="JewelsExchange/GetDataFromWebservice.cs" line="56" offsetX="494" offsetY="825" expression="json" liveUpdate="False" />
     <Watch file="Droid/Fragments/WebserviceTest.cs" line="54" offsetX="660" offsetY="795" expression="wDatas" liveUpdate="False" />
+    <Watch file="JewelsExchange/GetDataFromWebservice.cs" line="87" offsetX="292" offsetY="1290" expression="ex" liveUpdate="False" />
+    <Watch file="JewelsExchange/GetDataFromWebservice.cs" line="68" offsetX="718" offsetY="1005" expression="json" liveUpdate="False" />
+    <Watch file="JewelsExchange/GetDataFromWebservice.cs" line="68" offsetX="718" offsetY="1005" expression="items" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.JewelsExchange.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B58C90BA-6AE9-426A-A53C-99E5092A6C9F" />
-  <MonoDevelop.Ide.ItemProperties.JewelsExchange.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" AndroidDesignerPreferredTheme="MyMaterialTheme" />
+  <MonoDevelop.Ide.ItemProperties.JewelsExchange.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.e3c4dcf4" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
 </Properties>
