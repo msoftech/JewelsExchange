@@ -35,30 +35,40 @@ namespace JewelsExchange.Webservices
 		//public ObservableCollection<GetDataFromWebservice> wDatas { get; } = new ObservableCollection<GetDataFromWebservice>();
 
 
-		public ObservableCollection<T> wDatas { get; } = new ObservableCollection<T>();
+		//public ObservableCollection<T> wDatas { get; } = new ObservableCollection<T>();
 
 
-		public async Task GetWebDataTask(TaskCompletedDelegate delegateResult,String url,Dictionary<string,string> urlParam = null)
+		public async  void GetWebDataTask(TaskCompletedDelegate delegateResult,String url,Dictionary<string,string> urlParam = null)
 		{
 			try
 			{
 				if (urlParam != null) { 
 					
 					var enumerator = urlParam.GetEnumerator();
+					int firstParam = 0;
 					while (enumerator.MoveNext())
 					{
 						var pair = enumerator.Current;
-						url += "&" + pair.Key + "=" + pair.Value;
+						if (firstParam == 0)
+							url += "?" + pair.Key.Replace("@", "") + "=" + pair.Value;
+						else
+							url += "&" + pair.Key.Replace("@", "") + "=" + pair.Value;
+						
+						firstParam += 1;
 					}
+					//url = "?" + url.Substring(1);
 				}
+				url = url.Replace(" ", "%20");
 				
 				var client = new HttpClient();
-				var json = await client.GetStringAsync(url);
+				var json =  await client.GetStringAsync(url);
 				//var items = JsonConvert.DeserializeObject<List<GetDataFromWebservice>>(json);
-
+				//json = json.Replace("{Table:","");
+				//json = json.Remove(json.Length - 1);
 
 				var items = JsonConvert.DeserializeObject<List<T>>(json); //ResultJewelryMd
 
+				ObservableCollection<T> wDatas = new ObservableCollection<T>();
 				foreach (var item in items)
 					wDatas.Add(item);
 				//UIApplication sa;
