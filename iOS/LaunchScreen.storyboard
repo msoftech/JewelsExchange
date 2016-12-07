@@ -41,9 +41,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="44" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="welcome.jpeg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
-                            </imageView>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
@@ -77,7 +74,4 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <resources>
-        <image name="welcome.jpeg" width="390" height="129"/>
-    </resources>
 </document>
