@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{A552B3B9-182E-413F-8B4C-44397FF717CB}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="JewelsExchange Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="JewelsExchange/ConstWebservice.cs">
     <Files>
       <File FileName="Droid/Fragments/WebserviceTest.cs" Line="31" Column="6" />
       <File FileName="Droid/Fragments/DefaultActivity.cs" Line="119" Column="5" />
@@ -9,7 +9,7 @@
       <File FileName="Droid/WelcomeActivity.cs" Line="33" Column="38" />
       <File FileName="Droid/Adapter/ResultJewelryAdapter.cs" Line="47" Column="32" />
       <File FileName="Droid/Fragments/FragmentFinaResult.cs" Line="62" Column="2" />
-      <File FileName="JewelsExchange Status" />
+      <File FileName="JewelsExchange/ConstWebservice.cs" Line="3" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -25,5 +25,5 @@
     <Watch file="JewelsExchange/GetDataFromWebservice.cs" line="68" offsetX="718" offsetY="1005" expression="items" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.JewelsExchange.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B58C90BA-6AE9-426A-A53C-99E5092A6C9F" />
-  <MonoDevelop.Ide.ItemProperties.JewelsExchange.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.e3c4dcf4" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
+  <MonoDevelop.Ide.ItemProperties.JewelsExchange.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
 </Properties>
