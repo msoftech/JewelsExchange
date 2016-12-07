@@ -1,67 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="334">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="333">
-            <objects>
-                <viewController id="334" sceneMemberID="viewController" customClass="ViewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="331"/>
-                        <viewControllerLayoutGuide type="bottom" id="332"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="335" restorationIdentifier="Main">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews/>
-                    </view>
-                    <connections>
-                        <outlet property="Main" destination="335" id="name-outlet-335"/>
-                        <segue id="748" destination="341" kind="show" identifier="SignInSegue"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="336" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="417" y="146"/>
-        </scene>
-        <scene sceneID="340">
-            <objects>
-                <viewController id="341" sceneMemberID="viewController" customClass="ViewController_Stock">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="338"/>
-                        <viewControllerLayoutGuide type="bottom" id="339"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="342" restorationIdentifier="Stock">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="407" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="71" y="444" width="178" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" id="769" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="770"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="Stock" destination="342" id="name-outlet-342"/>
-                    </connections>
-                    <navigationItem title="Title" id="773" key="navigationItem"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="343" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="813" y="145"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina4"/>

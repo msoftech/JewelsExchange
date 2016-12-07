@@ -107,7 +107,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="ViewController_Stock.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -116,14 +115,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewController_Stock.cs" />
-    <Compile Include="ViewController_Stock.designer.cs">
-      <DependentUpon>ViewController_Stock.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\welcome.jpeg" />

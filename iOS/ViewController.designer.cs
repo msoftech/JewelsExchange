@@ -17,15 +17,11 @@ namespace JewelsExchange.iOS
         [Outlet]
         UIKit.UIButton Button { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView Main { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (Main != null) {
-                Main.Dispose ();
-                Main = null;
+            if (Button != null) {
+                Button.Dispose ();
+                Button = null;
             }
         }
     }
