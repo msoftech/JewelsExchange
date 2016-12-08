@@ -41,6 +41,24 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="29" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back3.jpeg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="599"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                <rect key="frame" x="20" y="41" width="280" height="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="JEWELS EXCHANGE">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1"/>
+                                            <font key="NSFont" name="Verdana-Bold" family="Verdana" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
@@ -74,4 +92,11 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <resources>
+        <image name="Back1.jpeg" width="168" height="300"/>
+        <image name="Back2.jpeg" width="185" height="272"/>
+        <image name="Back3.jpeg" width="194" height="259"/>
+        <image name="Menu5.png" width="16" height="16"/>
+        <image name="Search.png" width="32" height="32"/>
+    </resources>
 </document>

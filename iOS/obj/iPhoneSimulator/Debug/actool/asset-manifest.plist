@@ -6,8 +6,8 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/shiddic/Projects/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/actool/bundle/Assets.car</string>
-			<string>/Users/shiddic/Projects/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
+			<string>/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/actool/bundle/Assets.car</string>
+			<string>/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist</string>
 		</array>
 	</dict>
 	<key>com.apple.actool.document.warnings</key>
@@ -25,7 +25,7 @@
 				<string>./Data.dataset/[watch][][metal2v2][][2d][(null)]</string>
 			</array>
 			<key>catalog</key>
-			<string>/Users/shiddic/Projects/msoftech/JewelsExchange.git/iOS/Assets.xcassets</string>
+			<string>/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/Assets.xcassets</string>
 			<key>message</key>
 			<string>The data set "Data" has 8 unassigned children.</string>
 			<key>type</key>
