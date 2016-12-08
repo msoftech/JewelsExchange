@@ -20,22 +20,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="29" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back2.jpeg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
-                                <rect key="frame" x="20" y="41" width="280" height="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="JEWELS EXCHANGE">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1"/>
-                                            <font key="NSFont" name="Verdana-Bold" family="Verdana" size="24"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="31" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
-                                <rect key="frame" x="29" y="143" width="59" height="23"/>
+                                <rect key="frame" x="25" y="149" width="59" height="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -50,7 +36,7 @@
                                 </attributedString>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="32" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Enter the Email ID" usesAttributedText="YES">
-                                <rect key="frame" x="29" y="167" width="262" height="30"/>
+                                <rect key="frame" x="25" y="173" width="262" height="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <attributedString key="attributedText">
@@ -61,14 +47,26 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="59" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Enter the Password">
-                                <rect key="frame" x="29" y="236" width="262" height="30"/>
+                                <rect key="frame" x="22" y="233" width="262" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="60" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
-                                <rect key="frame" x="29" y="210" width="59" height="23"/>
+                                <rect key="frame" x="22" y="211" width="59" height="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -82,11 +80,99 @@
                                     </fragment>
                                 </attributedString>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="82" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="38" y="289" width="231" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.8" blue="1" alpha="1"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="LOGIN">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="Verdana-Bold" family="Verdana" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="86" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="38" y="327" width="231" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SIGNUP">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="Verdana-Bold" family="Verdana" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="94" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="20" y="456" width="280" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="95" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                <rect key="frame" x="156" y="460" width="7" height="37"/>
+                                <nil key="textColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="1"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="98" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                <rect key="frame" x="20" y="429" width="280" height="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Signup with your social account">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.6" green="0.6" blue="0.6" alpha="1"/>
+                                            <font key="NSFont" name="Helvetica" family="Helvetica" size="11"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="117" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Facebook.png">
+                                <rect key="frame" x="20" y="460" width="134" height="37"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="118" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Gmail.png">
+                                <rect key="frame" x="166" y="460" width="127" height="37"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="119" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Company.png">
+                                <rect key="frame" x="20" y="42" width="270" height="57"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="txtEmailid" destination="32" id="name-outlet-32"/>
                         <outlet property="txtPassword" destination="59" id="name-outlet-59"/>
+                        <outlet property="lblSeparater" destination="95" id="name-outlet-95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,5 +189,8 @@
         <image name="Back3.jpeg" width="194" height="259"/>
         <image name="Menu5.png" width="16" height="16"/>
         <image name="Search.png" width="32" height="32"/>
+        <image name="Facebook.png" width="192" height="59"/>
+        <image name="Gmail.png" width="188" height="59"/>
+        <image name="Company.png" width="402" height="88"/>
     </resources>
 </document>

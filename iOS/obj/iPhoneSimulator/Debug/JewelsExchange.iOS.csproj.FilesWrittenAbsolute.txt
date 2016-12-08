@@ -14,3 +14,6 @@
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.dll
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.Primitives.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Facebook.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Gmail.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Company.png

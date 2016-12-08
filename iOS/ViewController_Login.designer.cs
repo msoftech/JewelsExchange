@@ -16,6 +16,10 @@ namespace JewelsExchange.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblSeparater { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtEmailid { get; set; }
 
         [Outlet]
@@ -24,6 +28,11 @@ namespace JewelsExchange.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (lblSeparater != null) {
+                lblSeparater.Dispose ();
+                lblSeparater = null;
+            }
+
             if (txtEmailid != null) {
                 txtEmailid.Dispose ();
                 txtEmailid = null;

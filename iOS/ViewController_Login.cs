@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Foundation;
 using UIKit;
 
 namespace JewelsExchange.iOS
@@ -13,25 +13,30 @@ namespace JewelsExchange.iOS
 		public ViewController_Login(IntPtr p) : base(p)
 {
 		}
-		//public ViewController_Login(IntPtr obj)
-		//{
-		//	Initializer();
-		//}
-		//public void Initializer()
-		//{
-			
-
-		//}
+	
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 			txtEmailid.BackgroundColor = UIColor.Clear;
-			txtEmailid.BorderStyle = UITextBorderStyle.None;
-			txtEmailid.Font = UIFont.FromName("HollywoodHills", 20f);
+			txtEmailid.BorderStyle = UITextBorderStyle.RoundedRect ;
+			txtEmailid.Font = UIFont.FromName("HollywoodHills", 18f);
+			txtEmailid.TextColor = UIColor.White;
+			txtEmailid.AttributedPlaceholder = new NSAttributedString("Enter the Email-ID", new UIStringAttributes() { ForegroundColor = UIColor.Gray });
+			txtEmailid.Layer.BorderColor = UIColor.White.CGColor;
+			txtEmailid.Layer.BorderWidth = 1f;
+
 
 			txtPassword.BackgroundColor = UIColor.Clear;
-			txtPassword.BorderStyle = UITextBorderStyle.None;
-			txtPassword.Font = UIFont.FromName("HollywoodHills", 20f);
+			txtPassword.BorderStyle = UITextBorderStyle.RoundedRect;
+			txtPassword.Font = UIFont.FromName("HollywoodHills", 18f);
+			txtPassword.TextColor = UIColor.White;
+			txtPassword.AttributedPlaceholder = new NSAttributedString("Enter the Password", new UIStringAttributes() { ForegroundColor = UIColor.Gray });
+			txtPassword.Layer.BorderColor = UIColor.White.CGColor;
+			txtPassword.Layer.BorderWidth = 1f;
+
+
+			lblSeparater.Frame = new CoreGraphics.CGRect(160, 460, 1.5, 40);
+
 		}
 
 		public override void DidReceiveMemoryWarning()
