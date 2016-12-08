@@ -116,5 +116,12 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Back1.jpeg" />
+    <BundleResource Include="Resources\Back2.jpeg" />
+    <BundleResource Include="Resources\Back3.jpeg" />
+    <BundleResource Include="Resources\Menu5.png" />
+    <BundleResource Include="Resources\Search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
