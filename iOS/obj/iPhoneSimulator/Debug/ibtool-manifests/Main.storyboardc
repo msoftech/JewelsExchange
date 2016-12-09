@@ -7,6 +7,106 @@
 	<key>com.apple.ibtool.document.notices</key>
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
-	<dict/>
+	<dict>
+		<key>1814</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>1814</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>1867</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>1867</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>1874</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>1874</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>782</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>782</string>
+				</array>
+				<key>message</key>
+				<string>Segues initiated directly from view controllers must have an identifier</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>782</string>
+				</array>
+				<key>message</key>
+				<string>Push segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>838</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>838</string>
+				</array>
+				<key>message</key>
+				<string>Segues initiated directly from view controllers must have an identifier</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>838</string>
+				</array>
+				<key>message</key>
+				<string>Push segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>

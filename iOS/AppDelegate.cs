@@ -9,7 +9,7 @@ namespace JewelsExchange.iOS
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
-		//UIWindow window;
+		UIWindow window;
 		public override UIWindow Window
 		{
 			get;
@@ -22,15 +22,15 @@ namespace JewelsExchange.iOS
 			// If not required for your application you can safely delete this method
 
 
-			//window = new UIWindow(UIScreen.MainScreen.Bounds);
+			window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			//var storyboard = UIStoryboard.FromName("Main", null);
+			var storyboard = UIStoryboard.FromName("Main", null);
 			//UINavigationController nav = new UINavigationController();
 
 			//if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
 			//{
-				//ViewController_Login login = storyboard.InstantiateViewController("ViewController_Login") as ViewController_Login ;
-				//window.RootViewController = login;
+				ViewController_Login login = storyboard.InstantiateViewController("ViewController_Login") as ViewController_Login ;
+				window.RootViewController = login;
 
 				//ViewController_Stock login = storyboard.InstantiateViewController("ViewController_Stock") as ViewController_Stock ;
 				//window.RootViewController = login;

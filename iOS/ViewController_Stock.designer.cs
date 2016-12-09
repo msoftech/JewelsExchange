@@ -16,13 +16,30 @@ namespace JewelsExchange.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UINavigationBar mnuNavBar { get; set; }
+        UIKit.UIBarButtonItem btnMenu { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearch { get; set; }
+
+        [Action ("BtnMenu_Activated:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnMenu_Activated (UIKit.UIBarButtonItem sender);
+
+        [Action ("BtnSearch_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnSearch_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
-            if (mnuNavBar != null) {
-                mnuNavBar.Dispose ();
-                mnuNavBar = null;
+            if (btnMenu != null) {
+                btnMenu.Dispose ();
+                btnMenu = null;
+            }
+
+            if (btnSearch != null) {
+                btnSearch.Dispose ();
+                btnSearch = null;
             }
         }
     }
