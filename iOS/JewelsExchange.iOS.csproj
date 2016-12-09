@@ -108,6 +108,7 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="ViewController_Login.xib" />
+    <InterfaceDefinition Include="ViewController_Stock.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -120,6 +121,8 @@
     <Compile Include="ViewController_Login.designer.cs">
       <DependentUpon>ViewController_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewController_Stock.cs" />
+    <Compile Include="ViewController_Stock.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Back1.jpeg" />

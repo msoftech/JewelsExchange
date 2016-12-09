@@ -22,17 +22,30 @@ namespace JewelsExchange.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-			UIAlertView alert = new UIAlertView()
-			{
-				Title = "alert title",
-				Message = "this is a simple alert"
-			};
-			alert.AddButton("OK");
-			alert.Show();
-			UINavigationBar nb = new UINavigationBar();
-			nb.BackgroundColor = UIColor.Red ;
-			View.AddSubview(nb);
-			// Perform any additional setup after loading the view, typically from a nib.
+			//UIAlertView alert = new UIAlertView()
+			//{
+			//	Title = "alert title",
+			//	Message = "this is a simple alert"
+			//};
+			//alert.AddButton("OK");
+			//alert.Show();
+			UIBarButtonItem  customButton = new UIBarButtonItem(
+			   UIImage.FromBundle("Menu5"),
+			   UIBarButtonItemStyle.Plain,
+			   (s, e) =>
+			   {
+				   UIAlertView alert = new UIAlertView()
+				   {
+				   	Title = "alert title",
+				   	Message = "this is a simple alert"
+				   };
+				   alert.AddButton("OK");
+				   alert.Show();
+			   }
+			   );
+			NavigationItem.RightBarButtonItem = customButton;
+			//mnuNavBar.AddSubview(NavigationItem);
+
 		}
 
 		public override void DidReceiveMemoryWarning()

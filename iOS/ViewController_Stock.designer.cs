@@ -14,8 +14,16 @@ namespace JewelsExchange.iOS
     [Register ("ViewController_Stock")]
     partial class ViewController_Stock
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UINavigationBar mnuNavBar { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (mnuNavBar != null) {
+                mnuNavBar.Dispose ();
+                mnuNavBar = null;
+            }
         }
     }
 }

@@ -16,6 +16,14 @@ namespace JewelsExchange.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnLogin { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSignup { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblSeparater { get; set; }
 
         [Outlet]
@@ -26,8 +34,22 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtPassword { get; set; }
 
+        [Action ("BtnLogin_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnLogin_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (btnLogin != null) {
+                btnLogin.Dispose ();
+                btnLogin = null;
+            }
+
+            if (btnSignup != null) {
+                btnSignup.Dispose ();
+                btnSignup = null;
+            }
+
             if (lblSeparater != null) {
                 lblSeparater.Dispose ();
                 lblSeparater = null;

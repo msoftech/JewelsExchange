@@ -88,7 +88,7 @@
                                         <fragment content="LOGIN">
                                             <attributes>
                                                 <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                                <font key="NSFont" name="Verdana-Bold" family="Verdana" size="13"/>
+                                                <font key="NSFont" name="Verdana-Bold" family="Verdana" size="12"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -99,6 +99,10 @@
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="BtnLogin_TouchUpInside:" destination="11" id="250" eventType="touchUpInside"/>
+                                    <segue id="630" destination="128" kind="show" identifier="lnkStock"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="86" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
                                 <rect key="frame" x="38" y="327" width="231" height="30"/>
@@ -108,7 +112,7 @@
                                         <fragment content="SIGNUP">
                                             <attributes>
                                                 <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                                <font key="NSFont" name="Verdana-Bold" family="Verdana" size="13"/>
+                                                <font key="NSFont" name="Verdana-Bold" family="Verdana" size="12"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
@@ -173,11 +177,48 @@
                         <outlet property="txtEmailid" destination="32" id="name-outlet-32"/>
                         <outlet property="txtPassword" destination="59" id="name-outlet-59"/>
                         <outlet property="lblSeparater" destination="95" id="name-outlet-95"/>
+                        <outlet property="btnLogin" destination="82" id="name-outlet-82"/>
+                        <outlet property="btnSignup" destination="86" id="name-outlet-86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="432" y="93"/>
+            <point key="canvasLocation" x="278" y="104"/>
+        </scene>
+        <scene sceneID="127">
+            <objects>
+                <viewController id="128" sceneMemberID="viewController" customClass="ViewController_Stock" storyboardIdentifier="ViewController_Stock">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="125"/>
+                        <viewControllerLayoutGuide type="bottom" id="126"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="129">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="132" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="43" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" id="162" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="23" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="163"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="mnuNavBar" destination="162" id="name-outlet-162"/>
+                    </connections>
+                    <navigationItem title="Title" id="414" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="130" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="91"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
