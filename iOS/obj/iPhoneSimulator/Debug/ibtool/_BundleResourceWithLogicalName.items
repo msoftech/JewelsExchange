@@ -25,6 +25,10 @@
       <LogicalName>Main.storyboardc/1840-view-1841.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/1954-view-1955.nib">
+      <LogicalName>Main.storyboardc/1954-view-1955.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/714-view-715.nib">
       <LogicalName>Main.storyboardc/714-view-715.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -61,6 +65,10 @@
       <LogicalName>Main.storyboardc/ViewController_StockList.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_temp.nib">
+      <LogicalName>Main.storyboardc/ViewController_temp.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Login.nib">
       <LogicalName>ViewController_Login.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -79,6 +87,10 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_StockList.nib">
       <LogicalName>ViewController_StockList.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_temp.nib">
+      <LogicalName>ViewController_temp.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
   </ItemGroup>

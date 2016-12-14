@@ -11,19 +11,11 @@ using UIKit;
 
 namespace JewelsExchange.iOS
 {
-    [Register ("ViewController_Menu")]
-    partial class ViewController_Menu
+    [Register ("Graw")]
+    partial class Graw
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView table { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (table != null) {
-                table.Dispose ();
-                table = null;
-            }
         }
     }
 }

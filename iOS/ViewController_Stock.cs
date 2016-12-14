@@ -84,7 +84,6 @@ namespace JewelsExchange.iOS
 
 
 
-
 			//UIAlertView alert = new UIAlertView()
 			//{
 			//	Title = "alert title",

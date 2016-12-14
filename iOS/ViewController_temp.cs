@@ -7,29 +7,14 @@ using UIKit;
 
 namespace JewelsExchange.iOS
 {
-	public partial class ViewController_StockList : UIViewController
+	public partial class ViewController_temp : UIViewController
 	{
 		WebDataModel<ResultJewelry> viewModel;
-		partial void BtnStockDetails_TouchUpInside(UIButton sender)
-		{
-			try
-			{
-				ViewController_StockDetails controller = this.Storyboard.InstantiateViewController("ViewController_StockDetails") as ViewController_StockDetails;
-				this.NavigationController.PushViewController(controller, true);
-			}
-			catch (Exception ex)
-			{
-				Console.Write(ex.ToString());
-			}
-		}
 
-
-
-
-		public ViewController_StockList() : base("ViewController_StockList", null)
+		public ViewController_temp() : base("ViewController_temp", null)
 		{
 		}
-		public ViewController_StockList(IntPtr ptr) : base(ptr)
+		public ViewController_temp(IntPtr ptr) : base(ptr)
 		{
 			initialize();
 		}
@@ -46,13 +31,12 @@ namespace JewelsExchange.iOS
 
 			List<ResultJewelry> localModels = new List<ResultJewelry>();
 			//localModels.Add(null);
-			table.Source = new TableSource(localModels);
+			table1.Source = new TableSourceTemp(localModels);
 			loadData("AF MAN01", 0, 10, "n", false);
 			//string[] tableItems = new string[] { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
 			//table.Source = new TableSource(tableItems);
 			//Add(table);
-
-
+			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
 		public override void DidReceiveMemoryWarning()
@@ -79,15 +63,13 @@ namespace JewelsExchange.iOS
 		{
 			List<ResultJewelry> mModels = new List<ResultJewelry>(wDatas);
 
-			table.Source = new TableSource(mModels);
-			table.ReloadData();
+			table1.Source = new TableSourceTemp(mModels);
+			table1.ReloadData();
 			//Add(table);
 		}
-
-
 	}
 
-	public class TableSource : UITableViewSource
+	public class TableSourceTemp : UITableViewSource
 	{
 
 		List<ResultJewelry> models;
@@ -98,7 +80,7 @@ namespace JewelsExchange.iOS
 		//	TableItems = items;
 		//}
 
-		public TableSource(List<ResultJewelry> models)
+		public TableSourceTemp(List<ResultJewelry> models)
 		{
 			this.models = models;
 		}
@@ -113,26 +95,52 @@ namespace JewelsExchange.iOS
 			UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
 			string item = models[indexPath.Row].JewelBaseDescName; //TableItems[indexPath.Row];
 
-			//---- if there are no cells to reuse, create a new one
-			if (cell == null)
-			{ //cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier); 
-			  //cell = new UITableViewCell(UITableViewCellStyle.Subtitle, CellIdentifier);
-				cell = new UITableViewCell(UITableViewCellStyle.Value1 , CellIdentifier);
-			}
+
+			//if (cell == null)
+			//{ 
+			//	cell = new UITableViewCell(UITableViewCellStyle.Value1, CellIdentifier);
+			//}
 
 			//var cell = tableView.DequeueReusableCell(CellID, indexPath) as GrowRowTableCell;
+
+		
+			cell = ccell;
+
+
 
 			cell.TextLabel.Text = item;
 			cell.DetailTextLabel.Text = models[indexPath.Row].StockNumber;// tableItems[indexPath.Row].SubHeading;
 			cell.ImageView.Image = UIImage.FromBundle("User");// UIImage.FromFile("Images/" + tableItems[indexPath.Row].ImageName);
-			//cell.RowHeight = UITableView.AutomaticDimension;
-			//cell.EstimatedRowHeight = new nfloat(105.0);
-			//cell.RowHeight += (object sender, EventArgs e) =>
-
+															
 			return cell;
 		}
 
 
+	}
+
+	public class TableViewCustomCell : UITableViewCell
+	{
+		public UILabel  lbl2;
+		public UILabel lbl1;
+		public UILabel lbl3;
+
+
+		public TableViewCustomCell()
+		{
+			lbl2 = new UILabel();
+			lbl1 = new UILabel();
+			lbl3 = new UILabel();
+		}
+
+		public UITableViewCell GetCellFrame(string v1,string v2,string v3)
+		{
+			TableViewCustomCell ccell = new TableViewCustomCell();
+			lbl2 = new UILabel(new System.Drawing.RectangleF(100f, 10f, 500, 30f));
+
+
+
+			return ccell;
+		}
 	}
 }
 

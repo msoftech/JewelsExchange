@@ -6,7 +6,18 @@ namespace JewelsExchange.iOS
 {
 	public partial class ViewController_StockDetails : UIViewController
 	{
-
+		partial void BtnHome_TouchUpInside(UIButton sender)
+		{
+		try
+			{
+				ViewController_temp controller = this.Storyboard.InstantiateViewController("ViewController_temp") as ViewController_temp;
+				this.NavigationController.PushViewController(controller, true);
+			}
+			catch (Exception ex)
+			{
+				Console.Write(ex.ToString());
+			}
+		}
 
 		public ViewController_StockDetails() : base("ViewController_StockDetails", null)
 		{

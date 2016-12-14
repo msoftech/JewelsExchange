@@ -18,6 +18,10 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnStockDetails { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView table { get; set; }
+
         [Action ("BtnStockDetails_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnStockDetails_TouchUpInside (UIKit.UIButton sender);
@@ -27,6 +31,11 @@ namespace JewelsExchange.iOS
             if (btnStockDetails != null) {
                 btnStockDetails.Dispose ();
                 btnStockDetails = null;
+            }
+
+            if (table != null) {
+                table.Dispose ();
+                table = null;
             }
         }
     }

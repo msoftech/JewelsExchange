@@ -115,6 +115,7 @@
     <InterfaceDefinition Include="ViewController_StockList.xib" />
     <InterfaceDefinition Include="ViewController_StockDetails.xib" />
     <InterfaceDefinition Include="ViewController_Menu.xib" />
+    <InterfaceDefinition Include="ViewController_temp.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -140,6 +141,14 @@
     <Compile Include="ViewController_Menu.cs" />
     <Compile Include="ViewController_Menu.designer.cs">
       <DependentUpon>ViewController_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_temp.cs" />
+    <Compile Include="ViewController_temp.designer.cs">
+      <DependentUpon>ViewController_temp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graw.cs" />
+    <Compile Include="Graw.designer.cs">
+      <DependentUpon>Graw.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

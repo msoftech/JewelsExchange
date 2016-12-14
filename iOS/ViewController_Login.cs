@@ -12,16 +12,10 @@ namespace JewelsExchange.iOS
 			//this.PerformSegue("lnkStock", sender);
 			try
 			{
-
 				//ViewController_StockList controller = this.Storyboard.InstantiateViewController("ViewController_StockList") as ViewController_StockList;
 				//this.NavigationController.PushViewController(controller, true);
-
-
 				//UIViewController  controller = this.Storyboard.InstantiateViewController("Navigation") as UIViewController ;
 				//this.NavigationController.PushViewController(controller, true);
-
-
-
 			}
 			catch (Exception ex)
 			{
