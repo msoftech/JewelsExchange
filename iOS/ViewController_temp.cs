@@ -24,7 +24,7 @@ namespace JewelsExchange.iOS
 		private void InitializeTableView()
 		{
 			//tableView = new UITableView();
-			tableView.RegisterClassForCellReuse(typeof(TableCell), TableCell.Identifier);
+			//tableView.RegisterClassForCellReuse(typeof(TableCell), TableCell.Identifier);
 			tableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			tableView.RowHeight = UITableView.AutomaticDimension;
 			tableView.EstimatedRowHeight = 50;

@@ -39,17 +39,31 @@ namespace JewelsExchange.iOS
 			// do your initialization here
 		}
 
-	
+	private void InitializeTableView()
+		{
+			//tableView = new UITableView();
+			TableViewSearch.RegisterClassForCellReuse(typeof(TableCell), TableCell.Identifier);
+			TableViewSearch.SeparatorStyle = UITableViewCellSeparatorStyle.None;
+			TableViewSearch.RowHeight = UITableView.AutomaticDimension;
+			TableViewSearch.EstimatedRowHeight = 50;
+			//var vegtables = LoadVegatables();
+			//tableView.Source = new VegetableTableViewSource(vegtables);
+			//View.AddSubview(tableView);
+
+			List<ResultJewelry> localModels = new List<ResultJewelry>();
+			//localModels.Add(null);
+			TableViewSearch.RowHeight = UITableView.AutomaticDimension;
+			TableViewSearch.EstimatedRowHeight = 100;
+			TableViewSearch.Source = new TableSourceTemp(localModels);
+
+			loadData("AF MAN01", 0, 10, "n", false);
+		}
 
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 			viewModel = new WebDataModel<ResultJewelry>();
-
-			List<ResultJewelry> localModels = new List<ResultJewelry>();
-			//localModels.Add(null);
-			TableViewSearch.Source = new TableSource(localModels);
-			loadData("AF MAN01", 0, 10, "n", false);
+			InitializeTableView();
 			//string[] tableItems = new string[] { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
 			//table.Source = new TableSource(tableItems);
 			//Add(table);

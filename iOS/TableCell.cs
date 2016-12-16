@@ -18,6 +18,7 @@ namespace JewelsExchange.iOS
 			img_profile.Image = image;
 			lbl_name.Text = models[indexPath.Row].JewelBaseDescName;
 			lbl_Details.Text = "Kannan";
+
 		}
 	}
 }
