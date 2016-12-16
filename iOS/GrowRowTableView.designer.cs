@@ -11,19 +11,11 @@ using UIKit;
 
 namespace JewelsExchange.iOS
 {
-    [Register ("Graw")]
-    partial class Graw
+    [Register ("GrowRowTableView")]
+    partial class GrowRowTableView
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel label123 { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (label123 != null) {
-                label123.Dispose ();
-                label123 = null;
-            }
         }
     }
 }

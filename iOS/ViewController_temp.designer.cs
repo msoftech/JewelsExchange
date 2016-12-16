@@ -16,13 +16,13 @@ namespace JewelsExchange.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView table1 { get; set; }
+        UIKit.UITableView tableView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (table1 != null) {
-                table1.Dispose ();
-                table1 = null;
+            if (tableView != null) {
+                tableView.Dispose ();
+                tableView = null;
             }
         }
     }

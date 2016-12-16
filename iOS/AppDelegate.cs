@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using System;
+using Foundation;
 using UIKit;
 
 namespace JewelsExchange.iOS
@@ -10,6 +11,7 @@ namespace JewelsExchange.iOS
 	{
 		// class-level declarations
 		UIWindow window;
+		//public static event EventHandler RowHeight = delegate { };
 		public override UIWindow Window
 		{
 			get;

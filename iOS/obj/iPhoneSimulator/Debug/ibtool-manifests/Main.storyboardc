@@ -38,21 +38,6 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>1905</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>1905</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>2110</key>
 		<array>
 			<dict>
@@ -78,21 +63,6 @@
 				<string>IBDeprecated</string>
 				<key>type-value</key>
 				<integer>7</integer>
-			</dict>
-		</array>
-		<key>2113</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>2113</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
 			</dict>
 		</array>
 		<key>782</key>

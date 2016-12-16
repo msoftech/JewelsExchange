@@ -11,31 +11,36 @@ using UIKit;
 
 namespace JewelsExchange.iOS
 {
-    [Register ("ViewController_StockList")]
-    partial class ViewController_StockList
+    [Register ("TableCell")]
+    partial class TableCell
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnStockDetails { get; set; }
+        UIKit.UIImageView img_profile { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView TableViewSearch { get; set; }
+        UIKit.UILabel lbl_Details { get; set; }
 
-        [Action ("BtnStockDetails_TouchUpInside:")]
+        [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void BtnStockDetails_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UILabel lbl_name { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (btnStockDetails != null) {
-                btnStockDetails.Dispose ();
-                btnStockDetails = null;
+            if (img_profile != null) {
+                img_profile.Dispose ();
+                img_profile = null;
             }
 
-            if (TableViewSearch != null) {
-                TableViewSearch.Dispose ();
-                TableViewSearch = null;
+            if (lbl_Details != null) {
+                lbl_Details.Dispose ();
+                lbl_Details = null;
+            }
+
+            if (lbl_name != null) {
+                lbl_name.Dispose ();
+                lbl_name = null;
             }
         }
     }

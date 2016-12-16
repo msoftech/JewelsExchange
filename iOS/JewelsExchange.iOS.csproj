@@ -146,9 +146,9 @@
     <Compile Include="ViewController_temp.designer.cs">
       <DependentUpon>ViewController_temp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Graw.cs" />
-    <Compile Include="Graw.designer.cs">
-      <DependentUpon>Graw.cs</DependentUpon>
+    <Compile Include="TableCell.cs" />
+    <Compile Include="TableCell.designer.cs">
+      <DependentUpon>TableCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

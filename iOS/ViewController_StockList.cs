@@ -39,6 +39,8 @@ namespace JewelsExchange.iOS
 			// do your initialization here
 		}
 
+	
+
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
@@ -46,7 +48,7 @@ namespace JewelsExchange.iOS
 
 			List<ResultJewelry> localModels = new List<ResultJewelry>();
 			//localModels.Add(null);
-			table.Source = new TableSource(localModels);
+			TableViewSearch.Source = new TableSource(localModels);
 			loadData("AF MAN01", 0, 10, "n", false);
 			//string[] tableItems = new string[] { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
 			//table.Source = new TableSource(tableItems);
@@ -79,8 +81,8 @@ namespace JewelsExchange.iOS
 		{
 			List<ResultJewelry> mModels = new List<ResultJewelry>(wDatas);
 
-			table.Source = new TableSource(mModels);
-			table.ReloadData();
+			TableViewSearch.Source = new TableSource(mModels);
+			TableViewSearch.ReloadData();
 			//Add(table);
 		}
 
@@ -92,11 +94,7 @@ namespace JewelsExchange.iOS
 
 		List<ResultJewelry> models;
 		string CellIdentifier = "TableCell";
-		//string CellIdentifier = "GrowCell";
-		//public TableSource(string[] items)
-		//{
-		//	TableItems = items;
-		//}
+
 
 		public TableSource(List<ResultJewelry> models)
 		{
@@ -107,28 +105,15 @@ namespace JewelsExchange.iOS
 		{
 			return models.Count;
 		}
+		//public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+		//{
+		//	return 70;
+		//}
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
-			UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
-			string item = models[indexPath.Row].JewelBaseDescName; //TableItems[indexPath.Row];
-
-			//---- if there are no cells to reuse, create a new one
-			if (cell == null)
-			{ //cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier); 
-			  //cell = new UITableViewCell(UITableViewCellStyle.Subtitle, CellIdentifier);
-				cell = new UITableViewCell(UITableViewCellStyle.Value1 , CellIdentifier);
-			}
-
-			//var cell = tableView.DequeueReusableCell(CellID, indexPath) as GrowRowTableCell;
-
-			cell.TextLabel.Text = item;
-			cell.DetailTextLabel.Text = models[indexPath.Row].StockNumber;// tableItems[indexPath.Row].SubHeading;
-			cell.ImageView.Image = UIImage.FromBundle("User");// UIImage.FromFile("Images/" + tableItems[indexPath.Row].ImageName);
-			//cell.RowHeight = UITableView.AutomaticDimension;
-			//cell.EstimatedRowHeight = new nfloat(105.0);
-			//cell.RowHeight += (object sender, EventArgs e) =>
-
+			var cell = tableView.DequeueReusableCell(CellIdentifier) as TableCell;
+			cell.UpdateCell(models, UIImage.FromFile("User.png"), indexPath);
 			return cell;
 		}
 
