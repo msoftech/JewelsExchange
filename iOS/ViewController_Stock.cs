@@ -10,13 +10,58 @@ namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Stock : UIViewController
 	{
+		partial void BtnSearchKarat_TouchUpInside(UIButton sender)
+		{
+			pnlSearch.Hidden = false;
+			SearchBar.Placeholder = "Karat Search";
+		}
+
+		partial void BtnSearchCategory_TouchUpInside(UIButton sender)
+		{
+			pnlSearch.Hidden = false;
+			SearchBar.Placeholder = "Category Search";
+		}
+
+		partial void BtnSearchWorkType_TouchUpInside(UIButton sender)
+		{
+			pnlSearch.Hidden = false;
+			SearchBar.Placeholder = "Worktype Search";
+		}
+
+
+		partial void btnSearchClose_Click(UIButton sender)
+		{
+			pnlSearch.Hidden = true;
+			SearchBar.Text = "";
+		}
+
+		partial void btnSearchRegion_Click(UIButton sender)
+		{
+			pnlSearch.Hidden = false;
+			SearchBar.Placeholder = "Region Search";
+		}
+
+		partial void TabControl_Selection(UISegmentedControl sender)
+		{
+			var selectedSegmentId = (sender as UISegmentedControl).SelectedSegment;
+			if (selectedSegmentId == 0)
+			{
+				pnlStock.Hidden = false;
+				pnlCloseout.Hidden = true;
+			}
+			else
+			{
+				pnlStock.Hidden = true;
+				pnlCloseout.Hidden = false ;
+			}
+		}
 
 		public SidebarNavigation.SidebarController SidebarController { get; private set; }
 		public bool bMenuStatus = false;
 
 		partial void BtnMenu_Activated(UIBarButtonItem sender)
 		{
-
+			
 			var introController = (ViewController_Stock)Storyboard.InstantiateViewController("ViewController_Stock");
 			var menuController = (ViewController_Menu)Storyboard.InstantiateViewController("ViewController_Menu");
 
@@ -81,6 +126,10 @@ namespace JewelsExchange.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
+			pnlCloseout.Hidden = true;
+			pnlSearch.Hidden = true;
+			pnlSearch.Frame = new CoreGraphics.CGRect(0,62,320,506);
 
 
 

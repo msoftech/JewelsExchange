@@ -6,22 +6,22 @@ namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Login : UIViewController
 	{
-		partial void BtnLogin_TouchUpInside(UIButton sender)
-		{
+		//partial void BtnLogin_TouchUpInside(UIButton sender)
+		//{
 
-			//this.PerformSegue("lnkStock", sender);
-			try
-			{
-				//ViewController_StockList controller = this.Storyboard.InstantiateViewController("ViewController_StockList") as ViewController_StockList;
-				//this.NavigationController.PushViewController(controller, true);
-				//UIViewController  controller = this.Storyboard.InstantiateViewController("Navigation") as UIViewController ;
-				//this.NavigationController.PushViewController(controller, true);
-			}
-			catch (Exception ex)
-			{
-				Console.Write(ex.ToString());
-			}
-		}
+		//	//this.PerformSegue("lnkStock", sender);
+		//	try
+		//	{
+		//		//ViewController_Stock controller = this.Storyboard.InstantiateViewController("ViewController_Stock") as ViewController_Stock;
+		//		//this.NavigationController.PushViewController(controller, true);
+		//		UIViewController  controller = this.Storyboard.InstantiateViewController("Navigation") as UIViewController ;
+		//		this.NavigationController.PushViewController(controller, true);
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		Console.Write(ex.ToString());
+		//	}
+		//}
 		//ex.ToString()	"System.NullReferenceException: Object reference not set to an instance of an object\n  at JewelsExchange.iOS.ViewController_Login.BtnLogin_TouchUpInside (UIKit.UIButton sender) [0x00020] in /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/ViewController_Login.cs:16 "	string
 		public ViewController_Login() : base("ViewController_Main", null)
 		{

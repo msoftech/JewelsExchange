@@ -16,8 +16,8 @@ namespace JewelsExchange.iOS
 		public void UpdateCell(List<ResultJewelry> models, UIImage image, NSIndexPath indexPath)
 		{
 			img_profile.Image = image;
-			lbl_name.Text = models[indexPath.Row].JewelBaseDescName;
-			lbl_Details.Text = "Kannan";
+			lbl1.Text = models[indexPath.Row].JewelBaseDescName;
+			lbl2.Text = "Kannan";
 
 		}
 	}

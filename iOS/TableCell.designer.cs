@@ -20,11 +20,35 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel lbl_Details { get; set; }
+        UIKit.UILabel lbl1 { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel lbl_name { get; set; }
+        UIKit.UILabel lbl2 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl3 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl4 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl5 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl6 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl7 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl8 { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -33,14 +57,44 @@ namespace JewelsExchange.iOS
                 img_profile = null;
             }
 
-            if (lbl_Details != null) {
-                lbl_Details.Dispose ();
-                lbl_Details = null;
+            if (lbl1 != null) {
+                lbl1.Dispose ();
+                lbl1 = null;
             }
 
-            if (lbl_name != null) {
-                lbl_name.Dispose ();
-                lbl_name = null;
+            if (lbl2 != null) {
+                lbl2.Dispose ();
+                lbl2 = null;
+            }
+
+            if (lbl3 != null) {
+                lbl3.Dispose ();
+                lbl3 = null;
+            }
+
+            if (lbl4 != null) {
+                lbl4.Dispose ();
+                lbl4 = null;
+            }
+
+            if (lbl5 != null) {
+                lbl5.Dispose ();
+                lbl5 = null;
+            }
+
+            if (lbl6 != null) {
+                lbl6.Dispose ();
+                lbl6 = null;
+            }
+
+            if (lbl7 != null) {
+                lbl7.Dispose ();
+                lbl7 = null;
+            }
+
+            if (lbl8 != null) {
+                lbl8.Dispose ();
+                lbl8 = null;
             }
         }
     }

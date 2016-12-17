@@ -119,10 +119,10 @@ namespace JewelsExchange.iOS
 		{
 			return models.Count;
 		}
-		//public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
-		//{
-		//	return 70;
-		//}
+		public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+		{
+			return 100;
+		}
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{

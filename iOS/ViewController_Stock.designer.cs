@@ -22,6 +22,50 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSearch { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearchCategory { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearchClose { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearchKarat { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearchRegion { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearchWorkType { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UINavigationItem mnuStockMenu { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView pnlCloseout { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIVisualEffectView pnlSearch { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView pnlStock { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISearchBar SearchBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISegmentedControl TabControl { get; set; }
+
         [Action ("BtnMenu_Activated:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnMenu_Activated (UIKit.UIBarButtonItem sender);
@@ -29,6 +73,30 @@ namespace JewelsExchange.iOS
         [Action ("BtnSearch_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnSearch_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("BtnSearchCategory_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnSearchCategory_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("btnSearchClose_Click:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void btnSearchClose_Click (UIKit.UIButton sender);
+
+        [Action ("BtnSearchKarat_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnSearchKarat_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("btnSearchRegion_Click:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void btnSearchRegion_Click (UIKit.UIButton sender);
+
+        [Action ("BtnSearchWorkType_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnSearchWorkType_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("TabControl_Selection:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void TabControl_Selection (UIKit.UISegmentedControl sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -40,6 +108,61 @@ namespace JewelsExchange.iOS
             if (btnSearch != null) {
                 btnSearch.Dispose ();
                 btnSearch = null;
+            }
+
+            if (btnSearchCategory != null) {
+                btnSearchCategory.Dispose ();
+                btnSearchCategory = null;
+            }
+
+            if (btnSearchClose != null) {
+                btnSearchClose.Dispose ();
+                btnSearchClose = null;
+            }
+
+            if (btnSearchKarat != null) {
+                btnSearchKarat.Dispose ();
+                btnSearchKarat = null;
+            }
+
+            if (btnSearchRegion != null) {
+                btnSearchRegion.Dispose ();
+                btnSearchRegion = null;
+            }
+
+            if (btnSearchWorkType != null) {
+                btnSearchWorkType.Dispose ();
+                btnSearchWorkType = null;
+            }
+
+            if (mnuStockMenu != null) {
+                mnuStockMenu.Dispose ();
+                mnuStockMenu = null;
+            }
+
+            if (pnlCloseout != null) {
+                pnlCloseout.Dispose ();
+                pnlCloseout = null;
+            }
+
+            if (pnlSearch != null) {
+                pnlSearch.Dispose ();
+                pnlSearch = null;
+            }
+
+            if (pnlStock != null) {
+                pnlStock.Dispose ();
+                pnlStock = null;
+            }
+
+            if (SearchBar != null) {
+                SearchBar.Dispose ();
+                SearchBar = null;
+            }
+
+            if (TabControl != null) {
+                TabControl.Dispose ();
+                TabControl = null;
             }
         }
     }
