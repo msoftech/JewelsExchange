@@ -45,7 +45,7 @@ namespace JewelsExchange.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-
+			imgProductImage.Image = UIImage.FromFile("User.png");
 			lblDetails.Text = models[indexPath.Row].JewelBaseDescName;
 			//lblDetails.Text = sVar1;
 			//lblDetails2.Text = StudentName;

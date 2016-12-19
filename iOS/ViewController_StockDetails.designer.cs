@@ -16,6 +16,10 @@ namespace JewelsExchange.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView imgProductImage { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblBaseDesc { get; set; }
 
         [Outlet]
@@ -28,11 +32,19 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblCompany { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblCurrency { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblKarat { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblProductName { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -52,6 +64,11 @@ namespace JewelsExchange.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (imgProductImage != null) {
+                imgProductImage.Dispose ();
+                imgProductImage = null;
+            }
+
             if (lblBaseDesc != null) {
                 lblBaseDesc.Dispose ();
                 lblBaseDesc = null;
@@ -67,6 +84,11 @@ namespace JewelsExchange.iOS
                 lblCloseoutPrice = null;
             }
 
+            if (lblCompany != null) {
+                lblCompany.Dispose ();
+                lblCompany = null;
+            }
+
             if (lblCurrency != null) {
                 lblCurrency.Dispose ();
                 lblCurrency = null;
@@ -75,6 +97,11 @@ namespace JewelsExchange.iOS
             if (lblKarat != null) {
                 lblKarat.Dispose ();
                 lblKarat = null;
+            }
+
+            if (lblProductName != null) {
+                lblProductName.Dispose ();
+                lblProductName = null;
             }
 
             if (lblRegion != null) {

@@ -999,127 +999,129 @@
                                 </attributedString>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2794" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="300" width="81" height="14"/>
+                                <rect key="frame" x="120" y="300" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Stock">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2795" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="330" width="81" height="14"/>
+                                <rect key="frame" x="120" y="330" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Region">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2796" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="360" width="81" height="14"/>
+                                <rect key="frame" x="120" y="360" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Category">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2797" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="390" width="81" height="14"/>
+                                <rect key="frame" x="120" y="390" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Base-Desc">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2798" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="420" width="81" height="14"/>
+                                <rect key="frame" x="120" y="420" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Karat">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2799" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="450" width="81" height="14"/>
+                                <rect key="frame" x="120" y="450" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Weight">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2800" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="480" width="81" height="14"/>
+                                <rect key="frame" x="120" y="480" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Currency">
-                                        <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2801" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="510" width="81" height="14"/>
+                                <rect key="frame" x="120" y="510" width="190" height="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <attributedString key="attributedText"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2802" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
+                                <rect key="frame" x="120" y="540" width="190" height="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2803" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                <rect key="frame" x="265" y="270" width="45" height="14"/>
+                                <nil key="textColor" colorSpace="calibratedRGB" red="0.92549019607843142" green="0.074509803921568626" blue="0.11372549019607843" alpha="1"/>
+                                <nil key="highlightedColor"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Selling Price">
+                                    <fragment content="USD">
                                         <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.92549019607843142" green="0.074509803921568626" blue="0.11372549019607843" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="9"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2802" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES" fixedFrame="YES">
-                                <rect key="frame" x="120" y="540" width="81" height="14"/>
-                                <nil key="textColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2804" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                <rect key="frame" x="214" y="251" width="96" height="18"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0.25098039215686274" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Wishlist">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2805" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                <rect key="frame" x="182" y="251" width="30" height="18"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0.25098039215686274" blue="0" alpha="1"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2806" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                <rect key="frame" x="265" y="280" width="45" height="14"/>
+                                <nil key="textColor" colorSpace="calibratedRGB" red="0.92549019607843142" green="0.074509803921568626" blue="0.11372549019607843" alpha="1"/>
                                 <nil key="highlightedColor"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Closeout Price">
+                                    <fragment content="109">
                                         <attributes>
                                             <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="12"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="9"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2807" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                <rect key="frame" x="265" y="291" width="45" height="14"/>
+                                <nil key="textColor" colorSpace="calibratedRGB" red="0.92549019607843142" green="0.074509803921568626" blue="0.11372549019607843" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="12,000">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="9"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1137,6 +1139,9 @@
                         <outlet property="lblCurrency" destination="2800" id="name-outlet-2800"/>
                         <outlet property="lblSellingPrice" destination="2801" id="name-outlet-2801"/>
                         <outlet property="lblCloseoutPrice" destination="2802" id="name-outlet-2802"/>
+                        <outlet property="imgProductImage" destination="2705" id="name-outlet-2705"/>
+                        <outlet property="lblCompany" destination="2706" id="name-outlet-2706"/>
+                        <outlet property="lblProductName" destination="2707" id="name-outlet-2707"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="725" userLabel="First Responder" sceneMemberID="firstResponder"/>
