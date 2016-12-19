@@ -20,5 +20,8 @@ namespace JewelsExchange.iOS
 			lbl2.Text = "Kannan";
 
 		}
+
+	
+
 	}
 }

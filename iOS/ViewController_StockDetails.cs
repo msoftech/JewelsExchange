@@ -1,11 +1,19 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using Foundation;
+using JewelsExchange.Webservices;
 using UIKit;
 
 namespace JewelsExchange.iOS
 {
 	public partial class ViewController_StockDetails : UIViewController
 	{
+		public string sVar1;
+		public string StudentName { get; set; }
+		public List<ResultJewelry> models;
+	 	public NSIndexPath indexPath;
+
+
 		partial void BtnHome_TouchUpInside(UIButton sender)
 		{
 		try
@@ -18,6 +26,9 @@ namespace JewelsExchange.iOS
 				Console.Write(ex.ToString());
 			}
 		}
+
+	
+
 
 		public ViewController_StockDetails() : base("ViewController_StockDetails", null)
 		{
@@ -34,6 +45,10 @@ namespace JewelsExchange.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
+			lblDetails.Text = models[indexPath.Row].JewelBaseDescName;
+			//lblDetails.Text = sVar1;
+			//lblDetails2.Text = StudentName;
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
