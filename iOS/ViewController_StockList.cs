@@ -27,20 +27,6 @@ namespace JewelsExchange.iOS
 			}
 		}
 
-		//public void subloadNavi()
-		//{
-		//	try
-		//	{
-		//		//ViewController_StockDetails controller = this.Storyboard.InstantiateViewController("ViewController_StockDetails") as ViewController_StockDetails;
-		//		//this.NavigationController.PushViewController(controller, true);
-
-		//		///BtnStockDetails_TouchUpInside(sender: )
-		//	}
-		//	catch (Exception ex)
-		//	{
-		//		Console.Write(ex.ToString());
-		//	}
-		//}
 
 
 		public ViewController_StockList() : base("ViewController_StockList", null)
@@ -58,49 +44,15 @@ namespace JewelsExchange.iOS
 
 		private void InitializeTableView()
 		{
-			//tableView = new UITableView();
+			
 			TableViewSearch.RegisterClassForCellReuse(typeof(TableCell), TableCell.Identifier);
-			//TableViewSearch.SeparatorStyle = UITableViewCellSeparatorStyle.None;
+
 			TableViewSearch.RowHeight = UITableView.AutomaticDimension;
 			TableViewSearch.EstimatedRowHeight = 50;
-			//var vegtables = LoadVegatables();
-			//tableView.Source = new VegetableTableViewSource(vegtables);
-			//View.AddSubview(tableView);
 
-
-			//localModels.Add(null);
 			TableViewSearch.RowHeight = UITableView.AutomaticDimension;
 			TableViewSearch.EstimatedRowHeight = 100;
 			TableViewSearch.Source = new TableSource(localModels,this);
-			//TableSource source = new TableSource(localModels);
-			//TableViewSource tableData = new TableViewSource(results);
-
-			//source.SongSelected += (object sender, TableSource.SongSelectedEventArgs e) =>
-			//{
-			//	//Console.WriteLine("Test");
-			//	UIAlertView alert = new UIAlertView()
-			//	{
-			//		Title = "alert title",
-			//		Message = "this is a simple alert"
-			//	};
-			//	alert.AddButton("OK");
-			//	alert.Show();
-			//};
-
-			//source.SongSelected += delegate (object sender, TableSource.SongSelectedEventArgs e)
-			//{
-			//	UIAlertView alert = new UIAlertView()
-			//	{
-			//		Title = "alert title",
-			//		Message = "this is a simple alert"
-			//	};
-			//	alert.AddButton("OK");
-			//	alert.Show();
-			//	//Console.WriteLine("Test");
-			//	//LyricsScreen assetScreen = new LyricsScreen(e.Song);
-			//	//NavigationController.PushViewController(assetScreen, true);
-			//};
-
 
 			loadData("AF MAN01", 0, 10, "n", false);
 		}
@@ -112,36 +64,23 @@ namespace JewelsExchange.iOS
 			base.ViewDidLoad();
 			viewModel = new WebDataModel<ResultJewelry>();
 			InitializeTableView();
-			//string[] tableItems = new string[] { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
-			//table.Source = new TableSource(tableItems);
-			//Add(table);
-
 
 		}
-		//public override void ViewWillAppear(bool animated)
-		//{
-		//	base.ViewWillAppear(animated);
-		//	//var source = new TableSource(localModels);
-		//	//source.ItemSelected += (object o, EventArgs e) {
-
-		//	//};
-		//}
+	
 		public override void DidReceiveMemoryWarning()
 		{
 			base.DidReceiveMemoryWarning();
-			// Release any cached data, images, etc that aren't in use.
+
 		}
 
 		private void loadData(String LoggedCompanyCode, int StartRow, int EndRow, String closeout, Boolean showProgressMiddle)
 		{
 
-			//await viewModel.GetWebDataTask("http://montemagno.com/monkeys.json");
 			var urlParam = new Dictionary<string, string>();
 			urlParam.Add("@CompanyCode", LoggedCompanyCode);
 			urlParam.Add("@isCloseOut", closeout);
 			urlParam.Add("@StartRow", StartRow.ToString());
 			urlParam.Add("@EndRow", EndRow.ToString());
-
 			viewModel.GetWebDataTask(resultCompletion, _webFunction.GET_GOLD_STOCKS, urlParam);
 		}
 
@@ -151,15 +90,6 @@ namespace JewelsExchange.iOS
 			List<ResultJewelry> mModels = new List<ResultJewelry>(wDatas);
 
 			TableViewSearch.Source = new TableSource(mModels,this);
-
-			//source.ItemSelected += (object o, EventArgs e) {
-			//	ViewController_StockDetails controller = this.Storyboard.InstantiateViewController("ViewController_StockDetails") as ViewController_StockDetails;
-			//	this.NavigationController.PushViewController(controller, true);
-			//};
-
-			//TableViewSearch.Source = new ViewController_StockList(this);
-
-			// in the MyTableSource class
 
 
 				
@@ -179,27 +109,6 @@ namespace JewelsExchange.iOS
 		//public event EventHandler<SongSelectedEventArgs> SongSelected;
 		List<ResultJewelry> models;
 		string CellIdentifier = "TableCell";
-		//UITableView tableView1;
-		//NSIndexPath indexPath1;
-
-		//public class SongSelectedEventArgs : EventArgs
-		//{
-		//	public ResultJewelry Group { get; set; }
-		//	public SongSelectedEventArgs(ResultJewelry group) : base()
-		//	{ Group = group; }
-		//}
-
-
-		//public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
-		//public event EventHandler<EventArgs> ItemSelected;
-		//private int selectedIndex = 0;
-		//ViewController_StockList parent;
-
-
-		//public TableSource(ViewController_StockList parent)
-		//{
-		//	this.parent = parent;
-		//}
 
 
 

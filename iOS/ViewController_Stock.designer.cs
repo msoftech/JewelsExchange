@@ -28,10 +28,6 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnSearchClose { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSearchKarat { get; set; }
 
         [Outlet]
@@ -60,11 +56,35 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UISearchBar SearchBar { get; set; }
+        UIKit.UISearchDisplayController searchDisplayController { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISegmentedControl TabControl { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView TableViewStock { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtCategory { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtKarat { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtRegion { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISearchBar txtSearchBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtWorkType { get; set; }
 
         [Action ("BtnMenu_Activated:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -78,17 +98,13 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnSearchCategory_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("btnSearchClose_Click:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void btnSearchClose_Click (UIKit.UIButton sender);
-
         [Action ("BtnSearchKarat_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnSearchKarat_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("btnSearchRegion_Click:")]
+        [Action ("BtnSearchRegion_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void btnSearchRegion_Click (UIKit.UIButton sender);
+        partial void BtnSearchRegion_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("BtnSearchWorkType_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -113,11 +129,6 @@ namespace JewelsExchange.iOS
             if (btnSearchCategory != null) {
                 btnSearchCategory.Dispose ();
                 btnSearchCategory = null;
-            }
-
-            if (btnSearchClose != null) {
-                btnSearchClose.Dispose ();
-                btnSearchClose = null;
             }
 
             if (btnSearchKarat != null) {
@@ -155,14 +166,44 @@ namespace JewelsExchange.iOS
                 pnlStock = null;
             }
 
-            if (SearchBar != null) {
-                SearchBar.Dispose ();
-                SearchBar = null;
+            if (searchDisplayController != null) {
+                searchDisplayController.Dispose ();
+                searchDisplayController = null;
             }
 
             if (TabControl != null) {
                 TabControl.Dispose ();
                 TabControl = null;
+            }
+
+            if (TableViewStock != null) {
+                TableViewStock.Dispose ();
+                TableViewStock = null;
+            }
+
+            if (txtCategory != null) {
+                txtCategory.Dispose ();
+                txtCategory = null;
+            }
+
+            if (txtKarat != null) {
+                txtKarat.Dispose ();
+                txtKarat = null;
+            }
+
+            if (txtRegion != null) {
+                txtRegion.Dispose ();
+                txtRegion = null;
+            }
+
+            if (txtSearchBar != null) {
+                txtSearchBar.Dispose ();
+                txtSearchBar = null;
+            }
+
+            if (txtWorkType != null) {
+                txtWorkType.Dispose ();
+                txtWorkType = null;
             }
         }
     }

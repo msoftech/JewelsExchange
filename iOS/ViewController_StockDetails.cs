@@ -14,22 +14,6 @@ namespace JewelsExchange.iOS
 	 	public NSIndexPath indexPath;
 
 
-		partial void BtnHome_TouchUpInside(UIButton sender)
-		{
-		try
-			{
-				ViewController_temp controller = this.Storyboard.InstantiateViewController("ViewController_temp") as ViewController_temp;
-				this.NavigationController.PushViewController(controller, true);
-			}
-			catch (Exception ex)
-			{
-				Console.Write(ex.ToString());
-			}
-		}
-
-	
-
-
 		public ViewController_StockDetails() : base("ViewController_StockDetails", null)
 		{
 		}
@@ -46,10 +30,8 @@ namespace JewelsExchange.iOS
 		{
 			base.ViewDidLoad();
 			imgProductImage.Image = UIImage.FromFile("User.png");
-			lblDetails.Text = models[indexPath.Row].JewelBaseDescName;
-			//lblDetails.Text = sVar1;
-			//lblDetails2.Text = StudentName;
-			// Perform any additional setup after loading the view, typically from a nib.
+			lblStock .Text = models[indexPath.Row].JewelBaseDescName;
+
 		}
 
 		public override void DidReceiveMemoryWarning()

@@ -50,6 +50,10 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lbl8 { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblSearchDetails { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (img_profile != null) {
@@ -95,6 +99,11 @@ namespace JewelsExchange.iOS
             if (lbl8 != null) {
                 lbl8.Dispose ();
                 lbl8 = null;
+            }
+
+            if (lblSearchDetails != null) {
+                lblSearchDetails.Dispose ();
+                lblSearchDetails = null;
             }
         }
     }
