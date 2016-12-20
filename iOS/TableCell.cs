@@ -26,6 +26,14 @@ namespace JewelsExchange.iOS
 		public void UpdateCellSearch(List<ResultJewelry> models, NSIndexPath indexPath)
 		{
 			lblSearchDetails.Text = models[indexPath.Row].JewelBaseDescName;
+			if (!models[indexPath.Row].sStatus)
+			{
+				imgStatus.Image = UIImage.FromFile("Tick1_un.png");
+			}
+			else
+			{
+				imgStatus.Image = UIImage.FromBundle("Tick1.png");
+			}
 		}
 
 	}

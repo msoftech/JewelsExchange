@@ -259,7 +259,11 @@ namespace JewelsExchange.iOS
 		{
 
 				//var index = indexPath.Row;
-
+				UITableViewCell cell = tableView.DequeueReusableCell("cell") ?? new UITableViewCell();
+				cell.Selected = !this.GetFruit()[indexPath.Row].sStatus;
+				this.GetFruit()[indexPath.Row].sStatus  = !this.GetFruit()[indexPath.Row].sStatus;
+				//Tuple.Create(this.GetFruit()[indexPath.Row].JewelBaseDescName, !this.GetFruit()[indexPath.Row].sStatus );
+				tableView.ReloadData();
 				////ViewController_StockDetails controller = owner.Storyboard.InstantiateViewController("ViewController_StockDetails") as ViewController_StockDetails;
 				////controller.models = models;
 				////controller.indexPath = indexPath;

@@ -20,6 +20,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView imgStatus { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lbl1 { get; set; }
 
         [Outlet]
@@ -59,6 +63,11 @@ namespace JewelsExchange.iOS
             if (img_profile != null) {
                 img_profile.Dispose ();
                 img_profile = null;
+            }
+
+            if (imgStatus != null) {
+                imgStatus.Dispose ();
+                imgStatus = null;
             }
 
             if (lbl1 != null) {

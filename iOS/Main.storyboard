@@ -451,11 +451,15 @@
                                                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                                                 <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                                             </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="center" id="2886" translatesAutoresizingMaskIntoConstraints="NO" image="Tick1.png" key="tableHeaderView" fixedFrame="YES">
+                                                                <rect key="frame" x="242" y="5" width="39" height="26"/>
+                                                            </imageView>
                                                         </subviews>
                                                     </view>
                                                     <connections>
                                                         <outlet property="lblSearchDetails" destination="2813" id="name-outlet-2813"/>
                                                         <outlet property="lbl6" destination="2823" id="2822"/>
+                                                        <outlet property="imgStatus" destination="2886" id="name-outlet-2886"/>
                                                     </connections>
                                                 </tableViewCell>
                                             </prototypes>
@@ -1320,5 +1324,11 @@
         <image name="Gmail.png" width="188" height="59"/>
         <image name="Company.png" width="402" height="88"/>
         <image name="User.png" width="64" height="64"/>
+        <image name="Tick1.png" width="24" height="24"/>
+        <image name="Tick2.png" width="32" height="32"/>
+        <image name="Tick3.png" width="48" height="48"/>
+        <image name="Tick4.png" width="24" height="24"/>
+        <image name="Tick5.png" width="49" height="64"/>
+        <image name="Tick6.png" width="49" height="64"/>
     </resources>
 </document>

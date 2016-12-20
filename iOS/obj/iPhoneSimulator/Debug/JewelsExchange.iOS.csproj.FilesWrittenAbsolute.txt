@@ -8,6 +8,13 @@
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Gmail.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Company.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/User.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Tick1.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Tick2.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Tick3.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Tick4.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Tick5.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Tick6.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Tick1_un.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe.mdb
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe

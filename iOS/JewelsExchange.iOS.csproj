@@ -161,6 +161,13 @@
     <BundleResource Include="Resources\Gmail.png" />
     <BundleResource Include="Resources\Company.png" />
     <BundleResource Include="Resources\User.png" />
+    <BundleResource Include="Resources\Tick1.png" />
+    <BundleResource Include="Resources\Tick2.png" />
+    <BundleResource Include="Resources\Tick3.png" />
+    <BundleResource Include="Resources\Tick4.png" />
+    <BundleResource Include="Resources\Tick5.png" />
+    <BundleResource Include="Resources\Tick6.png" />
+    <BundleResource Include="Resources\Tick1_un.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="SidebarNavigation">
