@@ -28,6 +28,14 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearchClose { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnSearchDone { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSearchKarat { get; set; }
 
         [Outlet]
@@ -98,6 +106,14 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnSearchCategory_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("BtnSearchClose_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnSearchClose_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("BtnSearchDone_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnSearchDone_TouchUpInside (UIKit.UIButton sender);
+
         [Action ("BtnSearchKarat_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnSearchKarat_TouchUpInside (UIKit.UIButton sender);
@@ -129,6 +145,16 @@ namespace JewelsExchange.iOS
             if (btnSearchCategory != null) {
                 btnSearchCategory.Dispose ();
                 btnSearchCategory = null;
+            }
+
+            if (btnSearchClose != null) {
+                btnSearchClose.Dispose ();
+                btnSearchClose = null;
+            }
+
+            if (btnSearchDone != null) {
+                btnSearchDone.Dispose ();
+                btnSearchDone = null;
             }
 
             if (btnSearchKarat != null) {
