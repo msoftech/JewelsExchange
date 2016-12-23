@@ -1,5 +1,5 @@
 ﻿using System;
-
+using ToastIOS;
 using UIKit;
 using Foundation;
 using CoreGraphics;
@@ -14,7 +14,6 @@ namespace JewelsExchange.iOS
 	public partial class ViewController_Stock : UIViewController
 	{
 
-		//Any change Tablecell need to change
 		const string sRegionPH = "Region Search";
 		const string sWorkTypePH = "WorkType Search";
 		const string sCategoryPH = "Category Search";
@@ -39,6 +38,9 @@ namespace JewelsExchange.iOS
 		List<Master.Karat> objKarat;
 		List<Master.Karat> objKaratSearch;
 		private string sKaratSelectionData = "";
+	
+
+
 
 		public SidebarNavigation.SidebarController SidebarController { get; private set; }
 		public bool bMenuStatus = false;
@@ -46,7 +48,14 @@ namespace JewelsExchange.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-		
+
+
+		UIActivityIndicatorView spinner = new UIActivityIndicatorView();
+			spinner.StartAnimating();
+			spinner.Hidden = true;
+			this.Add(spinner);
+
+
 			InitializeTableView();
 			pnlCloseout.Hidden = true;
 			pnlSearch.Hidden = true;
@@ -142,8 +151,17 @@ namespace JewelsExchange.iOS
 		{
 				pnlSearch.Hidden = false;
 				txtSearchBar.Placeholder = sRegionPH;
+			if (sRegionSelectionData == "")
+			{
 				LoadRegionData("AMSWHO01", "GJ", 0);
+			}
+			else
+			{
+				TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
+				TableViewStock.ReloadData();
+			}
 		}
+
 		private void LoadRegionData(string LoggedCompanyCode, string sBType,int closeoutPrice)
 		{
 			var urlParam = new Dictionary<string, string>();
@@ -162,11 +180,109 @@ namespace JewelsExchange.iOS
 			TableViewStock.ReloadData();
 		}
 
+		partial void BtnSearchWorkType_TouchUpInside(UIButton sender)
+		{
+			if (sRegionSelectionData == "")
+			{
+				Toast.MakeText("Select Region.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+
+			}
+			pnlSearch.Hidden = false;
+			txtSearchBar.Placeholder = sWorkTypePH;
+			if (sWorkTypeSelectionData == "")
+			{
+				LoadWorkTypeData("AMSWHO01", "GJ", 0, sRegionSelectionData);
+			}
+			else
+			{
+				TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
+				TableViewStock.ReloadData();
+			}
+		}
+
+		private void LoadWorkTypeData(string LoggedCompanyCode, string sBType, int closeoutPrice, string sRegionData)
+		{
+			var urlParam = new Dictionary<string, string>();
+			urlParam.Add("@CompanyCode", LoggedCompanyCode);
+			urlParam.Add("@BusinessType", sBType);
+			urlParam.Add("@CloseOutPrice", closeoutPrice.ToString());
+			urlParam.Add("@RegionCode", sRegionData);
+			objWSWorkType.GetWebDataTask(resultWorkTypeCompletion, _webFunction.GET_MASTER_WORKTYPE, urlParam);
+		}
+
+		void resultWorkTypeCompletion(ObservableCollection<Master.WorkType> wDatas)
+		{
+			List<Master.WorkType> mModels = new List<Master.WorkType>(wDatas);
+			objWorkType = mModels;
+			objWorkTypeSearch = mModels;
+			TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
+			TableViewStock.ReloadData();
+		}
+
+		partial void BtnSearchCategory_TouchUpInside(UIButton sender)
+		{
+
+			if (sRegionSelectionData == "")
+			{
+				Toast.MakeText("Select Region.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+
+			}
+			if (sWorkTypeSelectionData == "")
+			{
+				Toast.MakeText("Select WorkType.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+
+			}
+			pnlSearch.Hidden = false;
+			txtSearchBar.Placeholder = sCategoryPH;
+			if (sCategorySelectionData == "")
+			{
+				LoadCategoryData("AMSWHO01", "GJ", 0, sRegionSelectionData, sWorkTypeSelectionData);
+			}
+			else
+			{
+				TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
+				TableViewStock.ReloadData();
+			}
+		}
+
+		private void LoadCategoryData(string LoggedCompanyCode, string sBType, int closeoutPrice, string sRegionData,string sWorkType)
+		{
+			var urlParam = new Dictionary<string, string>();
+			urlParam.Add("@CompanyCode", LoggedCompanyCode);
+			urlParam.Add("@BusinessType", sBType);
+			urlParam.Add("@CloseOutPrice", closeoutPrice.ToString());
+			urlParam.Add("@WorkTypeCode", sRegionData);
+			urlParam.Add("@Region", sWorkType);
+			objWSCategory.GetWebDataTask(resultCategoryCompletion, _webFunction.GET_MASTER_CATEGORY, urlParam);
+		}
+
+		void resultCategoryCompletion(ObservableCollection<Master.Category> wDatas)
+		{
+			List<Master.Category> mModels = new List<Master.Category>(wDatas);
+			objCategory = mModels;
+			objCategorySearch = mModels;
+			TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
+			TableViewStock.ReloadData();
+		}
+
+
+
 		partial void BtnSearchKarat_TouchUpInside(UIButton sender)
 		{
 			pnlSearch.Hidden = false;
 			txtSearchBar.Placeholder = sKaratPH;
-			LoadKaratData("AMSWHO01", "GJ", 0);
+			if (sKaratSelectionData == "")
+			{
+				LoadKaratData("AMSWHO01", "GJ", 0);
+			}
+			else
+			{
+				TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
+				TableViewStock.ReloadData();
+			}
 		}
 
 		private void LoadKaratData(string LoggedCompanyCode, string sBType, int closeoutPrice)
@@ -186,63 +302,6 @@ namespace JewelsExchange.iOS
 			TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
 			TableViewStock.ReloadData();
 		}
-
-
-     
-		partial void BtnSearchCategory_TouchUpInside(UIButton sender)
-		{
-			pnlSearch.Hidden = false;
-			txtSearchBar.Placeholder = sCategoryPH;
-			LoadCategoryData("AMSWHO01", "GJ", 0, sRegionSelectionData, sWorkTypeSelectionData);
-		}
-
-		private void LoadCategoryData(string LoggedCompanyCode, string sBType, int closeoutPrice, string sRegionData,string sWorkType)
-		{
-			var urlParam = new Dictionary<string, string>();
-			urlParam.Add("@CompanyCode", LoggedCompanyCode);
-			urlParam.Add("@BusinessType", sBType);
-			urlParam.Add("@CloseOutPrice", closeoutPrice.ToString());
-			urlParam.Add("@WorkType", sRegionData);
-			urlParam.Add("@Region", sWorkType);
-			objWSCategory.GetWebDataTask(resultCategoryCompletion, _webFunction.GET_MASTER_CATEGORY, urlParam);
-		}
-
-		void resultCategoryCompletion(ObservableCollection<Master.Category> wDatas)
-		{
-			List<Master.Category> mModels = new List<Master.Category>(wDatas);
-			objCategory = mModels;
-			objCategorySearch = mModels;
-			TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
-			TableViewStock.ReloadData();
-		}
-
-		partial void BtnSearchWorkType_TouchUpInside(UIButton sender)
-		{
-			pnlSearch.Hidden = false;
-			txtSearchBar.Placeholder = sWorkTypePH;
-			LoadWorkTypeData("AMSWHO01", "GJ", 0,sRegionSelectionData);
-		}
-
-		private void LoadWorkTypeData(string LoggedCompanyCode, string sBType, int closeoutPrice,string sRegionData)
-		{
-			var urlParam = new Dictionary<string, string>();
-			urlParam.Add("@CompanyCode", LoggedCompanyCode);
-			urlParam.Add("@BusinessType", sBType);
-			urlParam.Add("@CloseOutPrice", closeoutPrice.ToString());
-			urlParam.Add("@RegionCode", sRegionData);
-			objWSWorkType.GetWebDataTask(resultWorkTypeCompletion, _webFunction.GET_MASTER_WORKTYPE, urlParam);
-		}
-
-		void resultWorkTypeCompletion(ObservableCollection<Master.WorkType> wDatas)
-		{
-			List<Master.WorkType> mModels = new List<Master.WorkType>(wDatas);
-			objWorkType = mModels;
-			objWorkTypeSearch = mModels;
-			TableViewStock.Source = new TableSourceSearch(this, txtSearchBar.Placeholder.Trim());
-			TableViewStock.ReloadData();
-		}
-
-
 
 		public void SetSearchData()
 		{
@@ -313,15 +372,15 @@ namespace JewelsExchange.iOS
 					{
 						if (objCategorySearch[i].bStatus == true)
 						{
-							if (sWorkTypeSelectionData.Trim() == "")
+							if (sCategorySelectionData.Trim() == "")
 							{
-								sWorkTypeSelectionData = objCategory[i].JewelCategoryCode;
-								txtWorkType.Text = objCategory[i].JewelCategoryName;
+								sCategorySelectionData = objCategory[i].JewelCategoryCode;
+								txtCategory.Text = objCategory[i].JewelCategoryName;
 							}
 							else
 							{
-								sWorkTypeSelectionData = sWorkTypeSelectionData + "," + objCategory[i].JewelCategoryCode ;
-								txtWorkType.Text = txtWorkType.Text + "-" + objCategory[i].JewelCategoryName;
+								sCategorySelectionData = sCategorySelectionData + "," + objCategory[i].JewelCategoryCode ;
+								txtCategory.Text = txtCategory.Text + "-" + objCategory[i].JewelCategoryName;
 
 							}
 						}
@@ -339,15 +398,15 @@ namespace JewelsExchange.iOS
 					{
 						if (objKaratSearch[i].bStatus == true)
 						{
-							if (sWorkTypeSelectionData.Trim() == "")
+							if (sKaratSelectionData.Trim() == "")
 							{
-								sWorkTypeSelectionData = objKarat[i].JewelMetalKaratCode;
-								txtWorkType.Text = objKarat[i].JewelMetalKaratName ;
+								sKaratSelectionData = objKarat[i].JewelMetalKaratCode;
+								txtKarat.Text = objKarat[i].JewelMetalKaratName ;
 							}
 							else
 							{
-								sWorkTypeSelectionData = sWorkTypeSelectionData + "," + objKarat[i].JewelMetalKaratCode ;
-								txtWorkType.Text = txtWorkType.Text + "-" + objKarat[i].JewelMetalKaratName ;
+								sKaratSelectionData = sKaratSelectionData + "," + objKarat[i].JewelMetalKaratCode ;
+								txtKarat.Text = txtKarat.Text + "-" + objKarat[i].JewelMetalKaratName ;
 
 							}
 						}
@@ -400,6 +459,16 @@ namespace JewelsExchange.iOS
 			try
 			{
 				ViewController_StockList controller = this.Storyboard.InstantiateViewController("ViewController_StockList") as ViewController_StockList;
+				//controller.sRegionSelectionData = sRegionSelectionData;
+				//controller.sWorkTypeSelectionData = sWorkTypeSelectionData;
+				//controller.sCategorySelectionData = sCategorySelectionData;
+				//controller.sKaratSelectionData = sKaratSelectionData;
+
+				controller.sRegionSelectionData = "100";
+				controller.sWorkTypeSelectionData = "100";
+				controller.sCategorySelectionData = "100";
+				controller.sKaratSelectionData = "109";
+
 				this.NavigationController.PushViewController(controller, true);
 			}
 			catch (Exception ex)

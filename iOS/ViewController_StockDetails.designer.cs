@@ -20,6 +20,14 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl111 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lbl222 { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblBaseDesc { get; set; }
 
         [Outlet]
@@ -37,6 +45,10 @@ namespace JewelsExchange.iOS
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblCurrency { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblCurrencyName { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -62,11 +74,25 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblWeight { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIActivityIndicatorView Loading { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (imgProductImage != null) {
                 imgProductImage.Dispose ();
                 imgProductImage = null;
+            }
+
+            if (lbl111 != null) {
+                lbl111.Dispose ();
+                lbl111 = null;
+            }
+
+            if (lbl222 != null) {
+                lbl222.Dispose ();
+                lbl222 = null;
             }
 
             if (lblBaseDesc != null) {
@@ -92,6 +118,11 @@ namespace JewelsExchange.iOS
             if (lblCurrency != null) {
                 lblCurrency.Dispose ();
                 lblCurrency = null;
+            }
+
+            if (lblCurrencyName != null) {
+                lblCurrencyName.Dispose ();
+                lblCurrencyName = null;
             }
 
             if (lblKarat != null) {
@@ -122,6 +153,11 @@ namespace JewelsExchange.iOS
             if (lblWeight != null) {
                 lblWeight.Dispose ();
                 lblWeight = null;
+            }
+
+            if (Loading != null) {
+                Loading.Dispose ();
+                Loading = null;
             }
         }
     }

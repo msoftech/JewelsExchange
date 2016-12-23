@@ -20,6 +20,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIActivityIndicatorView Process { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView TableViewSearch { get; set; }
 
         [Action ("BtnStockDetails_TouchUpInside:")]
@@ -31,6 +35,11 @@ namespace JewelsExchange.iOS
             if (btnStockDetails != null) {
                 btnStockDetails.Dispose ();
                 btnStockDetails = null;
+            }
+
+            if (Process != null) {
+                Process.Dispose ();
+                Process = null;
             }
 
             if (TableViewSearch != null) {

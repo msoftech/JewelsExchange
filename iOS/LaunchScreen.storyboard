@@ -50,8 +50,8 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="124" fixedFrame="YES">
                                 <rect key="frame" x="30" y="533" width="244" height="2"/>
                             </progressView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="125" fixedFrame="YES">
-                                <rect key="frame" x="242" y="489" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="125" fixedFrame="YES" animating="YES" hidesWhenStopped="YES">
+                                <rect key="frame" x="146" y="324" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <variation key="default">
@@ -77,6 +77,9 @@
                             <constraint id="7" firstItem="3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="200"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Process" destination="125" id="name-outlet-125"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,5 +98,13 @@
         <image name="Facebook.png" width="192" height="59"/>
         <image name="Gmail.png" width="188" height="59"/>
         <image name="Company.png" width="402" height="88"/>
+        <image name="User.png" width="64" height="64"/>
+        <image name="Tick1.png" width="24" height="24"/>
+        <image name="Tick2.png" width="32" height="32"/>
+        <image name="Tick3.png" width="48" height="48"/>
+        <image name="Tick4.png" width="24" height="24"/>
+        <image name="Tick5.png" width="49" height="64"/>
+        <image name="Tick6.png" width="49" height="64"/>
+        <image name="Tick1_un.png" width="24" height="24"/>
     </resources>
 </document>

@@ -1,14 +1,26 @@
 ﻿using System;
 using Foundation;
+using ToastIOS;
 using UIKit;
 
 namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Login : UIViewController
 	{
-		//partial void BtnLogin_TouchUpInside(UIButton sender)
-		//{
+		partial void BtnLogin_TouchUpInside(UIButton sender)
+		{
+			//string ss = NSUserDefaults.StandardUserDefaults.StringForKey("UserCode");
+			//Toast.MakeText(ss, Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Bottom).SetBgRed(30).Show();
 
+			//NSUserDefaults.StandardUserDefaults.SetString("Kannan", "UserCode");
+			//NSUserDefaults.StandardUserDefaults.SetBool(true, "BooleanUniqueKey");
+			//NSUserDefaults.StandardUserDefaults.SetInt(100, "IntUniqueKey");
+
+
+		}
+
+		//  partial void BtnLogin_TouchUpInside(UIButton sender)
+		//  {
 		//	//this.PerformSegue("lnkStock", sender);
 		//	try
 		//	{
@@ -21,8 +33,9 @@ namespace JewelsExchange.iOS
 		//	{
 		//		Console.Write(ex.ToString());
 		//	}
-		//}
-		//ex.ToString()	"System.NullReferenceException: Object reference not set to an instance of an object\n  at JewelsExchange.iOS.ViewController_Login.BtnLogin_TouchUpInside (UIKit.UIButton sender) [0x00020] in /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/ViewController_Login.cs:16 "	string
+		//  }
+
+
 		public ViewController_Login() : base("ViewController_Main", null)
 		{
 		}

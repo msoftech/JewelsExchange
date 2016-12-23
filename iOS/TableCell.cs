@@ -9,21 +9,27 @@ namespace JewelsExchange.iOS
    partial class TableCell : UITableViewCell
 	{
 		 public const string Identifier = "Reuse";
-			const string sRegionPH = "Region Search";
-		const string sWorkTypePH = "WorkType Search";
-		const string sCategoryPH = "Category Search";
-		const string sKaratPH = "Karat Search";
+
 
 		public TableCell(IntPtr handle) : base(handle)
 		{
 			SelectionStyle = UITableViewCellSelectionStyle.Gray;
 		}
 
-		public void UpdateCell(List<ResultJewelry> models, UIImage image, NSIndexPath indexPath)
+		public void UpdateCell(List<StockList> models, UIImage image, NSIndexPath indexPath)
 		{
 			img_profile.Image = image;
-			lbl1.Text = models[indexPath.Row].JewelBaseDescName;
-			lbl2.Text = "Kannan";
+			lbl1.Text = models[indexPath.Row].JewelCategoryName;
+			lbl2.Text = models[indexPath.Row].JewelBaseDescName;
+			lbl3.Text = models[indexPath.Row].JewelRegionName;
+
+			lbl4.Text = "$ " + models[indexPath.Row].CloseOutPrice;
+			lbl5.Text = models[indexPath.Row].CompanyName;
+			lbl6.Text = models[indexPath.Row].JewelMetalKaratName;
+			lbl7.Text = models[indexPath.Row].WeightGms + " gm";
+			lbl8.Text = "Making : " + models[indexPath.Row].MakingChargesPerGm +"/gm";
+
+
 
 		}
 
