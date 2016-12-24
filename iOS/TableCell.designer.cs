@@ -20,6 +20,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView imgMenu { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView imgStatus { get; set; }
 
         [Outlet]
@@ -56,6 +60,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblMenu { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblSearchDetails { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -63,6 +71,11 @@ namespace JewelsExchange.iOS
             if (img_profile != null) {
                 img_profile.Dispose ();
                 img_profile = null;
+            }
+
+            if (imgMenu != null) {
+                imgMenu.Dispose ();
+                imgMenu = null;
             }
 
             if (imgStatus != null) {
@@ -108,6 +121,11 @@ namespace JewelsExchange.iOS
             if (lbl8 != null) {
                 lbl8.Dispose ();
                 lbl8 = null;
+            }
+
+            if (lblMenu != null) {
+                lblMenu.Dispose ();
+                lblMenu = null;
             }
 
             if (lblSearchDetails != null) {

@@ -10,14 +10,14 @@ using UIKit;
 
 namespace JewelsExchange.iOS
 {
-	public partial class ViewController_temp : UIViewController
+	public partial class ViewController_Install : UIViewController
 	{
 		//WebDataModel<ResultJewelry> viewModel;
 
-		public ViewController_temp() : base("ViewController_temp", null)
+		public ViewController_Install() : base("ViewController_temp", null)
 		{
 		}
-		public ViewController_temp(IntPtr ptr) : base(ptr)
+		public ViewController_Install(IntPtr ptr) : base(ptr)
 		{
 			//initialize();
 		}

@@ -118,7 +118,7 @@
     <InterfaceDefinition Include="ViewController_StockList.xib" />
     <InterfaceDefinition Include="ViewController_StockDetails.xib" />
     <InterfaceDefinition Include="ViewController_Menu.xib" />
-    <InterfaceDefinition Include="ViewController_temp.xib" />
+    <InterfaceDefinition Include="ViewController_Install.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -145,9 +145,9 @@
     <Compile Include="ViewController_Menu.designer.cs">
       <DependentUpon>ViewController_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewController_temp.cs" />
-    <Compile Include="ViewController_temp.designer.cs">
-      <DependentUpon>ViewController_temp.cs</DependentUpon>
+    <Compile Include="ViewController_Install.cs" />
+    <Compile Include="ViewController_Install.designer.cs">
+      <DependentUpon>ViewController_Install.cs</DependentUpon>
     </Compile>
     <Compile Include="TableCell.cs" />
     <Compile Include="TableCell.designer.cs">
@@ -172,6 +172,25 @@
     <BundleResource Include="Resources\Tick5.png" />
     <BundleResource Include="Resources\Tick6.png" />
     <BundleResource Include="Resources\Tick1_un.png" />
+    <BundleResource Include="Resources\Arrow.png" />
+    <BundleResource Include="Resources\Board.png" />
+    <BundleResource Include="Resources\Chating.png" />
+    <BundleResource Include="Resources\Msg.png" />
+    <BundleResource Include="Resources\Add Diamonds Jewelery.png" />
+    <BundleResource Include="Resources\Add Gold Jewelery.png" />
+    <BundleResource Include="Resources\Administrative Tools-50.png" />
+    <BundleResource Include="Resources\Chat.png" />
+    <BundleResource Include="Resources\Favourite Member.png" />
+    <BundleResource Include="Resources\Inventory.png" />
+    <BundleResource Include="Resources\Message Board.png" />
+    <BundleResource Include="Resources\My Stock.png" />
+    <BundleResource Include="Resources\Other Settings.png" />
+    <BundleResource Include="Resources\Search Jewelery.png" />
+    <BundleResource Include="Resources\Setting.png" />
+    <BundleResource Include="Resources\Back4.jpg" />
+    <BundleResource Include="Resources\Back5.jpg" />
+    <BundleResource Include="Resources\Back6.png" />
+    <BundleResource Include="Resources\Back7.jpg" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="SidebarNavigation">

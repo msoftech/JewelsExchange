@@ -19,6 +19,10 @@ namespace JewelsExchange.iOS
 		const string sCategoryPH = "Category Search";
 		const string sKaratPH = "Karat Search";
 
+		private string sIsCloseOut = "N";
+
+		private bool bMenu = false;
+
 		WebDataModel<Master.Region> objWSRegion = new WebDataModel<Master.Region>();
 		List<Master.Region> objRegion;
 		List<Master.Region> objRegionSearch;
@@ -50,13 +54,7 @@ namespace JewelsExchange.iOS
 			base.ViewDidLoad();
 
 
-		UIActivityIndicatorView spinner = new UIActivityIndicatorView();
-			spinner.StartAnimating();
-			spinner.Hidden = true;
-			this.Add(spinner);
-
-
-			InitializeTableView();
+		    InitializeTableView();
 			pnlCloseout.Hidden = true;
 			pnlSearch.Hidden = true;
 			pnlSearch.Frame = new CoreGraphics.CGRect(0, 62, 320, 506);
@@ -426,13 +424,15 @@ namespace JewelsExchange.iOS
 			var selectedSegmentId = (sender as UISegmentedControl).SelectedSegment;
 			if (selectedSegmentId == 0)
 			{
-				pnlStock.Hidden = false;
-				pnlCloseout.Hidden = true;
+				//pnlStock.Hidden = false;
+				//pnlCloseout.Hidden = true;
+				sIsCloseOut = "N";
 			}
 			else
 			{
-				pnlStock.Hidden = true;
-				pnlCloseout.Hidden = false;
+				//pnlStock.Hidden = true;
+				//pnlCloseout.Hidden = false;
+				sIsCloseOut = "Y";
 			}
 		}
 
@@ -441,16 +441,27 @@ namespace JewelsExchange.iOS
 		partial void BtnMenu_Activated(UIBarButtonItem sender)
 		{
 
-			var introController = (ViewController_Stock)Storyboard.InstantiateViewController("ViewController_Stock");
-			var menuController = (ViewController_Menu)Storyboard.InstantiateViewController("ViewController_Menu");
+			if (bMenu == false)
+			{
+				
+				bMenu = true;
+				var introController = (ViewController_Stock)Storyboard.InstantiateViewController("ViewController_Stock");
+				var menuController = (ViewController_Menu)Storyboard.InstantiateViewController("ViewController_Menu");
 
+				SidebarController = new SidebarNavigation.SidebarController(this, introController, menuController);
+				SidebarController.MenuWidth = 220;
+				SidebarController.ReopenOnRotate = false;
+				SidebarController.MenuLocation = SidebarController.MenuLocations.Left;
 
-			SidebarController = new SidebarNavigation.SidebarController(this, introController, menuController);
-			SidebarController.MenuWidth = 220;
-			SidebarController.ReopenOnRotate = false;
-			SidebarController.MenuLocation = SidebarController.MenuLocations.Left;
-			SidebarController.ToggleMenu();
-
+			//if (SidebarController.IsOpen == false)
+			//{
+				SidebarController.ToggleMenu();
+			}
+			else
+			{
+				bMenu = false;
+				SidebarController.CloseMenu();
+			}
 		}
 
 
@@ -459,15 +470,17 @@ namespace JewelsExchange.iOS
 			try
 			{
 				ViewController_StockList controller = this.Storyboard.InstantiateViewController("ViewController_StockList") as ViewController_StockList;
-				//controller.sRegionSelectionData = sRegionSelectionData;
-				//controller.sWorkTypeSelectionData = sWorkTypeSelectionData;
-				//controller.sCategorySelectionData = sCategorySelectionData;
-				//controller.sKaratSelectionData = sKaratSelectionData;
+				controller.sRegionSelectionData = sRegionSelectionData;
+				controller.sWorkTypeSelectionData = sWorkTypeSelectionData;
+				controller.sCategorySelectionData = sCategorySelectionData;
+				controller.sKaratSelectionData = sKaratSelectionData;
+				controller.sIsCloseOut  = this.sIsCloseOut ;
 
-				controller.sRegionSelectionData = "100";
-				controller.sWorkTypeSelectionData = "100";
-				controller.sCategorySelectionData = "100";
-				controller.sKaratSelectionData = "109";
+
+				//controller.sRegionSelectionData = "100";
+				//controller.sWorkTypeSelectionData = "100";
+				//controller.sCategorySelectionData = "100";
+				//controller.sKaratSelectionData = "109";
 
 				this.NavigationController.PushViewController(controller, true);
 			}

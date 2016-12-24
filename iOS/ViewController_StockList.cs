@@ -16,7 +16,9 @@ namespace JewelsExchange.iOS
 		public string sRegionSelectionData = "";
 		public string sWorkTypeSelectionData = "";
 		public string sCategorySelectionData = "";
+		public string sIsCloseOut = "";
 		public bool isLoding = false;
+
 		public ViewController_StockList() : base("ViewController_StockList", null)
 		{
 		}
@@ -41,7 +43,7 @@ namespace JewelsExchange.iOS
 			TableViewSearch.EstimatedRowHeight = 100;
 			TableViewSearch.Source = new TableSource(localModels, this);
 
-			loadData("AMSWHO01", "N", sRegionSelectionData , sWorkTypeSelectionData , sCategorySelectionData,sKaratSelectionData  ,0,5);
+			loadData("AMSWHO01", sIsCloseOut, sRegionSelectionData , sWorkTypeSelectionData , sCategorySelectionData,sKaratSelectionData  ,0,5);
 		}
 
 		public override void ViewDidLoad()

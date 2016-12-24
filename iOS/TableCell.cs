@@ -33,11 +33,25 @@ namespace JewelsExchange.iOS
 
 		}
 
+		public void UpdateCellMenu(string[] models, NSIndexPath indexPath)
+		{
+			if (models[indexPath.Row].ToString() == "Add Gold Jewelery" || models[indexPath.Row].ToString() =="Add Diamonds Jewelery" || models[indexPath.Row].ToString() == "My Stock"
+			   || models[indexPath.Row].ToString() == "Favourite Member" || models[indexPath.Row].ToString() == "Other Settings")
+			{
+				lblMenu.Frame = new CoreGraphics.CGRect(70, 5, 250, 27);
+				imgMenu.Frame = new CoreGraphics.CGRect(32, 12,20, 20);
+			}
+				lblMenu.Text = models[indexPath.Row].ToString();
+			//"Search Jewelery", "Chat", "Message Board", "Inventory", "Add Gold Jewelery", "Add Diamonds Jewelery","My Stock","Setting","Favourite Member","Other Settings" 
+		
+			imgMenu.Image = UIImage.FromBundle(models[indexPath.Row].ToString().Trim());
+
+
+   		}
+
 		public void UpdateCellRegionMaster(List<Master.Region> models, NSIndexPath indexPath)
 		{
-
-
-					lblSearchDetails.Text = models[indexPath.Row].JewelRegionName ;
+				lblSearchDetails.Text = models[indexPath.Row].JewelRegionName ;
 					if (!models[indexPath.Row].bStatus)
 					{
 						imgStatus.Image = UIImage.FromFile("Tick1_un.png");
