@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="11">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" launchScreen="NO" initialViewController="11">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="-563"/>
+            <point key="canvasLocation" x="447" y="80"/>
         </scene>
         <scene sceneID="127">
             <objects>
@@ -410,9 +410,9 @@
                                 </subviews>
                             </view>
                             <visualEffectView opaque="NO" contentMode="top" id="2359" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" alpha="0.7">
-                                <rect key="frame" x="0.0" y="62" width="309" height="486"/>
+                                <rect key="frame" x="0.0" y="62" width="65" height="119"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2360" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="309" height="486"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="65" height="119"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="2808" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsMultipleSelection="YES" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" pagingEnabled="YES">
@@ -570,7 +570,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="746" y="90"/>
+            <point key="canvasLocation" x="1178" y="-41"/>
         </scene>
         <scene sceneID="647">
             <objects>
@@ -590,7 +590,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="651" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="414" y="-559"/>
+            <point key="canvasLocation" x="820" y="77"/>
         </scene>
         <scene sceneID="713">
             <objects>
@@ -773,7 +773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="716" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="87"/>
+            <point key="canvasLocation" x="1529" y="80"/>
         </scene>
         <scene sceneID="722">
             <objects>
@@ -1301,7 +1301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="725" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="84"/>
+            <point key="canvasLocation" x="1880" y="80"/>
         </scene>
         <scene sceneID="1839">
             <objects>
@@ -1389,11 +1389,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1842" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="322" y="92"/>
+            <point key="canvasLocation" x="-47" y="91"/>
         </scene>
         <scene sceneID="3127">
             <objects>
-                <viewController id="3128" sceneMemberID="viewController" customClass="ViewController_Install" restorationIdentifier="ViewController_Install">
+                <viewController id="3128" sceneMemberID="viewController" customClass="ViewController_Ins_Agree" storyboardIdentifier="ViewController_Ins_Agree" useStoryboardIdentifierAsRestorationIdentifier="YES">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3125"/>
                         <viewControllerLayoutGuide type="bottom" id="3126"/>
@@ -1444,7 +1444,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue id="3319" destination="3156" kind="modal"/>
+                                    <segue id="5003" destination="3156" kind="modal"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="3138" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
@@ -1463,14 +1463,17 @@
                             </label>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnAgree" destination="3136" id="name-outlet-3136"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3130" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-552"/>
+            <point key="canvasLocation" x="365" y="-658"/>
         </scene>
         <scene sceneID="3155">
             <objects>
-                <viewController id="3156" sceneMemberID="viewController">
+                <viewController id="3156" sceneMemberID="viewController" customClass="ViewController_Ins_Types" storyboardIdentifier="ViewController_Ins_Types">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3153"/>
                         <viewControllerLayoutGuide type="bottom" id="3154"/>
@@ -1484,7 +1487,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3160" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
-                                <rect key="frame" x="52" y="264" width="222" height="32"/>
+                                <rect key="frame" x="52" y="264" width="222" height="47"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
                                 <size key="titleShadowOffset" width="1" height="0"/>
@@ -1504,6 +1507,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="UIButton3160_TouchUpInside:" destination="3156" id="3658" eventType="touchUpInside"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="3163" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
                                 <rect key="frame" x="35" y="37" width="256" height="83"/>
@@ -1523,7 +1529,7 @@
                                 </attributedString>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3166" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
-                                <rect key="frame" x="52" y="321" width="222" height="32"/>
+                                <rect key="frame" x="52" y="363" width="222" height="47"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
                                 <size key="titleShadowOffset" width="1" height="0"/>
@@ -1544,19 +1550,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue id="3397" destination="3168" kind="modal"/>
+                                    <action selector="BtnRetail_TouchUpInside:" destination="3156" id="3657" eventType="touchUpInside"/>
+                                    <segue id="5063" destination="3168" kind="modal"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnRetail" destination="3166" id="name-outlet-3166"/>
+                    </connections>
+                    <navigationItem title="Title" id="4844" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3158" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="-549"/>
+            <point key="canvasLocation" x="747" y="-663"/>
         </scene>
         <scene sceneID="3167">
             <objects>
-                <viewController id="3168" sceneMemberID="viewController">
+                <viewController id="3168" sceneMemberID="viewController" customClass="ViewController_Ins_Contact" storyboardIdentifier="ViewController_Ins_Contact">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3175"/>
                         <viewControllerLayoutGuide type="bottom" id="3176"/>
@@ -1577,7 +1588,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Retailer Name">
+                                    <fragment content="Country">
                                         <attributes>
                                             <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                             <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
@@ -1614,33 +1625,297 @@
                                     </fragment>
                                 </attributedString>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="3401" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES" borderStyle="line">
-                                <rect key="frame" x="25" y="213" width="266" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="3401" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="25" y="213" width="230" height="30"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
-                                <attributedString key="attributedText"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
-                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="3402" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES" borderStyle="line">
-                                <rect key="frame" x="25" y="280" width="266" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="3402" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="100" y="280" width="191" height="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <attributedString key="attributedText"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="3403" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES" borderStyle="line">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="3403" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" text="kannan@msoftech.com">
                                 <rect key="frame" x="25" y="350" width="266" height="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
-                                <attributedString key="attributedText"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3417" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="161" y="536" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Next">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="BtnContactNext_TouchUpInside:" destination="3168" id="4301" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3426" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="0.0" y="536" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue id="5191" destination="3156" kind="modal"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4316" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="263" y="218" width="22" height="21"/>
+                                <state key="normal" title="Button" image="Search.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnSearchRegion_TouchUpInside:" destination="4318" id="4317" eventType="touchUpInside"/>
+                                    <action selector="BtnSearchCountry_TouchUpInside:" destination="3168" id="4339" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="4319" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="24" y="280" width="72" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <visualEffectView opaque="NO" contentMode="top" id="4320" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" alpha="0.7">
+                                <rect key="frame" x="0.0" y="50" width="62" height="114"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4321" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="62" height="114"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="4322" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsSelectionDuringEditing="YES" pagingEnabled="YES">
+                                            <rect key="frame" x="17" y="67" width="286" height="393"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <prototypes>
+                                                <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4323" reuseIdentifier="TableCell" placeholderIntrinsicWidth="289" placeholderIntrinsicHeight="101" rowHeight="37" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" customClass="TableCell">
+                                                    <rect key="frame" x="0.0" y="1" width="286" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4328" tableViewCell="4323" customClass="TableCell">
+                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="36.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <subviews>
+                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="4325" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" fixedFrame="YES" usesAttributedText="YES">
+                                                                <rect key="frame" x="20" y="10" width="193" height="17"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="India">
+                                                                        <attributes>
+                                                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.2" green="0.2" blue="0.2" alpha="1"/>
+                                                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="15"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" id="4329" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO" hidden="YES">
+                                                                <rect key="frame" x="10" y="99" width="297" height="1"/>
+                                                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                                <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="center" id="4327" translatesAutoresizingMaskIntoConstraints="NO" image="Tick1_un.png" key="tableHeaderView" fixedFrame="YES">
+                                                                <rect key="frame" x="242" y="5" width="39" height="26"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="lblSearchDetails" destination="4325" id="4324"/>
+                                                        <outlet property="imgStatus" destination="4327" id="4326"/>
+                                                    </connections>
+                                                </tableViewCell>
+                                            </prototypes>
+                                            <color key="separatorColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                        </tableView>
+                                        <searchBar contentMode="redraw" id="4333" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="4" width="320" height="44"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4334" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                            <rect key="frame" x="112" y="473" width="96" height="25"/>
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Close">
+                                                        <attributes>
+                                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                            <connections>
+                                                <action selector="BtnSearchDone_TouchUpInside:" destination="4336" id="4335" eventType="touchUpInside"/>
+                                                <action selector="BtnSearchClose_TouchUpInside:" destination="4332" id="4337" eventType="touchUpInside"/>
+                                                <action selector="BtnCountryClose_TouchUpInside:" destination="3168" id="4373" eventType="touchUpInside"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="btnBack" destination="3426" id="name-outlet-3426"/>
+                        <outlet property="btnContactNext" destination="3417" id="name-outlet-3417"/>
+                        <outlet property="btnSearchCountry" destination="4316" id="name-outlet-4316"/>
+                        <outlet property="txtSearchBar" destination="4333" id="name-outlet-4333"/>
+                        <outlet property="TableViewStock" destination="4322" id="name-outlet-4322"/>
+                        <outlet property="btnCountryClose" destination="4334" id="name-outlet-4334"/>
+                        <outlet property="txtCountryName" destination="3401" id="name-outlet-3401"/>
+                        <outlet property="txtPhoneCode" destination="4319" id="name-outlet-4319"/>
+                        <outlet property="txtPhonenumber" destination="3402" id="name-outlet-3402"/>
+                        <outlet property="txtEmailId" destination="3403" id="name-outlet-3403"/>
+                        <outlet property="pnlSearch" destination="4320" id="name-outlet-4320"/>
+                        <segue id="5251" destination="3498" kind="push"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3177" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1533" y="-556"/>
+            <point key="canvasLocation" x="1181" y="-669"/>
+        </scene>
+        <scene sceneID="3497">
+            <objects>
+                <viewController id="3498" sceneMemberID="viewController" customClass="ViewController_Ins_OTP">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3513"/>
+                        <viewControllerLayoutGuide type="bottom" id="3514"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3501">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3502" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="3503" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="3504" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
+                                <rect key="frame" x="60" y="186" width="205" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Please Enter your Verification Code – Sent to ">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3510" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="84" y="321" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Verify">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="BtnOTPVerify_TouchUpInside:" destination="3498" id="5194" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3500" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="84" y="392" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Resent">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="4431" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="48" y="246" width="230" height="30"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnBack" destination="3500" id="3499"/>
+                        <outlet property="btnOTPVerify" destination="3510" id="name-outlet-3510"/>
+                        <outlet property="txtOTP" destination="4431" id="name-outlet-4431"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3515" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="-590"/>
+        </scene>
+        <scene sceneID="4445">
+            <objects>
+                <navigationController id="4446" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4448">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4449" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-121" y="-648"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1682,5 +1957,6 @@
         <image name="Back5.jpg" width="1080" height="1920"/>
         <image name="Back6.png" width="1242" height="2208"/>
         <image name="Back7.jpg" width="750" height="1334"/>
+        <image name="Search2.png" width="128" height="128"/>
     </resources>
 </document>

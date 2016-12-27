@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="NO" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -106,5 +106,24 @@
         <image name="Tick5.png" width="49" height="64"/>
         <image name="Tick6.png" width="49" height="64"/>
         <image name="Tick1_un.png" width="24" height="24"/>
+        <image name="Arrow.png" width="32" height="32"/>
+        <image name="Board.png" width="32" height="32"/>
+        <image name="Chating.png" width="32" height="32"/>
+        <image name="Msg.png" width="32" height="32"/>
+        <image name="Add Diamonds Jewelery.png" width="50" height="50"/>
+        <image name="Add Gold Jewelery.png" width="50" height="50"/>
+        <image name="Administrative Tools-50.png" width="50" height="50"/>
+        <image name="Chat.png" width="50" height="50"/>
+        <image name="Favourite Member.png" width="50" height="50"/>
+        <image name="Inventory.png" width="50" height="50"/>
+        <image name="Message Board.png" width="50" height="50"/>
+        <image name="My Stock.png" width="50" height="50"/>
+        <image name="Other Settings.png" width="50" height="50"/>
+        <image name="Search Jewelery.png" width="50" height="50"/>
+        <image name="Setting.png" width="50" height="50"/>
+        <image name="Back4.jpg" width="750" height="1334"/>
+        <image name="Back5.jpg" width="1080" height="1920"/>
+        <image name="Back6.png" width="1242" height="2208"/>
+        <image name="Back7.jpg" width="750" height="1334"/>
     </resources>
 </document>

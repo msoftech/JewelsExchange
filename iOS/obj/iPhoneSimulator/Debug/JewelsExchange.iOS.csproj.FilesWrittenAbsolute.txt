@@ -30,6 +30,8 @@
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Other Settings.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Search Jewelery.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Setting.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Back6.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Search2.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe.mdb
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe
@@ -42,4 +44,3 @@
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.dll
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.Primitives.dll
-/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Back6.png

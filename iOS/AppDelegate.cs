@@ -32,11 +32,42 @@ namespace JewelsExchange.iOS
 
 			//if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
 			//{
-				ViewController_Login login = storyboard.InstantiateViewController("ViewController_Login") as ViewController_Login ;
-				window.RootViewController = login;
 
-				//ViewController_Stock login = storyboard.InstantiateViewController("ViewController_Stock") as ViewController_Stock ;
-				//window.RootViewController = login;
+
+
+
+
+			if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
+			{
+				//UINavigationController ctrl = new UINavigationController();
+				ViewController_Ins_Agree controller = storyboard.InstantiateViewController("ViewController_Ins_Agree") as ViewController_Ins_Agree;
+				//ctrl.PushViewController(controller, true);
+				window.RootViewController = controller;
+				//ViewController_Config controller = storyboard.InstantiateViewController("ViewController_Config") as ViewController_Config;
+				////UIApplication.SharedApplication.KeyWindow.RootViewController = controller;
+				//window.RootViewController = controller;
+				window.MakeKeyAndVisible();
+				//window.MakeKeyAndVisible;
+			//this.window makeKeyAndVisible;
+			
+			}
+			else
+			{
+				UINavigationController ctrl = new UINavigationController();
+				ViewController_Stock controller = storyboard.InstantiateViewController("ViewController_Stock") as ViewController_Stock;
+				ctrl.PushViewController(controller, true);
+				window.RootViewController = ctrl;
+				//this.window makeKeyAndVisible;
+			}
+
+			//return;
+
+
+			//ViewController_Login login = storyboard.InstantiateViewController("ViewController_Login") as ViewController_Login ;
+			//	window.RootViewController = login;
+
+			//ViewController_Config login = storyboard.InstantiateViewController("ViewController_Config") as ViewController_Config ;
+			//	window.RootViewController = login;
 			//}
 			//else {
 			//	ViewController_Stock home = storyboard.InstantiateViewController("ViewController_Stock") as ViewController_Stock ;

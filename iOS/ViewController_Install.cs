@@ -19,7 +19,7 @@ namespace JewelsExchange.iOS
 		}
 		public ViewController_Install(IntPtr ptr) : base(ptr)
 		{
-			//initialize();
+			initialize();
 		}
 	//	private void InitializeTableView()
 	//	{
@@ -40,14 +40,14 @@ namespace JewelsExchange.iOS
 
 	//		loadData("AF MAN01", 0, 10, "n", false);
 	//	}
-	//	private void initialize()
-	//	{
+		private void initialize()
+		{
 			
 	//		//tableView.RegisterClassForCellReuse(typeof(TableCell), TableCell.Identifier);
 	//		//tableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 	//		//tableView.RowHeight = UITableView.AutomaticDimension;
 	//		//tableView.EstimatedRowHeight = 100;
-	//	}
+		}
 	//	//public override void ViewWillAppear(bool animated)
 	//	//{
 	//	//	base.ViewWillAppear(animated);
@@ -67,17 +67,17 @@ namespace JewelsExchange.iOS
 	//	//{
 	//	//	base.ViewDidDisappear(animated);
 	//	//}
-	//	public override void ViewDidLoad()
-	//	{
-	//		base.ViewDidLoad();
-	//		viewModel = new WebDataModel<ResultJewelry>();
-	//		InitializeTableView();
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
+			//viewModel = new WebDataModel<ResultJewelry>();
+			//InitializeTableView();
 
-	//		//string[] tableItems = new string[] { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
-	//		//table.Source = new TableSource(tableItems);
-	//		//Add(table);
-	//		// Perform any additional setup after loading the view, typically from a nib.
-	//	}
+			//string[] tableItems = new string[] { "Vegetables", "Fruits", "Flower Buds", "Legumes", "Bulbs", "Tubers" };
+			//table.Source = new TableSource(tableItems);
+			//Add(table);
+			// Perform any additional setup after loading the view, typically from a nib.
+		}
 
 	//	public override void DidReceiveMemoryWarning()
 	//	{

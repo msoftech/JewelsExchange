@@ -30,7 +30,7 @@ namespace JewelsExchange.iOS
 		{
 			// do your initialization here
 		}
-		public override async void ViewDidLoad()
+		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 			Loading.StartAnimating();

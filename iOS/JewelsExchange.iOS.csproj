@@ -119,6 +119,10 @@
     <InterfaceDefinition Include="ViewController_StockDetails.xib" />
     <InterfaceDefinition Include="ViewController_Menu.xib" />
     <InterfaceDefinition Include="ViewController_Install.xib" />
+    <InterfaceDefinition Include="ViewController_Ins_Agree.xib" />
+    <InterfaceDefinition Include="ViewController_Ins_Contact.xib" />
+    <InterfaceDefinition Include="ViewController_Ins_OTP.xib" />
+    <InterfaceDefinition Include="ViewController_Ins_Types.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -154,6 +158,22 @@
       <DependentUpon>TableCell.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonData.cs" />
+    <Compile Include="ViewController_Ins_Agree.designer.cs">
+      <DependentUpon>ViewController_Ins_Agree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Ins_Agree.cs" />
+    <Compile Include="ViewController_Ins_Contact.cs" />
+    <Compile Include="ViewController_Ins_Contact.designer.cs">
+      <DependentUpon>ViewController_Ins_Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Ins_OTP.cs" />
+    <Compile Include="ViewController_Ins_OTP.designer.cs">
+      <DependentUpon>ViewController_Ins_OTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Ins_Types.cs" />
+    <Compile Include="ViewController_Ins_Types.designer.cs">
+      <DependentUpon>ViewController_Ins_Types.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Back1.jpeg" />
@@ -191,6 +211,7 @@
     <BundleResource Include="Resources\Back5.jpg" />
     <BundleResource Include="Resources\Back6.png" />
     <BundleResource Include="Resources\Back7.jpg" />
+    <BundleResource Include="Resources\Search2.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="SidebarNavigation">

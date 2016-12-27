@@ -63,6 +63,20 @@ namespace JewelsExchange.iOS
 					
 
 		}
+
+		public void UpdateCellCountryMaster(List<Master.Country > models, NSIndexPath indexPath)
+		{
+			lblSearchDetails.Text = models[indexPath.Row].CountryName ;
+			//if (!models[indexPath.Row].bStatus)
+			//{
+			//	imgStatus.Image = UIImage.FromFile("Tick1_un.png");
+			//}
+			//else
+			//{
+			//	imgStatus.Image = UIImage.FromBundle("Tick1.png");
+			//}
+ 		}
+
 		public void UpdateCellWorkTypeMaster(List<Master.WorkType> models, NSIndexPath indexPath)
 		{
 			lblSearchDetails.Text = models[indexPath.Row].WorkTypeName;
