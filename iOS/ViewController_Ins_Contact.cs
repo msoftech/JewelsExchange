@@ -9,47 +9,14 @@ using UIKit;
 
 namespace JewelsExchange.iOS
 {
-	
 	public partial class ViewController_Ins_Contact : UIViewController
 	{
 		public string sRegionSelectionData = "";
 		List<Master.Country> objCountry;
 		List<Master.Country> objCountrySearch;
-		WebDataModel<string> objWSRegion = new WebDataModel<string>();
+		WebDataModel<SentOTP> objWSRegion = new WebDataModel<SentOTP>();
 
-		//partial void BtnCountryDone_TouchUpInside(UIButton sender)
-		//{
-		//	SetSearchData();
-		//}
-		//public void SetSearchData()
-		//{
-		//	int i = 0;
-
-		//			sRegionSelectionData = "";
-					
-		//			for (i = 0; i <= objCountry .Count - 1; i++)
-		//			{
-		//				if (objCountry[i].bStatus == true)
-		//				{
-		//					if (sRegionSelectionData.Trim() == "")
-		//					{
-		//						sRegionSelectionData = objCountry[i].CountryCode ;
-		//						txtCountryName .Text = objCountry[i].CountryName ;
-		//						txtPhoneCode.Text = objCountry[i].PhoneCode ;
-		//				break;
-		//					}
-		//					else
-		//					{
-		//						sRegionSelectionData = sRegionSelectionData + "," + objCountry[i].CountryCode;
-		//						txtCountryName.Text = txtCountryName.Text + "-" + objCountry[i].CountryName;
-		//					}
-		//				}
-		//			}
-					
-					
-				
-		//	pnlSearch.Hidden = true;
-		//}
+	
 
 		partial void BtnCountryClose_TouchUpInside(UIButton sender)
 		{
@@ -79,6 +46,9 @@ namespace JewelsExchange.iOS
 		partial void BtnContactNext_TouchUpInside(UIButton sender)
 		{
 			LoadRegionData();
+			//ViewController_Ins_OTP controller = this.Storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
+			//this.NavigationController.PushViewController(controller, true);
+			//ToastIOS.Toast.MakeText(opt);
 		}
 	    
 		private void LoadRegionData()//string LoggedCompanyCode, string sBType, int closeoutPrice
@@ -86,19 +56,16 @@ namespace JewelsExchange.iOS
 			var urlParam = new Dictionary<string, string>();
 			urlParam.Add("@EmailId", txtEmailId.Text );
 			urlParam.Add("@PhoneNumber", txtPhoneCode.Text + txtPhonenumber.Text);
-			urlParam.Add("@Otp", string.Empty);
-			objWSRegion.GetWebDataTask(resultRegionCompletion, _webFunction.GET_OTP, urlParam);
+			urlParam.Add("@OTPID", DeviceId);
+			urlParam.Add("@OTP", string.Empty);
+			objWSRegion.GetWebDataTask(resultRegionCompletion, _webFunction.GET_OTP , urlParam);
 		}
 
-		void resultRegionCompletion(ObservableCollection<string> wDatas)
+		void resultRegionCompletion(ObservableCollection<SentOTP> wDatas)
 		{
-			//List<Master.Region> mModels = new List<Master.Region>(wDatas);
-			string opt = wDatas[0].ToString();
-			ViewController_Ins_OTP  controller = this.Storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
-			this.NavigationController.PushViewController(controller, true);
-
-
-		}
+			List<SentOTP> mModels = new List<SentOTP>(wDatas);
+		    //string opt = mModels[0].RandomNumber.ToString();
+	    }
 		public ViewController_Ins_Contact() : base("ViewController_Ins_Contact", null)
 		{
 		}
@@ -106,7 +73,13 @@ namespace JewelsExchange.iOS
 		public ViewController_Ins_Contact(IntPtr p) : base(p)
 		{
 		}
-
+		public string DeviceId { get { return GetDeviceIdInternal(); } }
+		private string GetDeviceIdInternal()
+		{
+			var id = default(string);
+			id = UIKit.UIDevice.CurrentDevice.IdentifierForVendor.AsString();
+			return id;
+		}
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();

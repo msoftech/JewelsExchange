@@ -20,6 +20,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView imgFlag { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView imgMenu { get; set; }
 
         [Outlet]
@@ -71,6 +75,11 @@ namespace JewelsExchange.iOS
             if (img_profile != null) {
                 img_profile.Dispose ();
                 img_profile = null;
+            }
+
+            if (imgFlag != null) {
+                imgFlag.Dispose ();
+                imgFlag = null;
             }
 
             if (imgMenu != null) {

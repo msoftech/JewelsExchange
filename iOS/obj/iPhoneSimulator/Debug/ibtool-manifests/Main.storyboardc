@@ -38,21 +38,6 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>4320</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>4320</string>
-				</array>
-				<key>message</key>
-				<string>UIVisualEffectView should not have an Alpha value less than 1, this interferes with blurring</string>
-				<key>type</key>
-				<string>IBUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>4446</key>
 		<array>
 			<dict>
@@ -113,31 +98,49 @@
 				<integer>7</integer>
 			</dict>
 		</array>
-		<key>5251</key>
+		<key>5370</key>
 		<array>
 			<dict>
 				<key>affected-objects</key>
 				<array>
-					<string>5251</string>
+					<string>5370</string>
 				</array>
 				<key>message</key>
-				<string>Segues initiated directly from view controllers must have an identifier</string>
-				<key>type</key>
-				<string>IBUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>5251</string>
-				</array>
-				<key>message</key>
-				<string>Push segues are deprecated since iOS 8.0</string>
+				<string>Modal segues are deprecated since iOS 8.0</string>
 				<key>type</key>
 				<string>IBDeprecated</string>
 				<key>type-value</key>
 				<integer>7</integer>
+			</dict>
+		</array>
+		<key>5445</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>5445</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>5472</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>5472</string>
+				</array>
+				<key>message</key>
+				<string>“View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
 			</dict>
 		</array>
 		<key>782</key>

@@ -67,6 +67,7 @@ namespace JewelsExchange.iOS
 		public void UpdateCellCountryMaster(List<Master.Country > models, NSIndexPath indexPath)
 		{
 			lblSearchDetails.Text = models[indexPath.Row].CountryName ;
+			imgFlag.Image = UIImage.FromFile ("Flag/"+ models[indexPath.Row].CountryCode + ".png");
 			//if (!models[indexPath.Row].bStatus)
 			//{
 			//	imgStatus.Image = UIImage.FromFile("Tick1_un.png");
