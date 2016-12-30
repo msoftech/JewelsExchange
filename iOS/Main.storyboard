@@ -590,7 +590,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="651" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="77"/>
+            <point key="canvasLocation" x="806" y="84"/>
         </scene>
         <scene sceneID="713">
             <objects>
@@ -1444,7 +1444,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue id="5003" destination="3156" kind="modal"/>
+                                    <action selector="BtnAgree_TouchUpInside:" destination="3128" id="5590" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="3138" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
@@ -1465,11 +1465,12 @@
                     </view>
                     <connections>
                         <outlet property="btnAgree" destination="3136" id="name-outlet-3136"/>
+                        <segue id="5985" destination="3156" kind="show" identifier="CallTypes"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3130" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365" y="-658"/>
+            <point key="canvasLocation" x="-136" y="-663"/>
         </scene>
         <scene sceneID="3155">
             <objects>
@@ -1508,7 +1509,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="UIButton3160_TouchUpInside:" destination="3156" id="3658" eventType="touchUpInside"/>
+                                    <action selector="BtnWholesale_TouchUpInside:" destination="3156" id="6109" eventType="touchUpInside"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="3163" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
@@ -1551,19 +1552,21 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="BtnRetail_TouchUpInside:" destination="3156" id="3657" eventType="touchUpInside"/>
-                                    <segue id="5063" destination="3168" kind="modal"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="btnRetail" destination="3166" id="name-outlet-3166"/>
+                        <segue id="6051" destination="3168" kind="show" identifier="CallContact"/>
+                        <outlet property="btnWholesale" destination="3160" id="name-outlet-3160"/>
+                        <segue id="6545" destination="6346" kind="show" identifier="CallWholeSale"/>
                     </connections>
                     <navigationItem title="Title" id="4844" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3158" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747" y="-663"/>
+            <point key="canvasLocation" x="211" y="-662"/>
         </scene>
         <scene sceneID="3167">
             <objects>
@@ -1638,7 +1641,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="3402" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
                                 <rect key="frame" x="100" y="280" width="191" height="30"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -1670,7 +1673,6 @@
                                 </state>
                                 <connections>
                                     <action selector="BtnContactNext_TouchUpInside:" destination="3168" id="4301" eventType="touchUpInside"/>
-                                    <segue id="5370" destination="3498" kind="modal"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3426" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
@@ -1689,9 +1691,7 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <segue id="5191" destination="3156" kind="modal"/>
-                                </connections>
+                                <connections/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4316" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="263" y="218" width="22" height="21"/>
@@ -1812,11 +1812,12 @@
                         <outlet property="txtPhonenumber" destination="3402" id="name-outlet-3402"/>
                         <outlet property="txtEmailId" destination="3403" id="name-outlet-3403"/>
                         <outlet property="pnlSearch" destination="4320" id="name-outlet-4320"/>
+                        <segue id="6101" destination="3498" kind="show" identifier="CAllOTP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3177" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1340" y="-670"/>
+            <point key="canvasLocation" x="578" y="-668"/>
         </scene>
         <scene sceneID="3497">
             <objects>
@@ -1914,9 +1915,7 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <segue id="5445" destination="3168" kind="modal"/>
-                                </connections>
+                                <connections/>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="5447" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
                                 <rect key="frame" x="61" y="126" width="205" height="52"/>
@@ -1940,28 +1939,16 @@
                         <outlet property="txtOTP" destination="4431" id="name-outlet-4431"/>
                         <outlet property="btnOPTBack" destination="5388" id="name-outlet-5388"/>
                         <outlet property="lblTime" destination="5447" id="name-outlet-5447"/>
+                        <segue id="6168" destination="5472" kind="show" identifier="CallDetails"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3515" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="-653"/>
-        </scene>
-        <scene sceneID="4445">
-            <objects>
-                <navigationController id="4446" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4448">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4449" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-121" y="-648"/>
+            <point key="canvasLocation" x="955" y="-670"/>
         </scene>
         <scene sceneID="5471">
             <objects>
-                <viewController id="5472" sceneMemberID="viewController">
+                <viewController id="5472" sceneMemberID="viewController" customClass="ViewController_Ins_Details" storyboardIdentifier="ViewController_Ins_Details">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5491"/>
                         <viewControllerLayoutGuide type="bottom" id="5492"/>
@@ -1977,21 +1964,267 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="5485" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
                                 <rect key="frame" x="35" y="37" width="256" height="83"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="5486" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="5510" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="35" y="244" width="265" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="5511" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="210" width="256" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Name">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="5512" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="291" width="62" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Gender">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5516" fixedFrame="YES">
+                                <rect key="frame" x="114" y="292" width="186" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0.8" green="0.8" blue="0.8" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6208" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="1" y="537" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6209" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="162" y="537" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Next">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="BtnContactNext_TouchUpInside:" destination="6211" id="6210" eventType="touchUpInside"/>
+                                    <action selector="BtnDetailsNext_TouchUpInside:" destination="5472" id="6212" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="txtRetailerName" destination="5510" id="name-outlet-5510"/>
+                        <outlet property="btnDetailsNext" destination="6209" id="name-outlet-6209"/>
+                        <outlet property="rbGender" destination="5516" id="name-outlet-5516"/>
+                        <segue id="6261" destination="6187" kind="show" identifier="CallRegister"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5493" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="-669"/>
+        </scene>
+        <scene sceneID="6186">
+            <objects>
+                <viewController id="6187" sceneMemberID="viewController" customClass="ViewController_Ins_Register" storyboardIdentifier="ViewController_Ins_Register">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6203"/>
+                        <viewControllerLayoutGuide type="bottom" id="6204"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6190">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6191" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6192" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6198" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="40" y="203" width="256" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="JewelsXchange Name">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6199" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="35" y="242" width="265" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6200" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="161" y="536" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Create">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="BtnOTPVerify_TouchUpInside:" destination="6202" id="6201" eventType="touchUpInside"/>
+                                    <action selector="BtnRegiser_TouchUpInside:" destination="6187" id="6336" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6340" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="0.0" y="536" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Back">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections/>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <segue id="6333" destination="6264" kind="show" identifier="CallThanks"/>
+                        <outlet property="txtName" destination="6199" id="name-outlet-6199"/>
+                        <outlet property="btnRegiser" destination="6200" id="name-outlet-6200"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6205" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="-671"/>
+        </scene>
+        <scene sceneID="6263">
+            <objects>
+                <viewController id="6264" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6273"/>
+                        <viewControllerLayoutGuide type="bottom" id="6274"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6265">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6266" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6267" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6339" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
+                                <rect key="frame" x="35" y="244" width="256" height="130"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Thank You Very Much registering with JewelsXchange">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6275" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081" y="-671"/>
+        </scene>
+        <scene sceneID="6345">
+            <objects>
+                <viewController id="6346" sceneMemberID="viewController" customClass="ViewController_Ins_OTP" storyboardIdentifier="ViewController_Ins_OTP">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6365"/>
+                        <viewControllerLayoutGuide type="bottom" id="6366"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6359">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6360" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6361" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6362" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
                                 <rect key="frame" x="60" y="186" width="205" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Please Enter your Verification Code – Sent to ">
+                                    <fragment content="321">
                                         <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
                                             <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="15"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5476" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6350" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
                                 <rect key="frame" x="84" y="320" width="159" height="32"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
@@ -2008,10 +2241,10 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="BtnOTPVerify_TouchUpInside:" destination="5472" id="5487" eventType="touchUpInside"/>
+                                    <action selector="BtnOTPVerify_TouchUpInside:" destination="6346" id="6363" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5474" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6348" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
                                 <rect key="frame" x="84" y="390" width="159" height="32"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
@@ -2028,10 +2261,10 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="BtnResent_TouchUpInside:" destination="5472" id="5488" eventType="touchUpInside"/>
+                                    <action selector="BtnResent_TouchUpInside:" destination="6346" id="6364" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="5478" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6352" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
                                 <rect key="frame" x="48" y="246" width="230" height="30"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
@@ -2039,7 +2272,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5480" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6354" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
                                 <rect key="frame" x="84" y="460" width="159" height="32"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
@@ -2057,18 +2290,34 @@
                                 </state>
                                 <connections/>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6356" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
+                                <rect key="frame" x="61" y="126" width="205" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Time : 00">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="btnResent" destination="5474" id="5473"/>
-                        <outlet property="btnOTPVerify" destination="5476" id="5475"/>
-                        <outlet property="txtOTP" destination="5478" id="5477"/>
-                        <outlet property="btnOPTBack" destination="5480" id="5479"/>
+                        <outlet property="btnResent" destination="6348" id="6347"/>
+                        <outlet property="btnOTPVerify" destination="6350" id="6349"/>
+                        <outlet property="txtOTP" destination="6352" id="6351"/>
+                        <outlet property="btnOPTBack" destination="6354" id="6353"/>
+                        <outlet property="lblTime" destination="6356" id="6355"/>
+                        <segue id="6357" destination="6358" kind="show" identifier="CallDetails"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5493" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6367" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2121" y="-675"/>
+            <point key="canvasLocation" x="776" y="-1299"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -34,19 +34,61 @@ namespace JewelsExchange.iOS
 			//{
 
 
-
-
-
 			if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
 			{
 				//UINavigationController ctrl = new UINavigationController();
-				ViewController_Ins_Agree controller = storyboard.InstantiateViewController("ViewController_Ins_Agree") as ViewController_Ins_Agree;
+				//NSUserDefaults.StandardUserDefaults.SetString("", "CompletedStep");
+
+				if ( NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == null ||  NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == "")
+				{
+					ViewController_Ins_Agree controller = storyboard.InstantiateViewController("ViewController_Ins_Agree") as ViewController_Ins_Agree;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
+
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == "Agree")
+				{
+					ViewController_Ins_Types controller = storyboard.InstantiateViewController("ViewController_Ins_Types") as ViewController_Ins_Types;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
+
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep").ToString() == "Types")
+				{
+					ViewController_Ins_Contact controller = storyboard.InstantiateViewController("ViewController_Ins_Contact") as ViewController_Ins_Contact;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep").ToString() == "Contact")
+				{
+					ViewController_Ins_OTP controller = storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep").ToString() == "OTP")
+				{
+					ViewController_Ins_Details controller = storyboard.InstantiateViewController("ViewController_Ins_Details") as ViewController_Ins_Details;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep").ToString() == "Details")
+				{
+					ViewController_Ins_Register controller = storyboard.InstantiateViewController("ViewController_Ins_Register") as ViewController_Ins_Register;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
+
+
+
+
+
+
 				//ctrl.PushViewController(controller, true);
-				window.RootViewController = controller;
+			
 				//ViewController_Config controller = storyboard.InstantiateViewController("ViewController_Config") as ViewController_Config;
 				////UIApplication.SharedApplication.KeyWindow.RootViewController = controller;
 				//window.RootViewController = controller;
-				window.MakeKeyAndVisible();
+
 				//window.MakeKeyAndVisible;
 			//this.window makeKeyAndVisible;
 			

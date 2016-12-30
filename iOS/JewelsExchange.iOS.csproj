@@ -125,6 +125,8 @@
     <InterfaceDefinition Include="ViewController_Ins_Contact.xib" />
     <InterfaceDefinition Include="ViewController_Ins_OTP.xib" />
     <InterfaceDefinition Include="ViewController_Ins_Types.xib" />
+    <InterfaceDefinition Include="ViewController_Ins_Register.xib" />
+    <InterfaceDefinition Include="ViewController_Ins_Details.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -175,6 +177,14 @@
     <Compile Include="ViewController_Ins_Types.cs" />
     <Compile Include="ViewController_Ins_Types.designer.cs">
       <DependentUpon>ViewController_Ins_Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Ins_Register.cs" />
+    <Compile Include="ViewController_Ins_Register.designer.cs">
+      <DependentUpon>ViewController_Ins_Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Ins_Details.cs" />
+    <Compile Include="ViewController_Ins_Details.designer.cs">
+      <DependentUpon>ViewController_Ins_Details.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

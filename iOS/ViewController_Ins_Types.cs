@@ -1,13 +1,23 @@
 ﻿using System;
-
+using Foundation;
 using UIKit;
 
 namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Ins_Types : UIViewController
 	{
+		partial void BtnWholesale_TouchUpInside(UIButton sender)
+		{
+			NSUserDefaults.StandardUserDefaults.SetString("Types", "CompletedStep");
+			NSUserDefaults.StandardUserDefaults.SetString("WholeSale", "UserType");
+		}//Wholesale
+
+
 		partial void BtnRetail_TouchUpInside(UIButton sender)
 		{
+			NSUserDefaults.StandardUserDefaults.SetString("Types", "CompletedStep");
+			NSUserDefaults.StandardUserDefaults.SetString("Retails", "UserType");
+			this.PerformSegue("CallContact", sender);
 			//ViewController_Ins_Contact controller = this.Storyboard.InstantiateViewController("ViewController_Ins_Contact") as ViewController_Ins_Contact;
 			//this.NavigationController.PushViewController(controller, true);
 		}

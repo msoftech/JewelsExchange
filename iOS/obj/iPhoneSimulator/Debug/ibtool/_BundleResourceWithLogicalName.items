@@ -41,6 +41,18 @@
       <LogicalName>Main.storyboardc/3498-view-3501.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/5472-view-5483.nib">
+      <LogicalName>Main.storyboardc/5472-view-5483.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/6187-view-6190.nib">
+      <LogicalName>Main.storyboardc/6187-view-6190.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/6264-view-6265.nib">
+      <LogicalName>Main.storyboardc/6264-view-6265.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/714-view-715.nib">
       <LogicalName>Main.storyboardc/714-view-715.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -57,6 +69,10 @@
       <LogicalName>Main.storyboardc/Navigation.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/UIViewController-6264.nib">
+      <LogicalName>Main.storyboardc/UIViewController-6264.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Ins_Agree.nib">
       <LogicalName>Main.storyboardc/ViewController_Ins_Agree.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -65,8 +81,16 @@
       <LogicalName>Main.storyboardc/ViewController_Ins_Contact.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Ins_Details.nib">
+      <LogicalName>Main.storyboardc/ViewController_Ins_Details.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Ins_OTP.nib">
       <LogicalName>Main.storyboardc/ViewController_Ins_OTP.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Ins_Register.nib">
+      <LogicalName>Main.storyboardc/ViewController_Ins_Register.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Ins_Types.nib">
@@ -101,8 +125,16 @@
       <LogicalName>ViewController_Ins_Contact.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Ins_Details.nib">
+      <LogicalName>ViewController_Ins_Details.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Ins_OTP.nib">
       <LogicalName>ViewController_Ins_OTP.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Ins_Register.nib">
+      <LogicalName>ViewController_Ins_Register.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Ins_Types.nib">

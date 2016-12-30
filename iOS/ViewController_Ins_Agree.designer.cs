@@ -18,6 +18,10 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnAgree { get; set; }
 
+        [Action ("BtnAgree_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnAgree_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (btnAgree != null) {

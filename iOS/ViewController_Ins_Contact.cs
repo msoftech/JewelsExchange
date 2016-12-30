@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Foundation;
 using JewelsExchange.Webservices;
 using ObjCRuntime;
+using ToastIOS;
 using UIKit;
 
 namespace JewelsExchange.iOS
@@ -45,7 +47,51 @@ namespace JewelsExchange.iOS
 
 		partial void BtnContactNext_TouchUpInside(UIButton sender)
 		{
-			LoadRegionData();
+			if (txtCountryName.Text.Trim() == "")
+			{
+				Toast.MakeText("Country Name Empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+
+			}
+			else if (txtPhoneCode.Text.Trim() == "")
+			{
+				Toast.MakeText("Phone Code Empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+		
+
+			else if (txtPhonenumber.Text == "")
+			{
+
+				Toast.MakeText("Phone Number Empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			else if (Regex.IsMatch(txtPhonenumber.Text, "[^0-9.-]") )
+			{
+				Toast.MakeText("Wrong Phone Number.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			else if (txtEmailId.Text == "")
+			{
+				Toast.MakeText("Email ID Empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+
+			if (Regex.Match(txtEmailId.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success==false)
+			{
+				Toast.MakeText("Wrong Email ID", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;     
+			}
+
+			//LoadRegionData();
+
+			NSUserDefaults.StandardUserDefaults.SetString("Contact", "CompletedStep");
+			NSUserDefaults.StandardUserDefaults.SetString(txtCountryName.Text , "UserContryName");
+			NSUserDefaults.StandardUserDefaults.SetString(txtPhoneCode.Text, "UserPhoneCode");
+			NSUserDefaults.StandardUserDefaults.SetString(txtPhonenumber.Text, "UserPhoneNumber");
+			NSUserDefaults.StandardUserDefaults.SetString(txtEmailId.Text, "UserEmailID");
+
+			this.PerformSegue("CAllOTP", sender);
 			//ViewController_Ins_OTP controller = this.Storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
 			//this.NavigationController.PushViewController(controller, true);
 			//ToastIOS.Toast.MakeText(opt);
@@ -64,6 +110,9 @@ namespace JewelsExchange.iOS
 		void resultRegionCompletion(ObservableCollection<SentOTP> wDatas)
 		{
 			List<SentOTP> mModels = new List<SentOTP>(wDatas);
+
+			//ViewController_Ins_OTP controller = this.Storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
+			//this.NavigationController.PushViewController(controller, true);
 		    //string opt = mModels[0].RandomNumber.ToString();
 	    }
 		public ViewController_Ins_Contact() : base("ViewController_Ins_Contact", null)

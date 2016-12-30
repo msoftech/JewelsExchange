@@ -18,19 +18,28 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnRetail { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnWholesale { get; set; }
+
         [Action ("BtnRetail_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnRetail_TouchUpInside (UIKit.UIButton sender);
 
-        [Action ("UIButton3160_TouchUpInside:")]
+        [Action ("BtnWholesale_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton3160_TouchUpInside (UIKit.UIButton sender);
+        partial void BtnWholesale_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
             if (btnRetail != null) {
                 btnRetail.Dispose ();
                 btnRetail = null;
+            }
+
+            if (btnWholesale != null) {
+                btnWholesale.Dispose ();
+                btnWholesale = null;
             }
         }
     }
