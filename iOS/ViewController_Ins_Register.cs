@@ -69,7 +69,17 @@ namespace JewelsExchange.iOS
 			if (res == "Valid Name")
 			{
 				NSUserDefaults.StandardUserDefaults.SetString(txtName.Text, "UserExchangeName");
-				SaveRetailData();
+				//NSUserDefaults.StandardUserDefaults.SetString("WholeSale", "UserType");
+				if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType") == "WholeSale")
+				{
+					NSObject sender = new NSObject();
+					this.PerformSegue("CallCompanyOTP", sender);
+				}
+				else
+				{
+					SaveRetailData();
+				}
+
 				//NSUserDefaults.StandardUserDefaults.SetString("Registered", "CompletedStep");
 				//NSUserDefaults.StandardUserDefaults.SetBool(true, "LoggedIn");
 				//NSUserDefaults.StandardUserDefaults.SetString(txtName.Text, "UserExchangeName");

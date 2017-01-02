@@ -20,6 +20,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnCompanyCreate { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnContactNext { get; set; }
 
         [Outlet]
@@ -29,6 +33,10 @@ namespace JewelsExchange.iOS
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSearchCountry { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView imgCompanyCreate { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -58,6 +66,10 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISearchBar txtSearchBar { get; set; }
 
+        [Action ("BtnCompanyCreate_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnCompanyCreate_TouchUpInside (UIKit.UIButton sender);
+
         [Action ("BtnContactNext_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnContactNext_TouchUpInside (UIKit.UIButton sender);
@@ -77,6 +89,11 @@ namespace JewelsExchange.iOS
                 btnBack = null;
             }
 
+            if (btnCompanyCreate != null) {
+                btnCompanyCreate.Dispose ();
+                btnCompanyCreate = null;
+            }
+
             if (btnContactNext != null) {
                 btnContactNext.Dispose ();
                 btnContactNext = null;
@@ -90,6 +107,11 @@ namespace JewelsExchange.iOS
             if (btnSearchCountry != null) {
                 btnSearchCountry.Dispose ();
                 btnSearchCountry = null;
+            }
+
+            if (imgCompanyCreate != null) {
+                imgCompanyCreate.Dispose ();
+                imgCompanyCreate = null;
             }
 
             if (pnlSearch != null) {

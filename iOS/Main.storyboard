@@ -1899,24 +1899,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5388" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
-                                <rect key="frame" x="84" y="460" width="159" height="32"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
-                                <size key="titleShadowOffset" width="1" height="0"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Back">
-                                            <attributes>
-                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections/>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="5447" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
                                 <rect key="frame" x="61" y="126" width="205" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1937,9 +1919,9 @@
                         <outlet property="btnResent" destination="3500" id="name-outlet-3500"/>
                         <outlet property="btnOTPVerify" destination="3510" id="name-outlet-3510"/>
                         <outlet property="txtOTP" destination="4431" id="name-outlet-4431"/>
-                        <outlet property="btnOPTBack" destination="5388" id="name-outlet-5388"/>
                         <outlet property="lblTime" destination="5447" id="name-outlet-5447"/>
                         <segue id="6168" destination="5472" kind="show" identifier="CallDetails"/>
+                        <segue id="7625" destination="7216" kind="show" identifier="callmsg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3515" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2146,6 +2128,7 @@
                         <segue id="6333" destination="6264" kind="show" identifier="CallThanks"/>
                         <outlet property="txtName" destination="6199" id="name-outlet-6199"/>
                         <outlet property="btnRegiser" destination="6200" id="name-outlet-6200"/>
+                        <segue id="6891" destination="6786" kind="show" identifier="CallCompanyOTP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6205" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2194,7 +2177,7 @@
         </scene>
         <scene sceneID="6345">
             <objects>
-                <viewController id="6346" sceneMemberID="viewController" customClass="ViewController_Ins_OTP" storyboardIdentifier="ViewController_Ins_OTP">
+                <viewController id="6346" sceneMemberID="viewController" customClass="ViewController_Ins_Types" storyboardIdentifier="ViewController_Ins_Types_W">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6365"/>
                         <viewControllerLayoutGuide type="bottom" id="6366"/>
@@ -2210,22 +2193,117 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6361" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
                                 <rect key="frame" x="35" y="37" width="256" height="83"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6362" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
-                                <rect key="frame" x="60" y="186" width="205" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6350" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="80" y="386" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Verify">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="BtnOTPWholeVerify_TouchUpInside:" destination="6346" id="6692" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6352" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" placeholder="Enter the Email ID" textAlignment="center">
+                                <rect key="frame" x="48" y="246" width="230" height="30"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6356" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
+                                <rect key="frame" x="48" y="169" width="231" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="321">
+                                    <fragment content="Please Enter Registered email &amp; Mobile Number">
                                         <attributes>
-                                            <color key="NSColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
-                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="15"/>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="17"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6350" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
-                                <rect key="frame" x="84" y="320" width="159" height="32"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6566" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" placeholder="Enter the Mobile Number" textAlignment="center">
+                                <rect key="frame" x="48" y="304" width="230" height="30"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6953" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="30" y="456" width="266" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="New Company Registration Click Here">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="0.4" blue="0.4" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnNewCompany_TouchUpInside:" destination="6346" id="7075" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnOTPWholeVerify" destination="6350" id="name-outlet-6350"/>
+                        <outlet property="txtCompanyEmailID" destination="6352" id="name-outlet-6352"/>
+                        <outlet property="lblTime" destination="6356" id="6355"/>
+                        <outlet property="txtComplayMobileNo" destination="6566" id="name-outlet-6566"/>
+                        <segue id="6783" destination="3168" kind="show" identifier="CallUserCreation"/>
+                        <outlet property="btnNewCompany" destination="6953" id="name-outlet-6953"/>
+                        <segue id="7073" destination="6955" kind="show" identifier="CallCompany"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6367" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="-1321"/>
+        </scene>
+        <scene sceneID="6785">
+            <objects>
+                <viewController id="6786" sceneMemberID="viewController" customClass="ViewController_Ins_OTP" storyboardIdentifier="ViewController_Ins_OTP_W">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6803"/>
+                        <viewControllerLayoutGuide type="bottom" id="6804"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6797">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6798" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6799" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6800" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="3">
+                                <rect key="frame" x="20" y="172" width="258" height="97"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Please Enter your Verification Code  SMS Sent to Your Company  Registered Mobile Number&#xA;">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                            <font key="NSFont" name="Helvetica" family="Helvetica" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6790" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="84" y="362" width="159" height="32"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
                                 <size key="titleShadowOffset" width="1" height="0"/>
@@ -2241,11 +2319,11 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="BtnOTPVerify_TouchUpInside:" destination="6346" id="6363" eventType="touchUpInside"/>
+                                    <action selector="BtnWholeOTPVerify_TouchUpInside:" destination="6786" id="6907" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6348" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
-                                <rect key="frame" x="84" y="390" width="159" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6788" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="84" y="432" width="159" height="32"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
                                 <size key="titleShadowOffset" width="1" height="0"/>
@@ -2261,36 +2339,18 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="BtnResent_TouchUpInside:" destination="6346" id="6364" eventType="touchUpInside"/>
+                                    <action selector="BtnResent_TouchUpInside:" destination="6786" id="6802" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6352" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
-                                <rect key="frame" x="48" y="246" width="230" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6792" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="48" y="288" width="230" height="30"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6354" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
-                                <rect key="frame" x="84" y="460" width="159" height="32"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
-                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
-                                <size key="titleShadowOffset" width="1" height="0"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Back">
-                                            <attributes>
-                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections/>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6356" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6794" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
                                 <rect key="frame" x="61" y="126" width="205" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -2307,17 +2367,429 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="btnResent" destination="6348" id="6347"/>
-                        <outlet property="btnOTPVerify" destination="6350" id="6349"/>
-                        <outlet property="txtOTP" destination="6352" id="6351"/>
-                        <outlet property="btnOPTBack" destination="6354" id="6353"/>
-                        <outlet property="lblTime" destination="6356" id="6355"/>
-                        <segue id="6357" destination="6358" kind="show" identifier="CallDetails"/>
+                        <outlet property="btnResent" destination="6788" id="6787"/>
+                        <outlet property="btnWholeOTPVerify" destination="6790" id="name-outlet-6790"/>
+                        <outlet property="txtOTP" destination="6792" id="6791"/>
+                        <outlet property="lblTime" destination="6794" id="6793"/>
+                        <segue id="6905" destination="6264" kind="show" identifier="CallCompanyThanks"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6367" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6805" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776" y="-1299"/>
+            <point key="canvasLocation" x="1902" y="-1296"/>
+        </scene>
+        <scene sceneID="6954">
+            <objects>
+                <viewController id="6955" sceneMemberID="viewController" customClass="ViewController_Ins_Contact" storyboardIdentifier="ViewController_Ins_Contact123">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7005"/>
+                        <viewControllerLayoutGuide type="bottom" id="7006"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6980">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6981" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6982" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6983" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="21" y="326" width="276" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Country">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6984" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="21" y="392" width="276" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Mobile No.">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="6985" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="20" y="260" width="276" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Email ID.">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6969" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="21" y="354" width="230" height="30"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6973" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="96" y="421" width="191" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6975" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="20" y="288" width="266" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="6959" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect">
+                                <rect key="frame" x="69" y="528" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <connections>
+                                    <action selector="BtnCompanyCreate_TouchUpInside:" destination="6955" id="7363" eventType="touchUpInside"/>
+                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6961" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="259" y="359" width="22" height="21"/>
+                                <state key="normal" title="Button" image="Search.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnSearchRegion_TouchUpInside:" destination="6988" id="6987" eventType="touchUpInside"/>
+                                    <action selector="BtnSearchCountry_TouchUpInside:" destination="6955" id="6989" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6971" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="20" y="421" width="72" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <visualEffectView opaque="NO" contentMode="top" id="6977" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="50" width="46" height="90"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6990" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="46" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="6965" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsSelectionDuringEditing="YES" pagingEnabled="YES">
+                                            <rect key="frame" x="17" y="67" width="286" height="393"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <prototypes>
+                                                <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6991" reuseIdentifier="TableCell" placeholderIntrinsicWidth="289" placeholderIntrinsicHeight="101" rowHeight="37" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" customClass="TableCell">
+                                                    <rect key="frame" x="0.0" y="1" width="286" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6998" tableViewCell="6991" customClass="TableCell">
+                                                        <rect key="frame" x="0.0" y="0.0" width="286" height="36.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <subviews>
+                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="6993" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" fixedFrame="YES" usesAttributedText="YES">
+                                                                <rect key="frame" x="48" y="10" width="233" height="17"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="India">
+                                                                        <attributes>
+                                                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.2" green="0.2" blue="0.2" alpha="1"/>
+                                                                            <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="15"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" id="6999" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO" hidden="YES">
+                                                                <rect key="frame" x="10" y="99" width="297" height="1"/>
+                                                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                                <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6997" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Flag/RS.png">
+                                                                <rect key="frame" x="5" y="6" width="35" height="25"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="center" id="6995" translatesAutoresizingMaskIntoConstraints="NO" image="Tick1_un.png" key="tableHeaderView" fixedFrame="YES">
+                                                                <rect key="frame" x="247" y="6" width="34" height="22"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <connections>
+                                                        <outlet property="lblSearchDetails" destination="6993" id="6992"/>
+                                                        <outlet property="imgStatus" destination="6995" id="6994"/>
+                                                        <outlet property="imgFlag" destination="6997" id="6996"/>
+                                                    </connections>
+                                                </tableViewCell>
+                                            </prototypes>
+                                            <color key="separatorColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                        </tableView>
+                                        <searchBar contentMode="redraw" id="6963" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="4" width="320" height="44"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6967" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                            <rect key="frame" x="112" y="473" width="96" height="25"/>
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                    <real key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Close">
+                                                        <attributes>
+                                                            <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                            <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                            <connections>
+                                                <action selector="BtnSearchDone_TouchUpInside:" destination="7001" id="7000" eventType="touchUpInside"/>
+                                                <action selector="BtnSearchClose_TouchUpInside:" destination="7003" id="7002" eventType="touchUpInside"/>
+                                                <action selector="BtnCountryClose_TouchUpInside:" destination="6955" id="7004" eventType="touchUpInside"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7077" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Create Wholesaler ID">
+                                <rect key="frame" x="25" y="452" width="136" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="7078" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="25" y="478" width="266" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="7079" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="20" y="222" width="266" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7080" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Contact Person">
+                                <rect key="frame" x="20" y="194" width="276" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="7081" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                                <rect key="frame" x="20" y="156" width="266" height="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7082" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Company Name">
+                                <rect key="frame" x="20" y="128" width="276" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnCompanyCreate" destination="6959" id="name-outlet-6959"/>
+                        <outlet property="btnSearchCountry" destination="6961" id="6960"/>
+                        <outlet property="txtSearchBar" destination="6963" id="6962"/>
+                        <outlet property="TableViewStock" destination="6965" id="6964"/>
+                        <outlet property="btnCountryClose" destination="6967" id="6966"/>
+                        <outlet property="txtCountryName" destination="6969" id="6968"/>
+                        <outlet property="txtPhoneCode" destination="6971" id="6970"/>
+                        <outlet property="txtPhonenumber" destination="6973" id="6972"/>
+                        <outlet property="txtEmailId" destination="6975" id="6974"/>
+                        <outlet property="pnlSearch" destination="6977" id="6976"/>
+                        <outlet property="imgCompanyCreate" destination="6981" id="name-outlet-6981"/>
+                        <segue id="7181" destination="3498" kind="show" identifier="CallOTP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7007" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="-1445"/>
+        </scene>
+        <scene sceneID="7183">
+            <objects>
+                <viewController id="7184" sceneMemberID="viewController" customClass="ViewController_Ins_Types" storyboardIdentifier="ViewController_Ins_Types_WW">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7200"/>
+                        <viewControllerLayoutGuide type="bottom" id="7201"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7194">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7195" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7190" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect">
+                                <rect key="frame" x="52" y="264" width="222" height="47"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="BtnGoldJewelry_TouchUpInside:" destination="7184" id="7204" eventType="touchUpInside"/>
+                                </connections>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Gold Jewelry">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="7197" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7198" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Business Type" textAlignment="center">
+                                <rect key="frame" x="25" y="185" width="276" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7186" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect">
+                                <rect key="frame" x="52" y="363" width="222" height="47"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="BtnDiamondJewelry_TouchUpInside:" destination="7184" id="7205" eventType="touchUpInside"/>
+                                </connections>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Diamond Jewelry">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnDiamondJewelry" destination="7186" id="name-outlet-7186"/>
+                        <outlet property="btnGoldJewelry" destination="7190" id="name-outlet-7190"/>
+                    </connections>
+                    <navigationItem title="Title" id="7193" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7202" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="-1311"/>
+        </scene>
+        <scene sceneID="7215">
+            <objects>
+                <viewController id="7216" sceneMemberID="viewController" customClass="ViewController_Ins_Types" storyboardIdentifier="ViewController_Ins_Types345">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7221"/>
+                        <viewControllerLayoutGuide type="bottom" id="7222"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7217">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7218" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="7219" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7210" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="3">
+                                <rect key="frame" x="34" y="153" width="258" height="97"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Thank You Very Much  ABC Jewel Whole Sale Limited registered successfully. &#xA;">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                            <font key="NSFont" name="Helvetica" family="Helvetica" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7435" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
+                                <rect key="frame" x="104" y="340" width="159" height="32"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                <size key="titleShadowOffset" width="1" height="0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Verify">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="BtnOTPVerify_TouchUpInside:" destination="7437" id="7436" eventType="touchUpInside"/>
+                                    <action selector="Btnnexttype_TouchUpInside:" destination="7216" id="7438" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnnexttype" destination="7435" id="name-outlet-7435"/>
+                        <segue id="7493" destination="7184" kind="show" identifier="callbType"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7223" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="-1295"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

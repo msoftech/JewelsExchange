@@ -16,15 +16,15 @@ namespace JewelsExchange.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnOPTBack { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnOTPVerify { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnResent { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnWholeOTPVerify { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -42,13 +42,12 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void BtnResent_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("BtnWholeOTPVerify_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnWholeOTPVerify_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
-            if (btnOPTBack != null) {
-                btnOPTBack.Dispose ();
-                btnOPTBack = null;
-            }
-
             if (btnOTPVerify != null) {
                 btnOTPVerify.Dispose ();
                 btnOTPVerify = null;
@@ -57,6 +56,11 @@ namespace JewelsExchange.iOS
             if (btnResent != null) {
                 btnResent.Dispose ();
                 btnResent = null;
+            }
+
+            if (btnWholeOTPVerify != null) {
+                btnWholeOTPVerify.Dispose ();
+                btnWholeOTPVerify = null;
             }
 
             if (lblTime != null) {

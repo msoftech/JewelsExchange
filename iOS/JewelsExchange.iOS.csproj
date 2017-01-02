@@ -127,6 +127,7 @@
     <InterfaceDefinition Include="ViewController_Ins_Types.xib" />
     <InterfaceDefinition Include="ViewController_Ins_Register.xib" />
     <InterfaceDefinition Include="ViewController_Ins_Details.xib" />
+    <InterfaceDefinition Include="ViewController_Company.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -185,6 +186,10 @@
     <Compile Include="ViewController_Ins_Details.cs" />
     <Compile Include="ViewController_Ins_Details.designer.cs">
       <DependentUpon>ViewController_Ins_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Company.cs" />
+    <Compile Include="ViewController_Company.designer.cs">
+      <DependentUpon>ViewController_Company.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

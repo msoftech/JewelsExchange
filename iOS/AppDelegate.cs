@@ -33,11 +33,11 @@ namespace JewelsExchange.iOS
 			//if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
 			//{
 
-
+			NSUserDefaults.StandardUserDefaults.SetBool(false, "LoggedIn");
 			if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
 			{
 				//UINavigationController ctrl = new UINavigationController();
-				//NSUserDefaults.StandardUserDefaults.SetString("", "CompletedStep");
+				NSUserDefaults.StandardUserDefaults.SetString("", "CompletedStep");
 
 				if ( NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == null ||  NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == "")
 				{

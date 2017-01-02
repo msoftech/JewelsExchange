@@ -13,6 +13,15 @@ namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Ins_Contact : UIViewController
 	{
+		partial void BtnCompanyCreate_TouchUpInside(UIButton sender)
+		{
+			NSUserDefaults.StandardUserDefaults.SetString(txtPhoneCode.Text, "CompanyPhoneCode");
+			NSUserDefaults.StandardUserDefaults.SetString(txtPhonenumber.Text, "CompanyPhoneNumber");
+			NSUserDefaults.StandardUserDefaults.SetString(txtEmailId.Text, "CompanyEmailID");
+			this.PerformSegue("CallOTP", sender);//callmsg
+			//this.PerformSegue("callmsg", sender);//callmsg
+		}
+
 		public string sRegionSelectionData = "";
 		List<Master.Country> objCountry;
 		List<Master.Country> objCountrySearch;
