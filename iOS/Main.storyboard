@@ -188,7 +188,7 @@
         </scene>
         <scene sceneID="127">
             <objects>
-                <viewController id="128" sceneMemberID="viewController" customClass="ViewController_Stock" storyboardIdentifier="ViewController_Stock">
+                <viewController id="128" sceneMemberID="viewController" customClass="ViewController_Stock" storyboardIdentifier="ViewController_Stock123">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="125"/>
                         <viewControllerLayoutGuide type="bottom" id="126"/>
@@ -2213,7 +2213,7 @@
                                     <action selector="BtnOTPWholeVerify_TouchUpInside:" destination="6346" id="6692" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6352" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" placeholder="Enter the Email ID" textAlignment="center">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6352" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" placeholder="Enter the Email ID" textAlignment="center" text="kannan@msoftech.com">
                                 <rect key="frame" x="48" y="246" width="230" height="30"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -2235,7 +2235,7 @@
                                     </fragment>
                                 </attributedString>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6566" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" placeholder="Enter the Mobile Number" textAlignment="center">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="15" id="6566" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" placeholder="Enter the Mobile Number" textAlignment="center" text="9698761859">
                                 <rect key="frame" x="48" y="304" width="230" height="30"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
@@ -2371,12 +2371,12 @@
                         <outlet property="btnWholeOTPVerify" destination="6790" id="name-outlet-6790"/>
                         <outlet property="txtOTP" destination="6792" id="6791"/>
                         <outlet property="lblTime" destination="6794" id="6793"/>
-                        <segue id="6905" destination="6264" kind="show" identifier="CallCompanyThanks"/>
+                        <segue id="7789" destination="6264" kind="show" identifier="CallCompanyThanks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6805" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="-1296"/>
+            <point key="canvasLocation" x="2471" y="-658"/>
         </scene>
         <scene sceneID="6954">
             <objects>
@@ -2449,7 +2449,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6973" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6973" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" text="9698761859">
                                 <rect key="frame" x="96" y="421" width="191" height="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
@@ -2457,7 +2457,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6975" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6975" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" text="kannan@msoftech.com">
                                 <rect key="frame" x="20" y="288" width="266" height="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
@@ -2493,7 +2493,7 @@
                                     <action selector="BtnSearchCountry_TouchUpInside:" destination="6955" id="6989" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6971" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="6971" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" text="91">
                                 <rect key="frame" x="20" y="421" width="72" height="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
@@ -2595,7 +2595,7 @@
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="7078" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="7078" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" text="CS001">
                                 <rect key="frame" x="25" y="478" width="266" height="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1"/>
@@ -2720,6 +2720,7 @@
                     <connections>
                         <outlet property="btnDiamondJewelry" destination="7186" id="name-outlet-7186"/>
                         <outlet property="btnGoldJewelry" destination="7190" id="name-outlet-7190"/>
+                        <segue id="8335" destination="8138" kind="show" identifier="callRegionSearch"/>
                     </connections>
                     <navigationItem title="Title" id="7193" key="navigationItem"/>
                 </viewController>
@@ -2759,26 +2760,19 @@
                                     </fragment>
                                 </attributedString>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7435" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect" hasAttributedTitle="YES">
-                                <rect key="frame" x="104" y="340" width="159" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7435" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect">
+                                <rect key="frame" x="84" y="314" width="159" height="32"/>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
                                 <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
                                 <size key="titleShadowOffset" width="1" height="0"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Verify">
-                                            <attributes>
-                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="14"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
                                 <connections>
                                     <action selector="BtnOTPVerify_TouchUpInside:" destination="7437" id="7436" eventType="touchUpInside"/>
                                     <action selector="Btnnexttype_TouchUpInside:" destination="7216" id="7438" eventType="touchUpInside"/>
                                 </connections>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
                             </button>
                         </subviews>
                     </view>
@@ -2790,6 +2784,326 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7223" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110" y="-1295"/>
+        </scene>
+        <scene sceneID="7652">
+            <objects>
+                <viewController id="7653" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7658"/>
+                        <viewControllerLayoutGuide type="bottom" id="7659"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7654">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7655" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="7656" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7657" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES" numberOfLines="2">
+                                <rect key="frame" x="35" y="244" width="256" height="130"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Your Business Process Saved&#xA;">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                            <font key="NSFont" name="Helvetica" family="Helvetica" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7716" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="30" y="336" width="266" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="New User Registration Click Here&#xD;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="0.4" blue="0.4" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="BtnNewCompany_TouchUpInside:" destination="7718" id="7717" eventType="touchUpInside"/>
+                                    <segue id="8135" destination="3168" kind="modal"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7660" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="-1316"/>
+        </scene>
+        <scene sceneID="8137">
+            <objects>
+                <viewController id="8138" sceneMemberID="viewController" customClass="ViewController_RegionSearch" storyboardIdentifier="ViewController_RegionSearch">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8215"/>
+                        <viewControllerLayoutGuide type="bottom" id="8216"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8183">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8372" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" id="8178" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="135" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="8164" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsMultipleSelection="YES" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" pagingEnabled="YES">
+                                <rect key="frame" x="20" y="180" width="281" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8204" reuseIdentifier="TableCell" placeholderIntrinsicWidth="289" placeholderIntrinsicHeight="101" rowHeight="37" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" customClass="TableCell">
+                                        <rect key="frame" x="0.0" y="1" width="281" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8209" tableViewCell="8204" customClass="TableCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="36.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="8206" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="20" y="10" width="193" height="17"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Bangles">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.2" green="0.2" blue="0.2" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="15"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="8210" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO" hidden="YES">
+                                                    <rect key="frame" x="10" y="99" width="297" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" id="8208" translatesAutoresizingMaskIntoConstraints="NO" image="Tick1.png" key="tableHeaderView" fixedFrame="YES">
+                                                    <rect key="frame" x="230" y="5" width="39" height="26"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="lblSearchDetails" destination="8206" id="8205"/>
+                                            <outlet property="imgStatus" destination="8208" id="8207"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <color key="separatorColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.8" green="0.8" blue="0.8" alpha="1"/>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="8371" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Region Setting" textAlignment="center">
+                                <rect key="frame" x="25" y="93" width="276" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8154" translatesAutoresizingMaskIntoConstraints="NO" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="110" y="533" width="112" height="29"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                <connections>
+                                    <action selector="BtnSearch_TouchUpInside:" destination="8138" id="8193" eventType="touchUpInside"/>
+                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="8373" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="8142" id="8141"/>
+                        <outlet property="mnuStockMenu" destination="8144" id="8143"/>
+                        <outlet property="searchDisplayController" destination="8168" id="8167"/>
+                        <outlet property="txtSearchBar" destination="8178" id="8177"/>
+                        <outlet property="TableViewStock" destination="8164" id="8163"/>
+                        <outlet property="btnSearch" destination="8154" id="8153"/>
+                        <segue id="8518" destination="8385" kind="show" identifier="CallCategorySearch"/>
+                    </connections>
+                    <navigationItem id="8144" key="navigationItem" title="Gold Jewellery">
+                        <barButtonItem key="leftBarButtonItem" id="8142" image="Menu5.png">
+                            <connections>
+                                <action selector="BtnMenu_Activated:" destination="8138" id="8181"/>
+                            </connections>
+                        </barButtonItem>
+                        <label key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8182" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES">
+                            <rect key="frame" x="61.5" y="12" width="197" height="20"/>
+                            <nil key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            <nil key="highlightedColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Gold Jewellery">
+                                    <attributes>
+                                        <color key="NSColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <font key="NSFont" name="HelveticaNeue" size="17"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </label>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8217" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="8168">
+                    <connections>
+                        <outlet property="delegate" destination="8138" id="8218"/>
+                        <outlet property="searchBar" destination="8220" id="8219"/>
+                        <outlet property="searchContentsController" destination="8138" id="8221"/>
+                        <outlet property="searchResultsDataSource" destination="8138" id="8222"/>
+                        <outlet property="searchResultsDelegate" destination="8138" id="8223"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1864" y="-1308"/>
+        </scene>
+        <scene sceneID="8384">
+            <objects>
+                <viewController id="8385" sceneMemberID="viewController" customClass="ViewController_CategorySearch" storyboardIdentifier="ViewController_CategorySearch">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8412"/>
+                        <viewControllerLayoutGuide type="bottom" id="8413"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8400">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8401" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Back6.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" id="8393" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="135" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="8395" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsMultipleSelection="YES" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" pagingEnabled="YES">
+                                <rect key="frame" x="20" y="180" width="281" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8402" reuseIdentifier="TableCell" placeholderIntrinsicWidth="289" placeholderIntrinsicHeight="101" rowHeight="37" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" customClass="TableCell">
+                                        <rect key="frame" x="0.0" y="1" width="281" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8407" tableViewCell="8402" customClass="TableCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="36.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="8404" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="20" y="10" width="193" height="17"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Bangles">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.2" green="0.2" blue="0.2" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="15"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="8408" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO" hidden="YES">
+                                                    <rect key="frame" x="10" y="99" width="297" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" id="8406" translatesAutoresizingMaskIntoConstraints="NO" image="Tick1.png" key="tableHeaderView" fixedFrame="YES">
+                                                    <rect key="frame" x="230" y="5" width="39" height="26"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="lblSearchDetails" destination="8404" id="8403"/>
+                                            <outlet property="imgStatus" destination="8406" id="8405"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <color key="separatorColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <color key="sectionIndexBackgroundColor" colorSpace="calibratedRGB" red="0.8" green="0.8" blue="0.8" alpha="1"/>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="8409" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Category Setting" textAlignment="center">
+                                <rect key="frame" x="25" y="93" width="276" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8397" translatesAutoresizingMaskIntoConstraints="NO" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="110" y="533" width="112" height="29"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                                <connections>
+                                    <action selector="BtnSearch_TouchUpInside:" destination="8385" id="8410" eventType="touchUpInside"/>
+                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="8411" translatesAutoresizingMaskIntoConstraints="NO" image="Company.png" key="tableHeaderView" fixedFrame="YES">
+                                <rect key="frame" x="35" y="37" width="256" height="83"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="8387" id="8386"/>
+                        <outlet property="mnuStockMenu" destination="8389" id="8388"/>
+                        <outlet property="searchDisplayController" destination="8391" id="8390"/>
+                        <outlet property="txtSearchBar" destination="8393" id="8392"/>
+                        <outlet property="TableViewStock" destination="8395" id="8394"/>
+                        <outlet property="btnSearch" destination="8397" id="8396"/>
+                        <segue id="8616" destination="7653" kind="show" identifier="callmsgCompany"/>
+                    </connections>
+                    <navigationItem id="8389" key="navigationItem" title="Gold Jewellery">
+                        <barButtonItem key="leftBarButtonItem" id="8387" image="Menu5.png">
+                            <connections>
+                                <action selector="BtnMenu_Activated:" destination="8385" id="8398"/>
+                            </connections>
+                        </barButtonItem>
+                        <label key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8399" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES">
+                            <rect key="frame" x="61.5" y="12" width="197" height="20"/>
+                            <nil key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            <nil key="highlightedColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Gold Jewellery">
+                                    <attributes>
+                                        <color key="NSColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <font key="NSFont" name="HelveticaNeue" size="17"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </label>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8414" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="8391">
+                    <connections>
+                        <outlet property="delegate" destination="8385" id="8415"/>
+                        <outlet property="searchBar" destination="8417" id="8416"/>
+                        <outlet property="searchContentsController" destination="8385" id="8418"/>
+                        <outlet property="searchResultsDataSource" destination="8385" id="8419"/>
+                        <outlet property="searchResultsDelegate" destination="8385" id="8420"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2223" y="-1314"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

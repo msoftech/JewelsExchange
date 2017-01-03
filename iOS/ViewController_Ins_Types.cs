@@ -24,6 +24,7 @@ namespace JewelsExchange.iOS
 		partial void BtnGoldJewelry_TouchUpInside(UIButton sender)
 		{
 			NSUserDefaults.StandardUserDefaults.SetString("GoldJewelery", "BusinessType");
+			this.PerformSegue("callRegionSearch", sender);
 		}
 
 		partial void BtnNewCompany_TouchUpInside(UIButton sender)

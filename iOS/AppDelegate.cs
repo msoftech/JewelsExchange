@@ -41,7 +41,7 @@ namespace JewelsExchange.iOS
 
 				if ( NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == null ||  NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == "")
 				{
-					ViewController_Ins_Agree controller = storyboard.InstantiateViewController("ViewController_Ins_Agree") as ViewController_Ins_Agree;
+					ViewController_Ins_Types controller = storyboard.InstantiateViewController("ViewController_Ins_Types_WW") as ViewController_Ins_Types;
 					window.RootViewController = controller;
 					window.MakeKeyAndVisible();
 				}
