@@ -184,11 +184,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="80"/>
+            <point key="canvasLocation" x="396" y="69"/>
         </scene>
         <scene sceneID="127">
             <objects>
-                <viewController id="128" sceneMemberID="viewController" customClass="ViewController_Stock" storyboardIdentifier="ViewController_Stock123">
+                <viewController id="128" sceneMemberID="viewController" customClass="ViewController_Stock" storyboardIdentifier="ViewController_Stock_menu">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="125"/>
                         <viewControllerLayoutGuide type="bottom" id="126"/>
@@ -410,9 +410,9 @@
                                 </subviews>
                             </view>
                             <visualEffectView opaque="NO" contentMode="top" id="2359" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" alpha="0.7">
-                                <rect key="frame" x="0.0" y="62" width="65" height="119"/>
+                                <rect key="frame" x="0.0" y="62" width="84" height="117"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2360" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="65" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="84" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="2808" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsMultipleSelection="YES" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" pagingEnabled="YES">
@@ -570,7 +570,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1176" y="77"/>
+            <point key="canvasLocation" x="1163" y="79"/>
         </scene>
         <scene sceneID="647">
             <objects>
@@ -585,7 +585,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue id="1666" destination="128" kind="relationship" relationship="rootViewController"/>
+                        <segue id="9019" destination="128" kind="relationship" relationship="rootViewController"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="651" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -614,7 +614,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="1" sectionFooterHeight="1" id="2153" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" pagingEnabled="YES">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="445" width="320" height="123"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2154" reuseIdentifier="TableCell" placeholderIntrinsicWidth="289" placeholderIntrinsicHeight="101" rowHeight="100" customClass="TableCell" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES">
@@ -762,6 +762,366 @@
                                 <rect key="frame" x="155" y="536" width="20" height="20"/>
                                 <color key="color" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10318" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="254" y="26" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10321" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                <rect key="frame" x="90" y="58" width="149" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0" blue="0" alpha="1"/>
+                                <connections>
+                                    <action selector="BtnSearch_TouchUpInside:" destination="10323" id="10322" eventType="touchUpInside"/>
+                                    <action selector="BtnFilter_TouchUpInside:" destination="714" id="10390" eventType="touchUpInside"/>
+                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Filters">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" id="10362" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="64" width="123" height="243"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="10363" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="123" height="243"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" id="10364" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="94" width="320" height="314"/>
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10365" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="56" y="6" width="208" height="21"/>
+                                                    <nil key="textColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Type : Gold Jewellery">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="12"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10366" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="20" y="50" width="127" height="21"/>
+                                                    <nil key="textColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Region">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="12"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10367" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="20" y="100" width="127" height="21"/>
+                                                    <nil key="textColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Work Type">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="12"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10368" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="20" y="150" width="127" height="21"/>
+                                                    <nil key="textColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Category">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="12"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10369" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="20" y="200" width="127" height="21"/>
+                                                    <nil key="textColor" colorSpace="calibratedRGB" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Karat">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.4" green="0.4" blue="0.4" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="12"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="10370" translatesAutoresizingMaskIntoConstraints="NO" clearButtonMode="whileEditing" placeholder="--  Select Region  --" fixedFrame="YES">
+                                                    <rect key="frame" x="110" y="50" width="152" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="10371" translatesAutoresizingMaskIntoConstraints="NO" clearButtonMode="whileEditing" placeholder="--  Select Worktype  --" fixedFrame="YES">
+                                                    <rect key="frame" x="110" y="100" width="152" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="10372" translatesAutoresizingMaskIntoConstraints="NO" clearButtonMode="whileEditing" placeholder="--  Select Category  --" fixedFrame="YES">
+                                                    <rect key="frame" x="110" y="150" width="152" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="10373" translatesAutoresizingMaskIntoConstraints="NO" clearButtonMode="whileEditing" placeholder="--  Select Karat  --" fixedFrame="YES">
+                                                    <rect key="frame" x="110" y="200" width="152" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10377" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="270" y="50" width="22" height="21"/>
+                                                    <state key="normal" title="Button" image="Search.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="BtnSearchRegion_TouchUpInside:" destination="10376" id="10378" eventType="touchUpInside"/>
+                                                        <action selector="BtnSearchRegion_TouchUpInside:" destination="714" id="10441" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10379" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="270" y="100" width="22" height="21"/>
+                                                    <state key="normal" title="Button" image="Search.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="BtnSearchWorkType_TouchUpInside:" destination="10376" id="10380" eventType="touchUpInside"/>
+                                                        <action selector="BtnSearchWorkType_TouchUpInside:" destination="714" id="10460" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10381" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="270" y="150" width="22" height="21"/>
+                                                    <state key="normal" title="Button" image="Search.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="BtnSearchCategory_TouchUpInside:" destination="10376" id="10382" eventType="touchUpInside"/>
+                                                        <action selector="BtnSearchCategory_TouchUpInside:" destination="714" id="10461" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10383" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                    <rect key="frame" x="270" y="200" width="22" height="21"/>
+                                                    <state key="normal" title="Button" image="Search.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="BtnSearchKarat_TouchUpInside:" destination="10376" id="10384" eventType="touchUpInside"/>
+                                                        <action selector="BtnSearchKarat_TouchUpInside:" destination="714" id="10462" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" id="10385" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO">
+                                                    <rect key="frame" x="0.0" y="85" width="320" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="10386" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO">
+                                                    <rect key="frame" x="0.0" y="135" width="320" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <subviews/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="10387" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO">
+                                                    <rect key="frame" x="0.0" y="35" width="320" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <subviews/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="10388" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO">
+                                                    <rect key="frame" x="0.0" y="185" width="320" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <subviews/>
+                                                </view>
+                                                <view contentMode="scaleToFill" id="10389" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO">
+                                                    <rect key="frame" x="0.0" y="235" width="320" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <subviews/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10401" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                                    <rect key="frame" x="196" y="269" width="96" height="25"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0.50196078431372548" blue="0" alpha="1"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Done">
+                                                                <attributes>
+                                                                    <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                                    <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="BtnSearchDone_TouchUpInside:" destination="10403" id="10402" eventType="touchUpInside"/>
+                                                        <action selector="BtnFilterDone_TouchUpInside:" destination="714" id="10488" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10404" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                                    <rect key="frame" x="20" y="269" width="96" height="25"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Close">
+                                                                <attributes>
+                                                                    <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                                    <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="BtnSearchDone_TouchUpInside:" destination="10406" id="10405" eventType="touchUpInside"/>
+                                                        <action selector="BtnSearchClose_TouchUpInside:" destination="10408" id="10407" eventType="touchUpInside"/>
+                                                        <action selector="BtnCloseFilter_TouchUpInside:" destination="714" id="10409" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <visualEffectView opaque="NO" contentMode="top" id="10442" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" alpha="0.7">
+                                            <rect key="frame" x="0.0" y="0.0" width="82" height="172"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="10443" fixedFrame="YES">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="172"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="10444" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsMultipleSelection="YES" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" pagingEnabled="YES">
+                                                        <rect key="frame" x="17" y="67" width="286" height="393"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <prototypes>
+                                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="10445" reuseIdentifier="TableCell" placeholderIntrinsicWidth="289" placeholderIntrinsicHeight="101" rowHeight="37" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" customClass="TableCell">
+                                                                <rect key="frame" x="0.0" y="1" width="286" height="37"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="10450" tableViewCell="10445" customClass="TableCell">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="286" height="36.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="10447" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" fixedFrame="YES" usesAttributedText="YES">
+                                                                            <rect key="frame" x="20" y="10" width="193" height="17"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <attributedString key="attributedText">
+                                                                                <fragment content="Bangles">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" colorSpace="calibratedRGB" red="0.2" green="0.2" blue="0.2" alpha="1"/>
+                                                                                        <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="15"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" id="10451" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO" hidden="YES">
+                                                                            <rect key="frame" x="10" y="99" width="297" height="1"/>
+                                                                            <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                                            <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                                        </view>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="center" id="10449" translatesAutoresizingMaskIntoConstraints="NO" image="Tick1.png" key="tableHeaderView" fixedFrame="YES">
+                                                                            <rect key="frame" x="242" y="5" width="39" height="26"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </view>
+                                                                <connections>
+                                                                    <outlet property="lblSearchDetails" destination="10447" id="10446"/>
+                                                                    <outlet property="imgStatus" destination="10449" id="10448"/>
+                                                                </connections>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <color key="separatorColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                                    </tableView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10452" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                                        <rect key="frame" x="207" y="468" width="96" height="25"/>
+                                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0.50196078431372548" blue="0" alpha="1"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Done">
+                                                                    <attributes>
+                                                                        <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                                        <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="BtnSearchDone_TouchUpInside:" destination="10454" id="10453" eventType="touchUpInside"/>
+                                                            <action selector="BtnSearchDone_TouchUpInside:" destination="714" id="10481" eventType="touchUpInside"/>
+                                                        </connections>
+                                                    </button>
+                                                    <searchBar contentMode="redraw" id="10455" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="4" width="320" height="44"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </searchBar>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10456" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                                        <rect key="frame" x="17" y="468" width="96" height="25"/>
+                                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Close">
+                                                                    <attributes>
+                                                                        <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                                        <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="BtnSearchDone_TouchUpInside:" destination="10458" id="10457" eventType="touchUpInside"/>
+                                                            <action selector="BtnSearchClose_TouchUpInside:" destination="10454" id="10459" eventType="touchUpInside"/>
+                                                            <action selector="BtnSearchClose_TouchUpInside:" destination="714" id="10482" eventType="touchUpInside"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <blurEffect style="extraLight"/>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                     </view>
                     <connections>
@@ -769,11 +1129,37 @@
                         <outlet property="btnStockDetails" destination="840" id="name-outlet-840"/>
                         <outlet property="TableViewSearch" destination="2153" id="name-outlet-2153"/>
                         <outlet property="Process" destination="3041" id="name-outlet-3041"/>
+                        <outlet property="btnFilter" destination="10321" id="name-outlet-10321"/>
+                        <outlet property="pnlSearchFilter" destination="10362" id="name-outlet-10362"/>
+                        <outlet property="btnCloseFilter" destination="10404" id="name-outlet-10404"/>
+                        <outlet property="txtRegion" destination="10370" id="name-outlet-10370"/>
+                        <outlet property="txtWorkType" destination="10371" id="name-outlet-10371"/>
+                        <outlet property="txtCategory" destination="10372" id="name-outlet-10372"/>
+                        <outlet property="txtKarat" destination="10373" id="name-outlet-10373"/>
+                        <outlet property="btnSearchRegion" destination="10377" id="name-outlet-10377"/>
+                        <outlet property="btnSearchWorkType" destination="10379" id="name-outlet-10379"/>
+                        <outlet property="btnSearchCategory" destination="10381" id="name-outlet-10381"/>
+                        <outlet property="btnSearchKarat" destination="10383" id="name-outlet-10383"/>
+                        <outlet property="pnlSearch" destination="10442" id="name-outlet-10442"/>
+                        <outlet property="txtSearchBar" destination="10455" id="name-outlet-10455"/>
+                        <outlet property="TableViewStock" destination="10444" id="name-outlet-10444"/>
+                        <outlet property="btnSearchDone" destination="10452" id="name-outlet-10452"/>
+                        <outlet property="btnSearchClose" destination="10456" id="name-outlet-10456"/>
+                        <outlet property="btnFilterDone" destination="10401" id="name-outlet-10401"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="716" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="10491">
+                    <connections>
+                        <outlet property="delegate" destination="10493" id="10492"/>
+                        <outlet property="searchBar" destination="10495" id="10494"/>
+                        <outlet property="searchContentsController" destination="10493" id="10496"/>
+                        <outlet property="searchResultsDataSource" destination="10493" id="10497"/>
+                        <outlet property="searchResultsDelegate" destination="10493" id="10498"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1529" y="80"/>
+            <point key="canvasLocation" x="1525" y="79"/>
         </scene>
         <scene sceneID="722">
             <objects>
@@ -1319,11 +1705,11 @@
                                 <rect key="frame" x="0.0" y="141" width="320" height="427"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="1867" rowHeight="37" customClass="TableCell" reuseIdentifier="TableCell">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="37"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="1867" rowHeight="38" customClass="TableCell" reuseIdentifier="TableCell">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1867" id="1868">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="36.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="3092" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" usesAttributedText="YES" key="tableHeaderView" fixedFrame="YES">
@@ -1385,11 +1771,12 @@
                     </view>
                     <connections>
                         <outlet property="table" destination="1866" id="name-outlet-1866"/>
+                        <segue id="10096" destination="648" kind="push"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1842" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-47" y="91"/>
+            <point key="canvasLocation" x="451" y="703"/>
         </scene>
         <scene sceneID="3127">
             <objects>
@@ -2501,6 +2888,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7077" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Create Wholesaler ID">
+                                <rect key="frame" x="25" y="452" width="136" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
+                            </label>
                             <visualEffectView opaque="NO" contentMode="top" id="6977" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="0.0" y="50" width="46" height="90"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6990" fixedFrame="YES">
@@ -2588,13 +2982,6 @@
                                 </view>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="wordWrap" minimumFontSize="10" id="7077" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" key="tableHeaderView" fixedFrame="YES" text="Create Wholesaler ID">
-                                <rect key="frame" x="25" y="452" width="136" height="31"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="7078" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" text="CS001">
                                 <rect key="frame" x="25" y="478" width="266" height="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light"/>
@@ -2652,7 +3039,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7007" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="-1445"/>
+            <point key="canvasLocation" x="664" y="-1375"/>
         </scene>
         <scene sceneID="7183">
             <objects>
@@ -2783,7 +3170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7223" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="-1295"/>
+            <point key="canvasLocation" x="1089" y="-1366"/>
         </scene>
         <scene sceneID="7652">
             <objects>
@@ -3104,6 +3491,154 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2223" y="-1314"/>
+        </scene>
+        <scene sceneID="9508">
+            <objects>
+                <viewController id="9509" sceneMemberID="viewController" customClass="ViewController_Home" storyboardIdentifier="ViewController_Home">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9529"/>
+                        <viewControllerLayoutGuide type="bottom" id="9530"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9520">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9515" fixedFrame="YES">
+                                <rect key="frame" x="-3" y="64" width="327" height="29"/>
+                                <segments>
+                                    <segment title="New Stock" width="159"/>
+                                    <segment title="Closeout"/>
+                                </segments>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0.2" green="0.2" blue="0.2" alpha="1"/>
+                                <connections/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="-28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="40" sectionHeaderHeight="1" sectionFooterHeight="1" id="9517" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" separatorStyle="default" allowsMultipleSelection="YES" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" pagingEnabled="YES">
+                                <rect key="frame" x="0.0" y="93" width="320" height="433"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9524" reuseIdentifier="TableCell" placeholderIntrinsicWidth="289" placeholderIntrinsicHeight="101" rowHeight="60" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" customClass="TableCell">
+                                        <rect key="frame" x="0.0" y="1" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9527" tableViewCell="9524" customClass="TableCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="9526" translatesAutoresizingMaskIntoConstraints="NO" preferredMaxLayoutWidth="42" fixedFrame="YES" usesAttributedText="YES">
+                                                    <rect key="frame" x="20" y="21" width="226" height="25"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Bangles">
+                                                            <attributes>
+                                                                <color key="NSColor" colorSpace="calibratedRGB" red="0.2" green="0.2" blue="0.2" alpha="1"/>
+                                                                <font key="NSFont" name="HelveticaNeue" family="Helvetica Neue" size="15"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="9528" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clearsContextBeforeDrawing="NO" hidden="YES">
+                                                    <rect key="frame" x="10" y="99" width="297" height="1"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                    <color key="tintColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" id="10229" translatesAutoresizingMaskIntoConstraints="NO" image="Tick1_un.png" key="tableHeaderView" fixedFrame="YES">
+                                                    <rect key="frame" x="254" y="20" width="46" height="40"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="lblSearchDetails" destination="9526" id="9525"/>
+                                            <outlet property="imgStatus" destination="10229" id="name-outlet-10229"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <color key="separatorColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10230" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" hasAttributedTitle="YES">
+                                <rect key="frame" x="112" y="534" width="96" height="25"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0.50196078431372548" blue="0" alpha="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Done">
+                                            <attributes>
+                                                <color key="NSColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                                <font key="NSFont" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" size="13"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="BtnSearchDone_TouchUpInside:" destination="10232" id="10231" eventType="touchUpInside"/>
+                                    <action selector="BtnHomeSearch_TouchUpInside:" destination="9509" id="10233" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="9511" id="9510"/>
+                        <outlet property="mnuStockMenu" destination="9513" id="9512"/>
+                        <outlet property="TabControl" destination="9515" id="9514"/>
+                        <outlet property="TableViewStock" destination="9517" id="9516"/>
+                        <outlet property="btnHomeSearch" destination="10230" id="name-outlet-10230"/>
+                    </connections>
+                    <navigationItem id="9513" key="navigationItem" title="Gold Jewellery">
+                        <barButtonItem key="leftBarButtonItem" id="9511" image="Menu5.png">
+                            <connections>
+                                <action selector="BtnMenu_Activated:" destination="9509" id="9518"/>
+                            </connections>
+                        </barButtonItem>
+                        <label key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9519" translatesAutoresizingMaskIntoConstraints="NO" usesAttributedText="YES">
+                            <rect key="frame" x="61.5" y="12" width="197" height="20"/>
+                            <nil key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            <nil key="highlightedColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Gold Jewellery">
+                                    <attributes>
+                                        <color key="NSColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                        <font key="NSFont" name="HelveticaNeue" size="17"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </label>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9531" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="702"/>
+        </scene>
+        <scene sceneID="9711">
+            <objects>
+                <navigationController id="9712" sceneMemberID="viewController" storyboardIdentifier="Navigation1" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9715">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" colorSpace="calibratedRGB" red="0.4" green="0" blue="0" alpha="1"/>
+                        <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue id="9773" destination="9509" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9716" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="701"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

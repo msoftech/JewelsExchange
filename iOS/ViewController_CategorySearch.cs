@@ -129,7 +129,7 @@ namespace JewelsExchange.iOS
 			urlParam.Add("@CloseOutPrice", closeoutPrice.ToString());
 			urlParam.Add("@WorkTypeCode", sRegionData);
 			urlParam.Add("@Region", sWorkType);
-			objWSCategory.GetWebDataTask(resultCategoryCompletion, _webFunction.GET_MASTER_CATEGORY, urlParam);
+			objWSCategory.GetWebDataTask(resultCategoryCompletion, _webFunction.GET_MASTER_ALLCATEGORY, urlParam);
 		}
 
 		void resultCategoryCompletion(ObservableCollection<Master.Category> wDatas)

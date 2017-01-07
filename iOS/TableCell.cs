@@ -60,7 +60,19 @@ namespace JewelsExchange.iOS
 					{
 						imgStatus.Image = UIImage.FromBundle("Tick1.png");
 					}
-					
+			}
+
+		public void UpdateCellHomeRegionMaster(List<Master.Region> models, NSIndexPath indexPath)
+		{
+			lblSearchDetails.Text = models[indexPath.Row].JewelRegionName;
+			if (!models[indexPath.Row].bStatus)
+			{
+				imgStatus.Image = UIImage.FromFile("Tick1_un.png");
+			}
+			else
+			{
+				imgStatus.Image = UIImage.FromBundle("Tick1.png");
+			}
 
 		}
 

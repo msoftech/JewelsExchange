@@ -93,12 +93,20 @@
       <LogicalName>Main.storyboardc/8385-view-8400.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/9509-view-9520.nib">
+      <LogicalName>Main.storyboardc/9509-view-9520.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/Info.plist">
       <LogicalName>Main.storyboardc/Info.plist</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/Navigation.nib">
       <LogicalName>Main.storyboardc/Navigation.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/Navigation1.nib">
+      <LogicalName>Main.storyboardc/Navigation1.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/UIViewController-6264.nib">
@@ -111,6 +119,10 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_CategorySearch.nib">
       <LogicalName>Main.storyboardc/ViewController_CategorySearch.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Home.nib">
+      <LogicalName>Main.storyboardc/ViewController_Home.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Ins_Agree.nib">
@@ -169,10 +181,6 @@
       <LogicalName>Main.storyboardc/ViewController_RegionSearch.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Stock123.nib">
-      <LogicalName>Main.storyboardc/ViewController_Stock123.nib</LogicalName>
-      <Optimize>false</Optimize>
-    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_StockDetails.nib">
       <LogicalName>Main.storyboardc/ViewController_StockDetails.nib</LogicalName>
       <Optimize>false</Optimize>
@@ -181,12 +189,20 @@
       <LogicalName>Main.storyboardc/ViewController_StockList.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/Main.storyboardc/ViewController_Stock_menu.nib">
+      <LogicalName>Main.storyboardc/ViewController_Stock_menu.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_CategorySearch.nib">
       <LogicalName>ViewController_CategorySearch.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Company.nib">
       <LogicalName>ViewController_Company.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Home.nib">
+      <LogicalName>ViewController_Home.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Ins_Agree.nib">
@@ -239,6 +255,10 @@
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_StockList.nib">
       <LogicalName>ViewController_StockList.nib</LogicalName>
+      <Optimize>false</Optimize>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhoneSimulator/Debug/ibtool-link/ViewController_Test.nib">
+      <LogicalName>ViewController_Test.nib</LogicalName>
       <Optimize>false</Optimize>
     </_BundleResourceWithLogicalName>
   </ItemGroup>

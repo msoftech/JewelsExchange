@@ -130,6 +130,8 @@
     <InterfaceDefinition Include="ViewController_Company.xib" />
     <InterfaceDefinition Include="ViewController_RegionSearch.xib" />
     <InterfaceDefinition Include="ViewController_CategorySearch.xib" />
+    <InterfaceDefinition Include="ViewController_Home.xib" />
+    <InterfaceDefinition Include="ViewController_Test.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -200,6 +202,14 @@
     <Compile Include="ViewController_CategorySearch.cs" />
     <Compile Include="ViewController_CategorySearch.designer.cs">
       <DependentUpon>ViewController_CategorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Home.cs" />
+    <Compile Include="ViewController_Home.designer.cs">
+      <DependentUpon>ViewController_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Test.cs" />
+    <Compile Include="ViewController_Test.designer.cs">
+      <DependentUpon>ViewController_Test.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

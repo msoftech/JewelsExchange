@@ -33,7 +33,7 @@ namespace JewelsExchange.iOS
 			//if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
 			//{
 
-			NSUserDefaults.StandardUserDefaults.SetBool(false, "LoggedIn");
+			NSUserDefaults.StandardUserDefaults.SetBool(true, "LoggedIn");
 			if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
 			{
 				//UINavigationController ctrl = new UINavigationController();
@@ -96,10 +96,11 @@ namespace JewelsExchange.iOS
 			else
 			{
 				UINavigationController ctrl = new UINavigationController();
-				ViewController_Stock controller = storyboard.InstantiateViewController("ViewController_Stock") as ViewController_Stock;
+			//ViewController_Stock controller = storyboard.InstantiateViewController("ViewController_Stock_menu") as ViewController_Stock;
+				ViewController_Home controller = storyboard.InstantiateViewController("ViewController_Home") as ViewController_Home;
 				ctrl.PushViewController(controller, true);
 				window.RootViewController = ctrl;
-				//this.window makeKeyAndVisible;
+				window.MakeKeyAndVisible();
 			}
 
 			//return;

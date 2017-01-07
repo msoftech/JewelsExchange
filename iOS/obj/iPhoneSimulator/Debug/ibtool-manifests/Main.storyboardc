@@ -8,6 +8,48 @@
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
 	<dict>
+		<key>10096</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>10096</string>
+				</array>
+				<key>message</key>
+				<string>Segues initiated directly from view controllers must have an identifier</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>10096</string>
+				</array>
+				<key>message</key>
+				<string>Push segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>10442</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>10442</string>
+				</array>
+				<key>message</key>
+				<string>UIVisualEffectView should not have an Alpha value less than 1, this interferes with blurring</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>1814</key>
 		<array>
 			<dict>

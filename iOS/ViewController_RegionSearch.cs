@@ -128,7 +128,7 @@ namespace JewelsExchange.iOS
 			urlParam.Add("@CompanyCode", LoggedCompanyCode);
 			urlParam.Add("@BusinessType", sBType);
 			urlParam.Add("@CloseOutPrice", closeoutPrice.ToString());
-			objWSRegion.GetWebDataTask(resultRegionCompletion, _webFunction.GET_MASTER_REGION, urlParam);
+			objWSRegion.GetWebDataTask(resultRegionCompletion, _webFunction.GET_MASTER_ALLREGION, urlParam);
 		}
 
 		void resultRegionCompletion(ObservableCollection<Master.Region> wDatas)

@@ -445,7 +445,7 @@ namespace JewelsExchange.iOS
 			{
 				
 				bMenu = true;
-				var introController = (ViewController_Stock)Storyboard.InstantiateViewController("ViewController_Stock");
+				var introController = (ViewController_Stock)Storyboard.InstantiateViewController("ViewController_Stock_menu");
 				var menuController = (ViewController_Menu)Storyboard.InstantiateViewController("ViewController_Menu");
 
 				SidebarController = new SidebarNavigation.SidebarController(this, introController, menuController);
@@ -469,13 +469,14 @@ namespace JewelsExchange.iOS
 		{
 			try
 			{
+				
 				ViewController_StockList controller = this.Storyboard.InstantiateViewController("ViewController_StockList") as ViewController_StockList;
 				controller.sRegionSelectionData = sRegionSelectionData;
 				controller.sWorkTypeSelectionData = sWorkTypeSelectionData;
 				controller.sCategorySelectionData = sCategorySelectionData;
 				controller.sKaratSelectionData = sKaratSelectionData;
 				controller.sIsCloseOut  = this.sIsCloseOut ;
-
+				controller.sComingFrom = "Search";
 
 				//controller.sRegionSelectionData = "100";
 				//controller.sWorkTypeSelectionData = "100";
