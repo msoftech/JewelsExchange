@@ -17,12 +17,20 @@ namespace JewelsExchange
 		public static readonly string GET_MASTER_WORKTYPE = WEBSERVICE + "_FetchWorkTypeRequestedCompany";
 		public static readonly string GET_MASTER_CATEGORY = WEBSERVICE + "_FetchCategoryRequestedCompany";
 		public static readonly string GET_MASTER_KARAT = WEBSERVICE + "_FetchKaratRequestedCompany";
+		public static readonly string GET_MASTER_ALLREGION = WEBSERVICE + "JewelRegionMaster";
+		public static readonly string GET_MASTER_ALLCATEGORY = WEBSERVICE + "JewelCategoryMaster";
 
 		//Stock Search from Master
 		public static readonly string GET_GOLD_STOCKS = WEBSERVICE + "_getGoldStockList";
 		public static readonly string GET_GOLD_DETAILS = WEBSERVICE + "_getGoldStockDetail";
 
+
+
 		public static readonly string GET_OTP = WEBSERVICE + "LoginORVerifyLogin";
+		public static readonly string GET_CHK_XName = WEBSERVICE + "CheckJewelXchangeName";
+		public static readonly string GET_Save_Retail = WEBSERVICE + "RegistrationFromMobile";
+
+
 	}
 
 	public class Common
