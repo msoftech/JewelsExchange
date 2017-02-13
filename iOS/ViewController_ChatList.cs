@@ -153,7 +153,7 @@ namespace JewelsExchange.iOS
 				  , true);
 
 			pnlChatRequest.Hidden = true;
-			pnlChatRequest.Frame = new CoreGraphics.CGRect(0, NavigationController.NavigationBar.Frame.Height+20, View.Frame.Width, View.Frame.Height - NavigationController.NavigationBar.Frame.Height+20);
+			pnlChatRequest.Frame = new CoreGraphics.CGRect(0, NavigationController.NavigationBar.Frame.Height+25, View.Frame.Width, View.Frame.Height - NavigationController.NavigationBar.Frame.Height+25);
 
 		}
 

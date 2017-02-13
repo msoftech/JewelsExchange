@@ -92,7 +92,15 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblContactPersonName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblImagePath { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblJewelsID { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -215,9 +223,19 @@ namespace JewelsExchange.iOS
                 lblAudioPath = null;
             }
 
+            if (lblContactPersonName != null) {
+                lblContactPersonName.Dispose ();
+                lblContactPersonName = null;
+            }
+
             if (lblImagePath != null) {
                 lblImagePath.Dispose ();
                 lblImagePath = null;
+            }
+
+            if (lblJewelsID != null) {
+                lblJewelsID.Dispose ();
+                lblJewelsID = null;
             }
 
             if (lblMenu != null) {

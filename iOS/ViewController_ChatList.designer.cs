@@ -44,6 +44,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView TVChatRequest { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtCompanyName { get; set; }
 
         [Outlet]
@@ -117,6 +121,11 @@ namespace JewelsExchange.iOS
             if (pnlChatRequest != null) {
                 pnlChatRequest.Dispose ();
                 pnlChatRequest = null;
+            }
+
+            if (TVChatRequest != null) {
+                TVChatRequest.Dispose ();
+                TVChatRequest = null;
             }
 
             if (txtCompanyName != null) {
