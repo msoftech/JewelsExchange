@@ -540,6 +540,33 @@
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/CountryPicker.bundle/ZA.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/CountryPicker.bundle/ZM.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/CountryPicker.bundle/ZW.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/untitled folder 2/Edit1.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/untitled folder 2/Edit2.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/untitled folder 2/Edit3.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Audio.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Plus.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Arrow1.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Demand1.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Attach.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/untitled folder/Attach1.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/untitled folder/Attach2.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Attach1.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Attach2.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Add.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Delete.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Download.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Edit.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Edit1.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Edit2.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Pause.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Play.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Power.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Search.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/Send.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/DownloadSmall.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/PlaySmall.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/StopSmall.png
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/Final Image/AttachmentSmall.png
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/optimized/
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe.mdb
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.iOS.exe
@@ -547,8 +574,16 @@
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/obj/iPhoneSimulator/Debug/JewelsExchange.iOS.exe.mdb
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Xamarin-Sidebar-Unified.dll
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/ToastIOS.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Twilio.Common.iOS.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Sockets.Plugin.Abstractions.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Sockets.Plugin.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Quickblox.Sdk.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Quickblox.Sdk.Platform.Abstractions.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Quickblox.Sdk.Platform.iOS.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/KBCustomActionSheet.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/IQAudioRecorderController.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JSQMessagesViewController.dll
+/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Alliance.Carousel.dll
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.dll
 /Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/JewelsExchange.dll.mdb
-/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.dll
-/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
-/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug/System.Net.Http.Primitives.dll

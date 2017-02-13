@@ -46,7 +46,11 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSearchRegion { get; set; }
 
-        [Outlet]
+		 [Outlet]
+		[GeneratedCode("iOS Designer", "1.0")]
+		UIKit.UISearchDisplayController searchDisplayController { get; set; }
+
+		[Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSearchWorkType { get; set; }
 
@@ -82,12 +86,7 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtKarat { get; set; }
 
-
         [Outlet]
-		[GeneratedCode("iOS Designer", "1.0")]
-		UIKit.UISearchDisplayController searchDisplayController { get; set; }
-
-		[Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtRegion { get; set; }
 
@@ -150,13 +149,8 @@ namespace JewelsExchange.iOS
                 btnFilter.Dispose ();
                 btnFilter = null;
             }
-			  if (searchDisplayController != null)
-			{
-				searchDisplayController.Dispose();
-				searchDisplayController = null;
-			}
 
-			if (btnFilterDone != null) {
+            if (btnFilterDone != null) {
                 btnFilterDone.Dispose ();
                 btnFilterDone = null;
             }
@@ -170,6 +164,12 @@ namespace JewelsExchange.iOS
                 btnSearchClose.Dispose ();
                 btnSearchClose = null;
             }
+
+			 if (searchDisplayController != null)
+			{
+				searchDisplayController.Dispose();
+				searchDisplayController = null;
+			}
 
             if (btnSearchDone != null) {
                 btnSearchDone.Dispose ();

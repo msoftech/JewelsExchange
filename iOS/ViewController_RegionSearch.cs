@@ -233,6 +233,7 @@ namespace JewelsExchange.iOS
 			}
 			else
 			{
+				NSUserDefaults.StandardUserDefaults.SetString(sRegionSelectionData, "CompanyRegion");
 				this.PerformSegue("CallCategorySearch", sender);
 			}
 		}

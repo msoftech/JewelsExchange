@@ -1,5 +1,7 @@
 ﻿using System;
 using Foundation;
+using Quickblox.Sdk.Modules.ChatXmppModule;
+using ToastIOS;
 using UIKit;
 
 namespace JewelsExchange.iOS
@@ -10,7 +12,8 @@ namespace JewelsExchange.iOS
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
-		UIWindow window;
+		UIWindow window;// = new UIWindow(UIScreen.MainScreen.Bounds);
+			
 		//public static event EventHandler RowHeight = delegate { };
 		public override UIWindow Window
 		{
@@ -19,29 +22,39 @@ namespace JewelsExchange.iOS
 		}
 
 
+		void onMessageReceiveStatus(MessageEventArgs messageEventArgs)
+		{
+		}
+
+		void onErrorMessage(String error)
+		{
+			//Toast.MakeText(this, error, ToastLength.Short).Show();
+			Toast.MakeText(error, Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+		}
+
+		//UINavigationController navController;
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
-
-
+			
 			window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-			var storyboard = UIStoryboard.FromName("Main", null);
-			//UINavigationController nav = new UINavigationController();
+		var storyboard = UIStoryboard.FromName("Main", null);
+		
+			NSUserDefaults.StandardUserDefaults.SetBool(false, "LoggedIn");
 
-			//if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
-			//{
 
-			NSUserDefaults.StandardUserDefaults.SetBool(true, "LoggedIn");
-			if (!NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn"))
+ 			if (NSUserDefaults.StandardUserDefaults.BoolForKey("LoggedIn") == false)
 			{
-				//UINavigationController ctrl = new UINavigationController();
+
 				NSUserDefaults.StandardUserDefaults.SetString("", "CompletedStep");
 
-				if ( NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == null ||  NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == "")
+				if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == null || NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep") == "")
 				{
-					ViewController_Ins_Types controller = storyboard.InstantiateViewController("ViewController_Ins_Types_WW") as ViewController_Ins_Types;
+					//ViewController_Ins_Agree controller = storyboard.InstantiateViewController("ViewController_Ins_Agree") as ViewController_Ins_Agree;
+					ViewController_Ins_Register controller = storyboard.InstantiateViewController("ViewController_Ins_RegisterWhole") as ViewController_Ins_Register;
+					//ViewController_Chat controller = storyboard.InstantiateViewController("ViewController_Chat") as ViewController_Chat;
+					//ViewController_Ins_Types controller = storyboard.InstantiateViewController("ViewController_Ins_Types_WW") as ViewController_Ins_Types;
+
 					window.RootViewController = controller;
 					window.MakeKeyAndVisible();
 				}
@@ -61,7 +74,8 @@ namespace JewelsExchange.iOS
 				}
 				else if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep").ToString() == "Contact")
 				{
-					ViewController_Ins_OTP controller = storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
+					//ViewController_Ins_OTP controller = storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
+					ViewController_Ins_Contact controller = storyboard.InstantiateViewController("ViewController_Ins_Contact") as ViewController_Ins_Contact;
 					window.RootViewController = controller;
 					window.MakeKeyAndVisible();
 				}
@@ -77,45 +91,36 @@ namespace JewelsExchange.iOS
 					window.RootViewController = controller;
 					window.MakeKeyAndVisible();
 				}
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("CompletedStep").ToString() == "CompanyRegistered")
+				{
+					ViewController_Ins_Types controller = storyboard.InstantiateViewController("ViewController_Ins_Types_WW") as ViewController_Ins_Types;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
 
-
-
-
-
-
-				//ctrl.PushViewController(controller, true);
-			
-				//ViewController_Config controller = storyboard.InstantiateViewController("ViewController_Config") as ViewController_Config;
-				////UIApplication.SharedApplication.KeyWindow.RootViewController = controller;
-				//window.RootViewController = controller;
-
-				//window.MakeKeyAndVisible;
-			//this.window makeKeyAndVisible;
+				else
+				{
+					ViewController_Ins_Agree controller = storyboard.InstantiateViewController("ViewController_Ins_Agree") as ViewController_Ins_Agree;
+					window.RootViewController = controller;
+					window.MakeKeyAndVisible();
+				}
 			
 			}
 			else
 			{
-				UINavigationController ctrl = new UINavigationController();
-			//ViewController_Stock controller = storyboard.InstantiateViewController("ViewController_Stock_menu") as ViewController_Stock;
-				ViewController_Home controller = storyboard.InstantiateViewController("ViewController_Home") as ViewController_Home;
-				ctrl.PushViewController(controller, true);
-				window.RootViewController = ctrl;
+				//UINavigationController ctrl = new UINavigationController();
+				//ViewController_Home controller = storyboard.InstantiateViewController("ViewController_Home") as ViewController_Home;
+				//ctrl.PushViewController(controller, true);
+				//window.RootViewController = ctrl;
+				//window.MakeKeyAndVisible();
+
+				//UINavigationController ctrl = new UINavigationController();
+				//ViewController_Home controller = storyboard.InstantiateViewController("ViewController_Home") as ViewController_Home;
+				ViewController_Stock controller = storyboard.InstantiateViewController("ViewController_Stock_menu") as ViewController_Stock;
+			//	ctrl.PushViewController(controller, true);
+				window.RootViewController = controller;//ctrl;
 				window.MakeKeyAndVisible();
 			}
-
-			//return;
-
-
-			//ViewController_Login login = storyboard.InstantiateViewController("ViewController_Login") as ViewController_Login ;
-			//	window.RootViewController = login;
-
-			//ViewController_Config login = storyboard.InstantiateViewController("ViewController_Config") as ViewController_Config ;
-			//	window.RootViewController = login;
-			//}
-			//else {
-			//	ViewController_Stock home = storyboard.InstantiateViewController("ViewController_Stock") as ViewController_Stock ;
-			//	window.RootViewController = home;
-			//}
 			return true;
 		}
 

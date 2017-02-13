@@ -48,6 +48,14 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtCompanyName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtContactPerson { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtCountryName { get; set; }
 
         [Outlet]
@@ -65,6 +73,10 @@ namespace JewelsExchange.iOS
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISearchBar txtSearchBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtWholesaleID { get; set; }
 
         [Action ("BtnCompanyCreate_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -124,6 +136,16 @@ namespace JewelsExchange.iOS
                 TableViewStock = null;
             }
 
+            if (txtCompanyName != null) {
+                txtCompanyName.Dispose ();
+                txtCompanyName = null;
+            }
+
+            if (txtContactPerson != null) {
+                txtContactPerson.Dispose ();
+                txtContactPerson = null;
+            }
+
             if (txtCountryName != null) {
                 txtCountryName.Dispose ();
                 txtCountryName = null;
@@ -147,6 +169,11 @@ namespace JewelsExchange.iOS
             if (txtSearchBar != null) {
                 txtSearchBar.Dispose ();
                 txtSearchBar = null;
+            }
+
+            if (txtWholesaleID != null) {
+                txtWholesaleID.Dispose ();
+                txtWholesaleID = null;
             }
         }
     }

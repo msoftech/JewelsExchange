@@ -44,6 +44,10 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblMsg { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblTime { get; set; }
 
         [Outlet]
@@ -117,6 +121,11 @@ namespace JewelsExchange.iOS
             if (btnWholesale != null) {
                 btnWholesale.Dispose ();
                 btnWholesale = null;
+            }
+
+            if (lblMsg != null) {
+                lblMsg.Dispose ();
+                lblMsg = null;
             }
 
             if (lblTime != null) {

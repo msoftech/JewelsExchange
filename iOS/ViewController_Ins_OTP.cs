@@ -11,6 +11,7 @@ namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Ins_OTP : UIViewController
 	{
+		string sCurrentOTP = "";
 		partial void BtnWholeOTPVerify_TouchUpInside(UIButton sender)
 		{
 			this.PerformSegue("CallCompanyThanks", sender);
@@ -19,12 +20,14 @@ namespace JewelsExchange.iOS
 		private int _duration = 0;
 		bool _GameInProgress = true;
 		int iMint = 1;
+
 		partial void BtnResent_TouchUpInside(UIButton sender)
 		{
-			
 			LoadReSendData();
-			iMint = 1;
-			StartTimer();
+			btnResent.Hidden = true;
+			btnOTPVerify.Hidden = false ;
+			//iMint = 1;
+			//StartTimer();
 		}
 
 		
@@ -32,7 +35,7 @@ namespace JewelsExchange.iOS
 		WebDataModel<VerifyOTP> objWSRegion = new WebDataModel<VerifyOTP>();
 		WebDataModel<SentOTP> objWSReSent = new WebDataModel<SentOTP>();
 
-		public string DeviceId { get { return GetDeviceIdInternal(); } }
+		public string DeviceId = "";// = GetDeviceIdInternal();//"789";// { get { return GetDeviceIdInternal(); } }
 		private string GetDeviceIdInternal()
 		{
 			var id = default(string);
@@ -55,6 +58,8 @@ namespace JewelsExchange.iOS
 				if (iMint < 0)
 				{
 					lblTime.Text = "OTP Expired";
+					btnResent.Hidden = false;
+					btnOTPVerify.Hidden = true;
 					return;
 				}
 				//string s = TimeSpan.FromSeconds(_duration).ToString(@"mm\:ss");
@@ -74,8 +79,26 @@ namespace JewelsExchange.iOS
 		partial void BtnOTPVerify_TouchUpInside(UIButton sender)
 		{
 			//this.PerformSegue("CallRegister", sender);
-btnOTPVerify.Hidden = true;
-			LoadRegionData(txtOTP.Text);
+			//btnOTPVerify.Hidden = true;
+			if (sCurrentOTP != "")
+			{
+				if (txtOTP.Text.Trim() == sCurrentOTP)
+				{
+					LoadRegionData(txtOTP.Text);
+				}
+				else
+				{
+					Toast.MakeText("OTP Invalid.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+					return;
+				}
+			}
+			else
+			{
+				Toast.MakeText("OTP Not Received.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+		}
+
 
 			//UIWindow windows;
 			//windows = new UIWindow(UIScreen.MainScreen.Bounds);
@@ -90,12 +113,20 @@ btnOTPVerify.Hidden = true;
 
 
 
-		}
+
 
 		private void LoadRegionData(string sOTP)//string LoggedCompanyCode, string sBType, int closeoutPrice
 		{
 			var urlParam = new Dictionary<string, string>();
-			if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() != "WholeSale")
+
+			if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() == "WholeSaleUser")
+			{
+				urlParam.Add("@EmailId", NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString());//NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString()
+				urlParam.Add("@PhoneNumber", NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneNumber").ToString());//
+				urlParam.Add("@OTPID", DeviceId);
+				urlParam.Add("@OTP",sOTP);
+			}
+			else if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() != "WholeSale")
 			{
 				urlParam.Add("@EmailId", NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString());
 				urlParam.Add("@PhoneNumber", NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneNumber").ToString());
@@ -115,11 +146,19 @@ btnOTPVerify.Hidden = true;
 		{
 			
 			var urlParam = new Dictionary<string, string>();
-			if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() != "WholeSale")
+
+			if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() == "WholeSaleUser")
 			{
-				urlParam.Add("@EmailId", NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString());
-				urlParam.Add("@PhoneNumber", NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneNumber").ToString());
+				urlParam.Add("@EmailId", NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString());//NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString()
+				urlParam.Add("@PhoneNumber", NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneNumber").ToString());//
 				urlParam.Add("@OTPID", DeviceId);
+				urlParam.Add("@OTP", "");
+			}
+			else if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() != "WholeSale")
+			{
+				urlParam.Add("@EmailId",NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString() );//NSUserDefaults.StandardUserDefaults.StringForKey("UserEmailID").ToString()
+				urlParam.Add("@PhoneNumber", NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("UserPhoneNumber").ToString());//
+				urlParam.Add("@OTPID",DeviceId);
 				urlParam.Add("@OTP", "");
 			}
 			else
@@ -141,30 +180,93 @@ btnOTPVerify.Hidden = true;
 			{
 				
 				NSObject sender = new NSObject();
-				if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() != "WholeSale")
+
+
+
+				if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() == "WholeSaleUser" && NSUserDefaults.StandardUserDefaults.StringForKey("CompanyOTP").ToString() == "Yes")
+				{
+					NSUserDefaults.StandardUserDefaults.SetString("OTP", "CompletedStep");
+					NSUserDefaults.StandardUserDefaults.SetString("", "CompanyOTP");
+					this.PerformSegue("CallDetails", sender);
+				}
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() == "WholeSaleUser" && NSUserDefaults.StandardUserDefaults.StringForKey("CompanyOTP").ToString() == "")
+				{
+					NSUserDefaults.StandardUserDefaults.SetString("OTP", "CompletedStep");
+					NSUserDefaults.StandardUserDefaults.SetString("Yes", "CompanyOTP");
+					this.PerformSegue("CallCompUser", sender);
+				}
+				else if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() != "WholeSale")
 				{
 					NSUserDefaults.StandardUserDefaults.SetString("OTP", "CompletedStep");
 					this.PerformSegue("CallDetails", sender);
 				}
 				else
 				{
-					this.PerformSegue("callmsg", sender);
+					SaveRetailData();
 				}
 				//ViewController_Ins_Register controller = this.Storyboard.InstantiateViewController("ViewController_Ins_Register") as ViewController_Ins_Register;
 				//this.NavigationController.PushViewController(controller, true);
 			}
 			else
 			{
-				Toast.MakeText("OTP Invalid.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				Toast.MakeText("OTP Timeout.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
 
 			}
 		}
 
+
+
+		//NSUserDefaults.StandardUserDefaults.SetString(txtCompanyName.Text, "CompanyName");
+		//	NSUserDefaults.StandardUserDefaults.SetString(txtContactPerson.Text, "ContactPerson");
+
+		//	NSUserDefaults.StandardUserDefaults.SetString(txtPhoneCode.Text, "CompanyPhoneCode");
+		//	NSUserDefaults.StandardUserDefaults.SetString(txtPhonenumber.Text, "CompanyPhoneNumber");
+		//	NSUserDefaults.StandardUserDefaults.SetString(txtEmailId.Text, "CompanyEmailID");
+
+
+		private void SaveRetailData()//string LoggedCompanyCode, string sBType, int closeoutPrice
+		{
+			var urlParam = new Dictionary<string, string>();
+			urlParam.Add("@CompanyName", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyName").ToString());
+			urlParam.Add("@CompanyType", "WholeSaler");
+			urlParam.Add("@Phone", "+" + NSUserDefaults.StandardUserDefaults.StringForKey("CompanyPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("CompanyPhoneNumber").ToString());
+			urlParam.Add("@EmailId", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyEmailID").ToString());
+			urlParam.Add("@FirstName", NSUserDefaults.StandardUserDefaults.StringForKey("ContactPerson").ToString());
+			urlParam.Add("@MiddleName", "");
+			urlParam.Add("@LastName", "");
+			urlParam.Add("@Password", NSUserDefaults.StandardUserDefaults.StringForKey("ContactPerson").ToString());
+			urlParam.Add("@JewelXchangeName", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyWholeSaleID").ToString());
+			objWSRegion.GetWebDataTask(resultSaveRetailCompletion, _webFunction.GET_Save_Retail, urlParam);
+		}
+
+		void resultSaveRetailCompletion(ObservableCollection<VerifyOTP> wDatas)
+		{
+			string res = wDatas[0].Result.ToString();
+			if (res == "True")
+			{
+				NSUserDefaults.StandardUserDefaults.SetString("CompanyRegistered", "CompletedStep");
+				//NSUserDefaults.StandardUserDefaults.SetBool(true, "LoggedIn");
+
+				NSObject sender = new NSObject();
+				this.PerformSegue("callmsg", sender);
+				//this.PerformSegue("CallThanks", sender);
+			}
+			else
+			{
+				Toast.MakeText("Jewels Exchange Name Already Exists.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+
+			}
+		}
+
+
+
+
 		void resultReSendCompletion(ObservableCollection<SentOTP> wDatas)
 		{
-			string res = wDatas[0].RandomNumber.ToString();
-			iMint = 2;
-			StartTimer();
+			sCurrentOTP = wDatas[0].RandomNumber.ToString();
+			iMint = 1;
+			  StartTimer();
+			lblTime.Hidden = false;
 		}
 
 		public ViewController_Ins_OTP() : base("ViewController_Ins_OTP", null)
@@ -178,8 +280,25 @@ btnOTPVerify.Hidden = true;
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-			LoadReSendData();
-
+			lblTime.Hidden = true;
+			btnResent.Hidden = true;
+			btnOTPVerify.Hidden = false;
+			DeviceId = GetDeviceIdInternal();
+			if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() == "WholeSaleUser1")
+			{
+				sCurrentOTP = NSUserDefaults.StandardUserDefaults.StringForKey("CompanyUserOTP").ToString();
+				NSUserDefaults.StandardUserDefaults.SetString("WholeSaleUser", "UserType");
+				iMint = 1;
+				StartTimer();
+				lblTime.Hidden = false;
+				//NSUserDefaults.StandardUserDefaults.SetString(res, "CompanyUserOTP");
+			}
+			else
+			{
+				LoadReSendData();
+			}
+			//KK	iMint = 2; 
+			//KK	StartTimer(); 
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 

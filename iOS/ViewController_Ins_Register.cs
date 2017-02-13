@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using Foundation;
 using JewelsExchange.Webservices;
 using ToastIOS;
@@ -10,6 +11,21 @@ namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Ins_Register : UIViewController
 	{
+		//partial void Bttn_TouchUpInside(UIButton sender)
+		//{
+		//	this.PerformSegue("callWholehome", sender);
+		//}
+
+		//partial void BtnClose_TouchUpInside(UIButton sender)
+		//{
+		//	//Process.GetCurrentProcess().CloseMainWindow();
+		//	//Process.GetCurrentProcess().Close();
+		//	//NSObject sender = new NSObject();
+		//	this.PerformSegue("callretailhome", sender);
+		//}
+
+
+
 		WebDataModel<VerifyOTP> objWSRegion = new WebDataModel<VerifyOTP>();
 		partial void BtnRegiser_TouchUpInside(UIButton sender)
 		{
@@ -40,7 +56,7 @@ namespace JewelsExchange.iOS
 			urlParam.Add("@MiddleName", "");
 			urlParam.Add("@LastName", "");
 			urlParam.Add("@Password", NSUserDefaults.StandardUserDefaults.StringForKey("UserName").ToString());
-			urlParam.Add("@JewelXchangeName", NSUserDefaults.StandardUserDefaults.StringForKey("UserExchangeName").ToString());
+			urlParam.Add("@JewelXchangeName", NSUserDefaults.StandardUserDefaults.StringForKey("JewelsExchangeName").ToString());
 			objWSRegion.GetWebDataTask(resultSaveRetailCompletion, _webFunction.GET_Save_Retail, urlParam);
 		}
 
@@ -68,7 +84,7 @@ namespace JewelsExchange.iOS
 			string res = wDatas[0].Result.ToString();
 			if (res == "Valid Name")
 			{
-				NSUserDefaults.StandardUserDefaults.SetString(txtName.Text, "UserExchangeName");
+				NSUserDefaults.StandardUserDefaults.SetString(txtName.Text, "JewelsExchangeName");
 				//NSUserDefaults.StandardUserDefaults.SetString("WholeSale", "UserType");
 				if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType") == "WholeSale")
 				{

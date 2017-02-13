@@ -29,8 +29,15 @@ namespace JewelsExchange
 		public static readonly string GET_OTP = WEBSERVICE + "LoginORVerifyLogin";
 		public static readonly string GET_CHK_XName = WEBSERVICE + "CheckJewelXchangeName";
 		public static readonly string GET_Save_Retail = WEBSERVICE + "RegistrationFromMobile";
+		public static readonly string GET_Save_CompRule = WEBSERVICE + "InsertBTCatRegionForCompany";
+		public static readonly string GET_Save_ChkCompData = WEBSERVICE + "CheckCmpnyEmailExists";
+		public static readonly string GET_Save_SaveImage = WEBSERVICE + "_storeFiles";
+		public static readonly string GET_Save_Attachment = WEBSERVICE + "StoreImgAud";
 
 
+		public static readonly string TEMP_CHAT = WEBSERVICE + "TempChat";
+		public static readonly string GET_Save_Demand = WEBSERVICE + "_InsertDemandAttachment";
+		public static readonly string GET_ChatRequest = WEBSERVICE + "UserChatRequest";
 	}
 
 	public class Common

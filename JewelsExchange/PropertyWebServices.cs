@@ -40,6 +40,15 @@ namespace JewelsExchange.Webservices
 		public string Result { get; set; }
 
 	}
+
+	public class CHKCompOTP
+	{
+		public string RandomNumber { get; set; }
+		public string Date { get; set; }
+		public string Result { get; set; }
+
+	}
+
 	public class Master
 	{
 		public class Region

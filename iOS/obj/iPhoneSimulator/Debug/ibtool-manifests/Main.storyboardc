@@ -50,6 +50,51 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>11378</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>11378</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>11500</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>11500</string>
+				</array>
+				<key>message</key>
+				<string>Modal segues are deprecated since iOS 8.0</string>
+				<key>type</key>
+				<string>IBDeprecated</string>
+				<key>type-value</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>12220</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>12220</string>
+				</array>
+				<key>message</key>
+				<string>UIVisualEffectView should not have an Alpha value less than 1, this interferes with blurring</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>1814</key>
 		<array>
 			<dict>

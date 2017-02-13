@@ -31,6 +31,7 @@ namespace JewelsExchange.iOS
 			base.ViewDidLoad();
 			window = new UIWindow(UIScreen.MainScreen.Bounds);
 
+
 			//var contentController = (ContentController)Storyboard.InstantiateViewController("ContentController");
 
 			//ContentButton.TouchUpInside += (o, e) =>
@@ -41,8 +42,31 @@ namespace JewelsExchange.iOS
 			//};
 
 			//table = new UITableView(View.Bounds); // defaults to Plain style
-			string[] tableItems = new string[] {"Home Screen", "Search Jewelery", "Chat", "Message Board", "Inventory", "Add Gold Jewelery", "Add Diamonds Jewelery","My Stock","Setting","Favourite Member","Other Settings" };
-			table.Source = new TableSource(this,tableItems);
+			//NSUserDefaults.StandardUserDefaults.StringForKey(("Retails", "UserType");
+			//string[] tableItems = new string[] { "Home Screen", "Search Jewelery", "Chat", "Message Board", "Inventory", "Add Gold Jewelery", "Add Diamonds Jewelery", "My Stock", "Setting", "Favourite Member", "Other Settings" };
+
+			if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() == "Retails")
+			{
+				txtName.Text = NSUserDefaults.StandardUserDefaults.StringForKey("UserName").ToString();
+				NSUserDefaults.StandardUserDefaults.SetString(txtName.Text, "Chat_Sender");
+				txtType.Text = "Retailer";
+				string[] tableItems = new string[] { "Chat","Setting",  "Other Settings" };
+				table.Source = new TableSource(this, tableItems);
+			}
+			else
+			{
+				txtName.Text = NSUserDefaults.StandardUserDefaults.StringForKey("ContactPerson").ToString();
+				NSUserDefaults.StandardUserDefaults.SetString(txtName.Text, "Chat_Sender");
+				if (txtName.Text.Trim() == "")
+				{
+					txtName.Text = NSUserDefaults.StandardUserDefaults.StringForKey("UserName").ToString();
+				}
+
+				txtType.Text = "WholeSaller";
+				string[] tableItems = new string[] { "Home Screen", "Search Jewelery", "Chat", "Message Board", "Inventory", "Add Gold Jewelery", "Add Diamonds Jewelery", "My Stock", "Setting", "Favourite Member" ,"Other Settings" };
+				table.Source = new TableSource(this, tableItems);
+			}
+
 			//Add(table);
 
 			// Perform any additional setup after loading the view, typically from a nib.
@@ -54,6 +78,11 @@ namespace JewelsExchange.iOS
 			if (sSelectedName == "Home Screen")
 			{
 				ViewController_Home  controller = this.Storyboard.InstantiateViewController("ViewController_Home") as ViewController_Home;
+				ctrl.PushViewController(controller, true);
+			}
+			else if (sSelectedName == "Chat")
+			{
+				ViewController_ChatList controller = this.Storyboard.InstantiateViewController("ViewController_ChatList") as ViewController_ChatList;
 				ctrl.PushViewController(controller, true);
 			}
 			else

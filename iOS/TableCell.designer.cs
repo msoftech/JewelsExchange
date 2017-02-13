@@ -16,6 +16,30 @@ namespace JewelsExchange.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnDownloadReceive { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnDownloadSender { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnPlayReceive { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnPlaySender { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnStopReceive { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnStopSender { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView img_profile { get; set; }
 
         [Outlet]
@@ -64,14 +88,68 @@ namespace JewelsExchange.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblAudioPath { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblImagePath { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblMenu { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblSearchDetails { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtReceive { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtSender { get; set; }
+
+        [Action ("BtnDownloadSender_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnDownloadSender_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("BtnPlaySender_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnPlaySender_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (btnDownloadReceive != null) {
+                btnDownloadReceive.Dispose ();
+                btnDownloadReceive = null;
+            }
+
+            if (btnDownloadSender != null) {
+                btnDownloadSender.Dispose ();
+                btnDownloadSender = null;
+            }
+
+            if (btnPlayReceive != null) {
+                btnPlayReceive.Dispose ();
+                btnPlayReceive = null;
+            }
+
+            if (btnPlaySender != null) {
+                btnPlaySender.Dispose ();
+                btnPlaySender = null;
+            }
+
+            if (btnStopReceive != null) {
+                btnStopReceive.Dispose ();
+                btnStopReceive = null;
+            }
+
+            if (btnStopSender != null) {
+                btnStopSender.Dispose ();
+                btnStopSender = null;
+            }
+
             if (img_profile != null) {
                 img_profile.Dispose ();
                 img_profile = null;
@@ -132,6 +210,16 @@ namespace JewelsExchange.iOS
                 lbl8 = null;
             }
 
+            if (lblAudioPath != null) {
+                lblAudioPath.Dispose ();
+                lblAudioPath = null;
+            }
+
+            if (lblImagePath != null) {
+                lblImagePath.Dispose ();
+                lblImagePath = null;
+            }
+
             if (lblMenu != null) {
                 lblMenu.Dispose ();
                 lblMenu = null;
@@ -140,6 +228,16 @@ namespace JewelsExchange.iOS
             if (lblSearchDetails != null) {
                 lblSearchDetails.Dispose ();
                 lblSearchDetails = null;
+            }
+
+            if (txtReceive != null) {
+                txtReceive.Dispose ();
+                txtReceive = null;
+            }
+
+            if (txtSender != null) {
+                txtSender.Dispose ();
+                txtSender = null;
             }
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CoreGraphics;
 using Foundation;
 using JewelsExchange.Webservices;
 using ObjCRuntime;
@@ -13,20 +14,92 @@ namespace JewelsExchange.iOS
 {
 	public partial class ViewController_Ins_Contact : UIViewController
 	{
-		partial void BtnCompanyCreate_TouchUpInside(UIButton sender)
-		{
-			NSUserDefaults.StandardUserDefaults.SetString(txtPhoneCode.Text, "CompanyPhoneCode");
-			NSUserDefaults.StandardUserDefaults.SetString(txtPhonenumber.Text, "CompanyPhoneNumber");
-			NSUserDefaults.StandardUserDefaults.SetString(txtEmailId.Text, "CompanyEmailID");
-			this.PerformSegue("CallOTP", sender);//callmsg
-			//this.PerformSegue("callmsg", sender);//callmsg
-		}
-
 		public string sRegionSelectionData = "";
 		List<Master.Country> objCountry;
 		List<Master.Country> objCountrySearch;
 		WebDataModel<SentOTP> objWSRegion = new WebDataModel<SentOTP>();
+		WebDataModel<VerifyOTP> objWSChkCompany = new WebDataModel<VerifyOTP>();
 
+
+		partial void BtnCompanyCreate_TouchUpInside(UIButton sender)
+		{
+
+			if (txtCompanyName.Text.Trim() == "")
+			{
+				Toast.MakeText("Company Name is empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			if (txtContactPerson.Text.Trim() == "")
+			{
+				Toast.MakeText("Contact Person is empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			if (txtPhoneCode.Text.Trim() == "")
+			{
+				Toast.MakeText("Phone Code is empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			if (txtPhonenumber.Text.Trim() == "")
+			{
+				Toast.MakeText("Phone Number is empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			if (txtEmailId.Text.Trim() == "")
+			{
+				Toast.MakeText("Email ID is empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			if (txtWholesaleID.Text.Trim() == "")
+			{
+				Toast.MakeText("Wholesale ID is empty.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+
+
+			NSUserDefaults.StandardUserDefaults.SetString(txtCompanyName.Text, "CompanyName");
+			NSUserDefaults.StandardUserDefaults.SetString(txtContactPerson.Text, "ContactPerson");
+
+			NSUserDefaults.StandardUserDefaults.SetString(txtPhoneCode.Text, "CompanyPhoneCode");
+			NSUserDefaults.StandardUserDefaults.SetString(txtPhonenumber.Text, "CompanyPhoneNumber");
+			NSUserDefaults.StandardUserDefaults.SetString(txtEmailId.Text, "CompanyEmailID");
+			NSUserDefaults.StandardUserDefaults.SetString(txtWholesaleID .Text, "CompanyWholeSaleID");
+			NSUserDefaults.StandardUserDefaults.SetString(txtWholesaleID.Text, "JewelsExchangeName");
+
+
+			ChkCompanyData();
+
+
+			//this.PerformSegue("callmsg", sender);//callmsg
+		}
+
+		private void ChkCompanyData()//string LoggedCompanyCode, string sBType, int closeoutPrice
+		{
+			var urlParam = new Dictionary<string, string>();
+			urlParam.Add("@JewelXchangeName", txtWholesaleID.Text);
+			objWSChkCompany.GetWebDataTask(resultChkCompanyData, _webFunction.GET_CHK_XName, urlParam);
+		}
+
+
+
+		void resultChkCompanyData(ObservableCollection<VerifyOTP> wDatas)
+		{
+			NSObject sender = new NSObject();
+			List<VerifyOTP> mModels = new List<VerifyOTP>(wDatas);
+
+			string res = mModels[0].Result.ToString();
+			if (res == "Valid Name")
+			{
+				this.PerformSegue("CallOTP", sender);//callmsg
+			}
+			else
+			{
+				Toast.MakeText("WholeSale ID Already Avaliable.", Toast.LENGTH_SHORT).SetUseShadow(true).SetFontSize(13).SetGravity(ToastGravity.Center).SetBgRed(30).Show();
+				return;
+			}
+			//ViewController_Ins_OTP controller = this.Storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
+			//this.NavigationController.PushViewController(controller, true);
+			//string opt = mModels[0].RandomNumber.ToString();
+		}
 	
 
 		partial void BtnCountryClose_TouchUpInside(UIButton sender)
@@ -35,10 +108,33 @@ namespace JewelsExchange.iOS
 		}
 
 
-	
+		//public void LoadProcessStart()
+		//{
+		//	Process.Hidden = false;
+		//	Process.StartAnimating();
+		//}
+
+		//public void LoadProcessEnd()
+		//{
+		//	Process.StopAnimating();
+		//	Process.Hidden = true;
+
+		//}
 
 		partial void BtnSearchCountry_TouchUpInside(UIButton sender)
 		{
+
+			//if (objCountry == null)
+			//{
+				//var bounds = UIScreen.MainScreen.Bounds;
+
+				//// show the loading overlay on the UI thread using the correct orientation sizing
+				//LoadingOverlay loadPop = new LoadingOverlay(bounds);
+				//View.Add(loadPop);
+				objCountrySearch = LoadCountry();
+				objCountry = objCountrySearch;
+				//loadPop.Hide();
+			//}
 			pnlSearch.Hidden = false;
 			txtSearchBar.Placeholder = "Country";
 			//if (sRegionSelectionData == "")
@@ -100,7 +196,14 @@ namespace JewelsExchange.iOS
 			NSUserDefaults.StandardUserDefaults.SetString(txtPhonenumber.Text, "UserPhoneNumber");
 			NSUserDefaults.StandardUserDefaults.SetString(txtEmailId.Text, "UserEmailID");
 
-			this.PerformSegue("CAllOTP", sender);
+			//if (NSUserDefaults.StandardUserDefaults.StringForKey("UserType").ToString() == "WholeSaleUser")
+			//{
+			//	this.PerformSegue("callAferOTP", sender);
+			//}
+			//else
+			//{
+				this.PerformSegue("CAllOTP", sender);
+			//}
 			//ViewController_Ins_OTP controller = this.Storyboard.InstantiateViewController("ViewController_Ins_OTP") as ViewController_Ins_OTP;
 			//this.NavigationController.PushViewController(controller, true);
 			//ToastIOS.Toast.MakeText(opt);
@@ -143,11 +246,10 @@ namespace JewelsExchange.iOS
 			base.ViewDidLoad();
 
 
-		 	objCountrySearch =	LoadCountry();
-			objCountry = objCountrySearch;
+		 	//Process.Hidden = true;
 			pnlSearch.Hidden = true;
 			pnlSearch.Frame = new CoreGraphics.CGRect(0, 50, 320, 518);
-
+			//LoadingOverlay loadingOverlay;
 			//var Temp = new TableSourceSearch(this);
 			//TableViewStock.Source = Temp;
 			//var sdc = searchDisplayController;
@@ -197,7 +299,6 @@ namespace JewelsExchange.iOS
 				{ "1"  , "AI"},
 				{ "1"  , "AG"},
 				{ "54" , "AR"}
-			
 			};
 
 			for (int j = 0; j < NSLocale.ISOCountryCodes.Length; j++)
@@ -304,5 +405,68 @@ namespace JewelsExchange.iOS
 
 
 	}
+
+
+
+	public class LoadingOverlay : UIView
+	{
+		// control declarations
+		UIActivityIndicatorView activitySpinner;
+		UILabel loadingLabel;
+
+		public LoadingOverlay(CGRect frame) : base(frame)
+		{
+			// configurable bits
+			BackgroundColor = UIColor.Black;
+			Alpha = 0.75f;
+			AutoresizingMask = UIViewAutoresizing.All;
+
+			nfloat labelHeight = 22;
+			nfloat labelWidth = Frame.Width - 20;
+
+			// derive the center x and y
+			nfloat centerX = Frame.Width / 2;
+			nfloat centerY = Frame.Height / 2;
+
+			// create the activity spinner, center it horizontall and put it 5 points above center x
+			activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.WhiteLarge);
+			activitySpinner.Frame = new CGRect(
+				centerX - (activitySpinner.Frame.Width / 2),
+				centerY - activitySpinner.Frame.Height - 20,
+				activitySpinner.Frame.Width,
+				activitySpinner.Frame.Height);
+			activitySpinner.AutoresizingMask = UIViewAutoresizing.All;
+			AddSubview(activitySpinner);
+			activitySpinner.StartAnimating();
+
+			// create and configure the "Loading Data" label
+			loadingLabel = new UILabel(new CGRect(
+				centerX - (labelWidth / 2),
+				centerY + 20,
+				labelWidth,
+				labelHeight
+				));
+			loadingLabel.BackgroundColor = UIColor.Clear;
+			loadingLabel.TextColor = UIColor.White;
+			loadingLabel.Text = "Loading Data...";
+			loadingLabel.TextAlignment = UITextAlignment.Center;
+			loadingLabel.AutoresizingMask = UIViewAutoresizing.All;
+			AddSubview(loadingLabel);
+
+		}
+
+		/// <summary>
+		/// Fades out the control and then removes it from the super view
+		/// </summary>
+		public void Hide()
+		{
+			UIView.Animate(
+				0.5, // duration
+				() => { Alpha = 0; },
+				() => { RemoveFromSuperview(); }
+			);
+		}
+	}
+
 }
 

@@ -17,7 +17,6 @@ namespace JewelsExchange.iOS
 			pnlSearchFilter.Hidden = true;
 		}
 
-
 		partial void BtnSearchClose_TouchUpInside(UIButton sender)
 		{
 			pnlSearch.Hidden = true;
@@ -54,7 +53,6 @@ namespace JewelsExchange.iOS
 		List<Master.Karat> objKarat;
 		List<Master.Karat> objKaratSearch;
 		public string sKaratSelectionData = "";
-
 
 
 		partial void BtnSearchRegion_TouchUpInside(UIButton sender)
@@ -369,11 +367,7 @@ namespace JewelsExchange.iOS
 
 		private void InitializeTableView()
 		{
-
 			TableViewSearch.RegisterClassForCellReuse(typeof(TableCell), TableCell.Identifier);
-
-
-
 			TableViewSearch.RowHeight = UITableView.AutomaticDimension;
 			TableViewSearch.EstimatedRowHeight = 100;
 			TableViewSearch.Source = new TableSource(localModels, this);
@@ -612,6 +606,7 @@ namespace JewelsExchange.iOS
 		//						 select model).ToList();
 
 		//}
+
 		public override nint RowsInSection(UITableView tableview, nint section)
 		{
 
@@ -742,26 +737,7 @@ namespace JewelsExchange.iOS
 			this.owner = owner;
 		}
 
-		//public override void Scrolled(UIScrollView scrollView)
-		//{
-		//			UIAlertView alert = new UIAlertView()
-		//			{
-		//				Title = "alert title",
-		//				Message = "this is a simple alert"
-		//			};
-		//	alert.AddButton("OK");
-		//	alert.Show();
-
-		//	// load more bottom
-		//	//float height = (float)scrollView.Frame.Size.Height;
-		//	//float distanceFromBottom = (float)(scrollView.ContentSize.Height - scrollView.ContentOffset.Y);
-
-		//	//if (distanceFromBottom < height )
-		//	//{
-		//	//	// reload data here
-		//	//}
-
-		//}
+	
 		public override void Scrolled(UIScrollView scrollView)
 		{
 			//          Globals.refreshView.DidScroll ();
@@ -808,45 +784,8 @@ namespace JewelsExchange.iOS
 
 
 		}
+				
 
-
-		//public override int  GetItemViewType(int position)
-		//{
-		//	return mModels[position] == null ? VIEW_TYPE_LOADING : VIEW_TYPE_ITEM;//base.GetItemViewType(position);
-		//}
-
-
-		//public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
-		//{
-		//	if (holder is ResultViewHolder)
-		//	{
-		//		ResultJewelry model = mModels[position];
-		//		ResultViewHolder exholder = (ResultViewHolder)holder;
-		//		exholder.bind(model, holder.ItemView.Context);
-		//	}
-		//	else if (holder is LoadingViewHolder)
-		//	{
-		//		LoadingViewHolder loadingViewHolder = (LoadingViewHolder)holder;
-		//		loadingViewHolder.progressBar.Indeterminate = true;
-		//	}
-		//}
-
-		//public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
-		//{
-		//	if (viewType == VIEW_TYPE_ITEM)
-		//	{
-		//		View itemView = mInflater.Inflate(Resource.Layout.row_result, parent, false);
-		//		return new ResultViewHolder(itemView);
-		//	}
-		//	else if (viewType == VIEW_TYPE_LOADING)
-		//	{
-		//		View itemView = mInflater.Inflate(Resource.Layout.layout_loading_item, parent, false);
-		//		//            View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.layout_loading_item, parent, false);
-		//		return new LoadingViewHolder(itemView);
-		//	}
-		//	return null;
-		//}
-		//---------------------------
 		public override bool CanEditRow(UITableView tableView, NSIndexPath indexPath)
 		{
 			return true;

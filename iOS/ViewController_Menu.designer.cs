@@ -18,11 +18,29 @@ namespace JewelsExchange.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView table { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel txtName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel txtType { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (table != null) {
                 table.Dispose ();
                 table = null;
+            }
+
+            if (txtName != null) {
+                txtName.Dispose ();
+                txtName = null;
+            }
+
+            if (txtType != null) {
+                txtType.Dispose ();
+                txtType = null;
             }
         }
     }

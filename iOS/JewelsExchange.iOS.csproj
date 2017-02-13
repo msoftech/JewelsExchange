@@ -94,6 +94,41 @@
     <Reference Include="ToastIOS">
       <HintPath>..\Components\ToastIOS-1.6\lib\ios-unified\ToastIOS.dll</HintPath>
     </Reference>
+    <Reference Include="Twilio.Common.iOS">
+      <HintPath>..\packages\Twilio.Common.Xamarin.0.3.1\lib\Xamarin.iOS10\Twilio.Common.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sockets.Plugin.Abstractions">
+      <HintPath>..\packages\rda.SocketsForPCL.1.2.2\lib\Xamarin.iOS10\Sockets.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sockets.Plugin">
+      <HintPath>..\packages\rda.SocketsForPCL.1.2.2\lib\Xamarin.iOS10\Sockets.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Quickblox.Sdk">
+      <HintPath>..\packages\Quickblox.Sdk.1.2.6\lib\Xamarin.iOS10\Quickblox.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Quickblox.Sdk.Platform.Abstractions">
+      <HintPath>..\packages\Quickblox.Sdk.1.2.6\lib\Xamarin.iOS10\Quickblox.Sdk.Platform.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Quickblox.Sdk.Platform.iOS">
+      <HintPath>..\packages\Quickblox.Sdk.1.2.6\lib\Xamarin.iOS10\Quickblox.Sdk.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="KBCustomActionSheet">
+      <HintPath>..\Components\KBActionSheet-1.0\lib\ios-unified\KBCustomActionSheet.dll</HintPath>
+    </Reference>
+    <Reference Include="IQAudioRecorderController">
+      <HintPath>..\Components\iqaudiorecordercontroller-1.0\lib\ios-unified\IQAudioRecorderController.dll</HintPath>
+    </Reference>
+    <Reference Include="JSQMessagesViewController">
+      <HintPath>..\Components\jsqmessagesviewcontroller-7.2.0\lib\ios-unified\JSQMessagesViewController.dll</HintPath>
+    </Reference>
+    <Reference Include="Alliance.Carousel">
+      <HintPath>..\Components\Alliance.Carousel-3.0\lib\ios-unified\Alliance.Carousel.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JewelsExchange\JewelsExchange.csproj">
@@ -105,6 +140,39 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\.DS_Store" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-87%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Spotlight-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Spotlight-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleIncoming.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleIncoming.imageset\bubble_regular.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleIncoming.imageset\bubble_regular%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleIncoming.imageset\bubble_regular%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleOutgoing.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleOutgoing.imageset\bubble_regular.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleOutgoing.imageset\bubble_regular%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BubbleOutgoing.imageset\bubble_regular%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape%402x~ipad.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape~ipad.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x~ipad.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait~ipad.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -132,10 +200,15 @@
     <InterfaceDefinition Include="ViewController_CategorySearch.xib" />
     <InterfaceDefinition Include="ViewController_Home.xib" />
     <InterfaceDefinition Include="ViewController_Test.xib" />
+    <InterfaceDefinition Include="ViewController_Chat.xib" />
+    <InterfaceDefinition Include="ViewController_Demand.xib" />
+    <InterfaceDefinition Include="ChatOn.xib" />
+    <InterfaceDefinition Include="ViewController_ChatList.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -211,6 +284,35 @@
     <Compile Include="ViewController_Test.designer.cs">
       <DependentUpon>ViewController_Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewController_Homet.cs" />
+    <Compile Include="ViewController_Homet.designer.cs">
+      <DependentUpon>ViewController_Homet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Chat.cs" />
+    <Compile Include="ViewController_Chat.designer.cs">
+      <DependentUpon>ViewController_Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController_Demand.cs" />
+    <Compile Include="ViewController_Demand.designer.cs">
+      <DependentUpon>ViewController_Demand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatOn.cs" />
+    <Compile Include="ChatOn.designer.cs">
+      <DependentUpon>ChatOn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chating.cs" />
+    <Compile Include="ViewController_ChatList.cs" />
+    <Compile Include="ViewController_ChatList.designer.cs">
+      <DependentUpon>ViewController_ChatList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat\ChatSource.cs" />
+    <Compile Include="Chat\ChatViewController.cs" />
+    <Compile Include="Chat\Cells\BubbleCell.cs" />
+    <Compile Include="Chat\Cells\IncomingCell.cs" />
+    <Compile Include="Chat\Cells\OutgoingCell.cs" />
+    <Compile Include="Chat\ChatInput\ChatInputView.cs" />
+    <Compile Include="Chat\Model\Message.cs" />
+    <Compile Include="Chat\Model\MessageType.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Back1.jpeg" />
@@ -757,6 +859,34 @@
     <BundleResource Include="Resources\CountryPicker.bundle\ZA.png" />
     <BundleResource Include="Resources\CountryPicker.bundle\ZM.png" />
     <BundleResource Include="Resources\CountryPicker.bundle\ZW.png" />
+    <BundleResource Include="Resources\untitled folder 2\Edit1.png" />
+    <BundleResource Include="Resources\untitled folder 2\Edit2.png" />
+    <BundleResource Include="Resources\untitled folder 2\Edit3.png" />
+    <BundleResource Include="Resources\Audio.png" />
+    <BundleResource Include="Resources\Plus.png" />
+    <BundleResource Include="Resources\Arrow1.png" />
+    <BundleResource Include="Resources\Demand1.png" />
+    <BundleResource Include="Resources\noImg.jpg" />
+    <BundleResource Include="Resources\Attach.png" />
+    <BundleResource Include="Resources\untitled folder\Attach1.png" />
+    <BundleResource Include="Resources\untitled folder\Attach2.png" />
+    <BundleResource Include="Resources\Attach1.png" />
+    <BundleResource Include="Resources\Attach2.png" />
+    <BundleResource Include="Resources\Final Image\Add.png" />
+    <BundleResource Include="Resources\Final Image\Delete.png" />
+    <BundleResource Include="Resources\Final Image\Download.png" />
+    <BundleResource Include="Resources\Final Image\Edit.png" />
+    <BundleResource Include="Resources\Final Image\Edit1.png" />
+    <BundleResource Include="Resources\Final Image\Edit2.png" />
+    <BundleResource Include="Resources\Final Image\Pause.png" />
+    <BundleResource Include="Resources\Final Image\Play.png" />
+    <BundleResource Include="Resources\Final Image\Power.png" />
+    <BundleResource Include="Resources\Final Image\Search.png" />
+    <BundleResource Include="Resources\Final Image\Send.png" />
+    <BundleResource Include="Resources\Final Image\DownloadSmall.png" />
+    <BundleResource Include="Resources\Final Image\PlaySmall.png" />
+    <BundleResource Include="Resources\Final Image\StopSmall.png" />
+    <BundleResource Include="Resources\Final Image\AttachmentSmall.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="SidebarNavigation">
@@ -765,6 +895,22 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="ToastIOS">
       <Version>1.6</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="KBActionSheet">
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="iqaudiorecordercontroller">
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="jsqmessagesviewcontroller">
+      <Version>7.2.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="Alliance.Carousel">
+      <Version>3.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

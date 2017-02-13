@@ -233,11 +233,50 @@ namespace JewelsExchange.iOS
 			}
 			else
 			{
+				NSUserDefaults.StandardUserDefaults.SetString(sCategorySelectionData, "CompanyCategory");
+				//SaveCompanyRule();
 				this.PerformSegue("callmsgCompany", sender);
 			}
 		}
 
 
+		//var urlParam = new Dictionary<string, string>();
+		//urlParam.Add("@CompanyName", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyName").ToString());
+		//	urlParam.Add("@CompanyType", "WholeSaler");
+		//	urlParam.Add("@Phone", "+" + NSUserDefaults.StandardUserDefaults.StringForKey("CompanyPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("CompanyPhoneNumber").ToString());
+		//	urlParam.Add("@EmailId", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyEmailID").ToString());
+		//	urlParam.Add("@FirstName", NSUserDefaults.StandardUserDefaults.StringForKey("ContactPerson").ToString());
+		//	urlParam.Add("@MiddleName", "");
+		//	urlParam.Add("@LastName", "");
+		//	urlParam.Add("@Password", NSUserDefaults.StandardUserDefaults.StringForKey("ContactPerson").ToString());
+		//	urlParam.Add("@JewelXchangeName", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyWholeSaleID").ToString());
+
+
+		private void SaveCompanyRule()
+		{
+			var urlParam = new Dictionary<string, string>();
+			urlParam.Add("@BusinessType", NSUserDefaults.StandardUserDefaults.StringForKey("BusinessType").ToString());
+			urlParam.Add("@Region", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyRegion").ToString());
+			urlParam.Add("@Category", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyCategory").ToString());
+			urlParam.Add("@EmailId",NSUserDefaults.StandardUserDefaults.StringForKey("CompanyEmailID").ToString());
+			urlParam.Add("@PhoneNumber", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyPhoneCode").ToString() + NSUserDefaults.StandardUserDefaults.StringForKey("CompanyPhoneNumber").ToString());
+			urlParam.Add("@JewelXchangeId", NSUserDefaults.StandardUserDefaults.StringForKey("CompanyWholeSaleID").ToString());
+			objWSCategory.GetWebDataTask(resultSaveCompanyRule, _webFunction.GET_Save_CompRule, urlParam);
+		}
+
+		void resultSaveCompanyRule(ObservableCollection<Master.Category> wDatas)
+		{
+			
+			//NSObject sender = new NSObject();
+			//List<VerifyOTP> mModels = new List<VerifyOTP>(wDatas);
+
+			//string res = mModels[0].Result.ToString();
+			//if (res == "Valid Name")
+			//{
+			//	this.PerformSegue("callmsgCompany", sender);
+			//}
+
+		}
 
 		//private void Search()
 		//{

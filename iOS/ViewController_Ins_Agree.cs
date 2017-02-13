@@ -21,6 +21,7 @@ namespace JewelsExchange.iOS
 			//	navController = new UINavigationController(viewController);
 			//	window.RootViewController = navController;
 			//	window.MakeKeyAndVisible();
+			NSUserDefaults.StandardUserDefaults.SetString("", "CompanyOTP");
 			NSUserDefaults.StandardUserDefaults.SetString("Agree", "CompletedStep");
 			this.PerformSegue("CallTypes", sender);
 

@@ -2,10 +2,10 @@
 <Sdk>
   <AndroidApiLevel>24</AndroidApiLevel>
   <AndroidApiLevelName>24</AndroidApiLevelName>
-  <AndroidNdkPath>/Users/arshad/Library/Developer/Xamarin/android-ndk/android-ndk-r12-beta1</AndroidNdkPath>
-  <AndroidSdkBuildToolsPath>/Users/arshad/Documents/Android/sdk/build-tools/24.0.3</AndroidSdkBuildToolsPath>
-  <AndroidSdkBuildToolsBinPath>/Users/arshad/Documents/Android/sdk/build-tools/24.0.3</AndroidSdkBuildToolsBinPath>
-  <AndroidSdkPath>/Users/arshad/Documents/Android/sdk</AndroidSdkPath>
+  <AndroidNdkPath />
+  <AndroidSdkBuildToolsPath>/Users/shiddic/Documents/Android/sdk/build-tools/24.0.3</AndroidSdkBuildToolsPath>
+  <AndroidSdkBuildToolsBinPath>/Users/shiddic/Documents/Android/sdk/build-tools/24.0.3</AndroidSdkBuildToolsBinPath>
+  <AndroidSdkPath>/Users/shiddic/Documents/Android/sdk</AndroidSdkPath>
   <JavaSdkPath>/usr</JavaSdkPath>
   <MonoAndroidBinPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/bin</MonoAndroidBinPath>
   <MonoAndroidToolsPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid</MonoAndroidToolsPath>
@@ -13,7 +13,7 @@
     <ReferenceAssemblyPath>/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/</ReferenceAssemblyPath>
   </ReferenceAssemblyPaths>
   <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
-  <ZipAlignPath>/Users/arshad/Documents/Android/sdk/build-tools/24.0.3</ZipAlignPath>
+  <ZipAlignPath>/Users/shiddic/Documents/Android/sdk/build-tools/24.0.3</ZipAlignPath>
   <MonoAndroidIncludePath />
   <SupportedApiLevel>24</SupportedApiLevel>
   <AndroidSequencePointsMode>None</AndroidSequencePointsMode>

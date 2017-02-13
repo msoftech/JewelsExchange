@@ -17,6 +17,7 @@ namespace JewelsExchange.iOS
 
 			NSUserDefaults.StandardUserDefaults.SetString("Details", "CompletedStep");
 			NSUserDefaults.StandardUserDefaults.SetString(txtRetailerName.Text, "UserName");
+			NSUserDefaults.StandardUserDefaults.SetString("", "ContactPerson");
 			string Gender ="";
 			if (rbGender.SelectedSegment == 0)
 			{

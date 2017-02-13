@@ -60,6 +60,8 @@ namespace JewelsExchange.iOS
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+			//pnlSearchFilter.Hidden = true;
+			//pnlSearch.Hidden = true;
 			LoadRegionData("AMSWHO01", "GJ", 0);
 			// Perform any additional setup after loading the view, typically from a nib.
 		}

@@ -35,6 +35,32 @@
 	-r \
 	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
 	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Twilio.Common.Xamarin.0.3.1/lib/Xamarin.iOS10/Twilio.Common.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Newtonsoft.Json.8.0.3/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/rda.SocketsForPCL.1.2.2/lib/Xamarin.iOS10/Sockets.Plugin.Abstractions.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/rda.SocketsForPCL.1.2.2/lib/Xamarin.iOS10/Sockets.Plugin.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.Linq.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Quickblox.Sdk.1.2.6/lib/Xamarin.iOS10/Quickblox.Sdk.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Quickblox.Sdk.1.2.6/lib/Xamarin.iOS10/Quickblox.Sdk.Platform.Abstractions.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Quickblox.Sdk.1.2.6/lib/Xamarin.iOS10/Quickblox.Sdk.Platform.iOS.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/KBActionSheet-1.0/lib/ios-unified/KBCustomActionSheet.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/iqaudiorecordercontroller-1.0/lib/ios-unified/IQAudioRecorderController.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/jsqmessagesviewcontroller-7.2.0/lib/ios-unified/JSQMessagesViewController.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/Alliance.Carousel-3.0/lib/ios-unified/Alliance.Carousel.dll \
+	-r \
 	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/JewelsExchange/bin/Debug/JewelsExchange.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
@@ -299,13 +325,29 @@
 	-r \
 	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/ToastIOS-1.6/lib/ios-unified/ToastIOS.dll \
 	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Twilio.Common.Xamarin.0.3.1/lib/Xamarin.iOS10/Twilio.Common.iOS.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Newtonsoft.Json.8.0.3/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/rda.SocketsForPCL.1.2.2/lib/Xamarin.iOS10/Sockets.Plugin.Abstractions.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/rda.SocketsForPCL.1.2.2/lib/Xamarin.iOS10/Sockets.Plugin.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Quickblox.Sdk.1.2.6/lib/Xamarin.iOS10/Quickblox.Sdk.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Quickblox.Sdk.1.2.6/lib/Xamarin.iOS10/Quickblox.Sdk.Platform.Abstractions.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/packages/Quickblox.Sdk.1.2.6/lib/Xamarin.iOS10/Quickblox.Sdk.Platform.iOS.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/KBActionSheet-1.0/lib/ios-unified/KBCustomActionSheet.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/iqaudiorecordercontroller-1.0/lib/ios-unified/IQAudioRecorderController.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/jsqmessagesviewcontroller-7.2.0/lib/ios-unified/JSQMessagesViewController.dll \
+	-r \
+	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/Components/Alliance.Carousel-3.0/lib/ios-unified/Alliance.Carousel.dll \
+	-r \
 	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/JewelsExchange/bin/Debug/JewelsExchange.dll \
-	-r \
-	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/JewelsExchange/bin/Debug/System.Net.Http.dll \
-	-r \
-	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/JewelsExchange/bin/Debug/Newtonsoft.Json.dll \
-	-r \
-	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/JewelsExchange/bin/Debug/System.Net.Http.Primitives.dll \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
 	/Users/shiddic/Documents/JewelsExchange/msoftech/JewelsExchange.git/iOS/bin/iPhoneSimulator/Debug//JewelsExchange.iOS.exe \
