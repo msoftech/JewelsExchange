@@ -27,5 +27,5 @@ namespace JewelsExchange.iOS
 		public string JewelsExchangeID { get; set; }
 		public string QuickBoxID { get; set; }
 	}
-
+	//MOGUDOOM MOHAMED - TO CHECK THE SOURCE TREE CONTROL ON 13022017
 }

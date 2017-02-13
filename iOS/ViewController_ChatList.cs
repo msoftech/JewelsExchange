@@ -165,6 +165,7 @@ namespace JewelsExchange.iOS
 		private void initialize()
 		{
 			// do your initialization here
+			//MOGUDOOM MOHAMED - TO CHECK THE SOURCE TREE CONTROL ON 13022017
 		}
 		public override void DidReceiveMemoryWarning()
 		{

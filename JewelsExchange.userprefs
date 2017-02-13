@@ -1,24 +1,5 @@
 ﻿<Properties StartupConfiguration="{C3982AD1-8A99-4F3E-9BEA-AF237E9FE174}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workbench ActiveDocument="JewelsExchange.git Status">
-    <Files>
-      <File FileName="iOS/ViewController_ChatList.cs" Line="159" Column="3" />
-      <File FileName="iOS/Chating.cs" Line="28" Column="27" />
-      <File FileName="JewelsExchange.git Status" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="JewelsExchange" expanded="True" selected="True">
-            <Node name="JewelsExchange.iOS" expanded="True">
-              <Node name="Chat" expanded="True">
-                <Node name="Cells" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
@@ -92,6 +73,6 @@
     <Watch file="Droid/Fragments/WebserviceTest.cs" line="35" offsetX="603" offsetY="510" expression="wDatas" liveUpdate="True" />
     <Watch file="Droid/Fragments/WebserviceTest.cs" line="54" offsetX="660" offsetY="795" expression="wDatas" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.JewelsExchange.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CE1E7409-799C-4C3F-9AC7-5940551B3891" />
+  <MonoDevelop.Ide.ItemProperties.JewelsExchange.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BAFDA5F6-3539-4F4A-B033-9D32464E344C" />
   <MonoDevelop.Ide.ItemProperties.JewelsExchange.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" AndroidDesignerPreferredTheme="Theme.DeviceDefault" />
 </Properties>
